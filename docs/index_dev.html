@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - TopTier League</title>
+    <script>
+        const hostname = 'toptierleague.com'
+        if (window.location.hostname === hostname) window.location.replace(`https://www.${hostname}` + window.location.pathname + window.location.search);
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Animation for Lighting Text */
+        .lighting-text {
+            background: linear-gradient(to right, #fff 20%, #ff0000 40%, #ff0000 60%, #fff 80%);
+            background-size: 200% auto;
+            color: #000;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-black text-slate-50 selection:bg-red-500 selection:text-white antialiased">
+
+    <!-- Navbar (Simplified: Logo Image Only, Centered) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-red-900/30 py-4">
+        <div class="container mx-auto px-6 flex justify-center items-center">
+            <img 
+                src="TopTier League logo new.jpg" 
+                alt="TopTier League" 
+                class="h-12 w-auto object-contain" 
+                onerror="this.style.display='none'"
+            />
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-20 bg-zinc-950 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+            <div class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-red-900 rounded-full blur-[150px]"></div>
+            <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-yellow-700 rounded-full blur-[150px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+            <h4 class="text-red-500 font-bold tracking-[0.2em] uppercase mb-4">Join the Elite</h4>
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
+                TopTier League <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">Membership</span>
+            </h1>
+            <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                A pioneering global e-commerce community where top sellers, category leaders, and forward-thinking entrepreneurs connect, learn, and grow.
+            </p>
+            <p class="text-gray-400 text-lg max-w-3xl mx-auto">
+                We embrace the latest trends, collaborate with top industry talent, and leverage cutting-edge technology — with a strong focus on <span class="text-white font-semibold">TikTok, Amazon, and AI</span>.
+            </p>
+        </div>
+    </section>
+
+    <!-- What Happens in the Community -->
+    <section class="py-20 bg-black border-y border-zinc-900">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">What Happens in the Community 💬</h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        It starts with a dedicated discussion group designed for high-level exchange. We also host monthly online workshops that keep members ahead of every major trend in e-commerce.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
+                            <div class="bg-red-600/20 p-3 rounded-full mr-4"><i data-lucide="message-circle" class="text-red-500 w-6 h-6"></i></div>
+                            <span class="text-gray-200 font-medium">Exchange insights with experienced sellers</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
+                            <div class="bg-blue-600/20 p-3 rounded-full mr-4"><i data-lucide="share-2" class="text-blue-500 w-6 h-6"></i></div>
+                            <span class="text-gray-200 font-medium">Share challenges and breakthroughs</span>
+                        </div>
+                        <div class="flex items-center p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
+                            <div class="bg-yellow-600/20 p-3 rounded-full mr-4"><i data-lucide="users" class="text-yellow-500 w-6 h-6"></i></div>
+                            <span class="text-gray-200 font-medium">Build meaningful business relationships</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-600/20 to-transparent rounded-bl-full"></div>
+                    <h3 class="text-xl font-bold text-white mb-4">Monthly Workshops</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Each month, our sessions feature <span class="text-white">real-world strategies</span>, <span class="text-white">product insights</span>, and <span class="text-white">growth frameworks</span> that members can immediately apply.
+                    </p>
+                    <div class="flex items-center text-yellow-500 font-bold text-sm uppercase tracking-wider">
+                        <i data-lucide="zap" class="w-5 h-5 mr-2"></i> Ahead of the curve
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 bg-zinc-950 relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-4">What You’ll Get as a Member 🚀</h2>
+                <div class="w-24 h-1.5 bg-red-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Benefit 1 -->
+                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-red-600 transition-all group">
+                    <div class="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">1️⃣ All-in-One TikTok Shop Database</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your go-to resource for systematic TikTok Shop operations — organized, updated, and field-tested by experienced sellers.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-red-600 transition-all group">
+                    <div class="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                        <i data-lucide="video" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">2️⃣ Monthly Online Workshops</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Elite sellers share cutting-edge tactics, real case studies, and actionable insights. Learn scaling across platforms in just one power-packed hour.
+                    </p>
+                    <span class="text-xs font-bold text-yellow-500 bg-yellow-500/10 px-3 py-1 rounded-full">Join live or watch replay</span>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-red-600 transition-all group">
+                    <div class="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                        <i data-lucide="life-buoy" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">3️⃣ TikTok Internal Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Access to key contacts in various TikTok functions. Stay close to official updates, troubleshooting contacts, and partnership opportunities.
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-red-600 transition-all group">
+                    <div class="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">4️⃣ 7-9 Figure Mentorship</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Get real advice from those who have built massive, sustainable e-commerce empires.
+                    </p>
+                </div>
+
+                <!-- Benefit 5: Master Class (Spans 2 columns on LG) -->
+                <div class="bg-gradient-to-br from-zinc-900 to-black border border-zinc-800 p-8 rounded-2xl md:col-span-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10"><i data-lucide="graduation-cap" class="w-32 h-32 text-white"></i></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold text-white mb-2">5️⃣ TikTok Shop Operation Master Class</h3>
+                        <p class="text-gray-400 mb-6">A foundational, 5+ hour online course that walks you through every step.</p>
+                        
+                        <div class="bg-black/50 border border-zinc-700/50 rounded-xl p-6">
+                            <h4 class="text-sm font-bold text-red-500 uppercase tracking-wider mb-4">Course Outline</h4>
+                            <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> TikTok Shop opportunities</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Business models on TikTok</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Seller Center essentials</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Account & content strategy</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Product selection</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Affiliate network building</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Live streaming strategy</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Team structure</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Amazon–TikTok synergy</li>
+                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Real case studies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Achieve -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="bg-zinc-900/30 border border-zinc-800 p-10 md:p-16 rounded-3xl">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">What You’ll Achieve in TopTier League 🎯</h2>
+                <ul class="space-y-6 text-lg">
+                    <li class="flex items-start">
+                        <i data-lucide="target" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-300"><strong class="text-white">Solid Understanding:</strong> Mastery of TikTok Shop operations with an always-updated reference.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="cpu" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-300"><strong class="text-white">AI Mastery:</strong> Command of AI-driven tools applied in real business operations.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="map" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-300"><strong class="text-white">Clear Roadmap:</strong> A path for growth with early access to insider resources.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="box" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-300"><strong class="text-white">Personalized Model:</strong> A TikTok business model fit for the social commerce era.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="globe" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-300"><strong class="text-white">Channel Synergy:</strong> A comprehensive Amazon–TikTok strategy to scale across platforms.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & CTA -->
+    <section class="py-24 bg-zinc-950 relative">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-900/20 via-black to-black opacity-50 pointer-events-none"></div>
+        <div class="container mx-auto px-6 max-w-3xl relative z-10">
+            
+            <div class="bg-black border border-red-900/50 shadow-[0_0_60px_-15px_rgba(220,38,38,0.3)] rounded-3xl overflow-hidden text-center">
+                <div class="bg-gradient-to-r from-red-700 to-red-900 py-4">
+                    <h3 class="text-white font-bold tracking-widest uppercase">Move 10X Faster in Social E-commerce</h3>
+                </div>
+                <div class="p-10 md:p-14">
+                    <h2 class="text-3xl font-bold text-white mb-2">Annual Community Membership</h2>
+                    <div class="flex items-center justify-center my-8">
+                        <span class="text-5xl md:text-6xl font-black text-white">$1,297</span>
+                        <span class="text-gray-500 text-xl ml-2 self-end mb-2">/ year</span>
+                    </div>
+
+                    <div class="bg-zinc-900/50 rounded-xl p-6 mb-10 text-left inline-block w-full max-w-md">
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i> Full access to monthly online workshops</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i> The TikTok Shop Operation Master Class</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i> Entry to private seller community group</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i> Continuous access to all shared resources</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <a href="contact.html" class="inline-block w-full md:w-auto bg-white text-black hover:bg-gray-200 px-10 py-4 rounded-full font-bold text-xl transition-all transform hover:scale-105 shadow-lg">
+                            Join TopTier League
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="py-20 bg-black border-t border-zinc-900">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="w-32 h-32 bg-zinc-800 rounded-full border-4 border-zinc-700 flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="user" class="w-16 h-16 text-gray-500"></i>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-white mb-1">About Can Chan 👤</h3>
+                    <p class="text-red-500 font-medium mb-4">Co-founder of TopTier League</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center justify-center md:justify-start"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span> Veteran Amazon & TikTok Shop seller</li>
+                        <li class="flex items-center justify-center md:justify-start"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span> Co-founder of a 100K+ member seller network</li>
+                        <li class="flex items-center justify-center md:justify-start"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span> Consultant to 10+ 8- and 9-figure Amazon sellers</li>
+                        <li class="flex items-center justify-center md:justify-start"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span> Co-founder of Minnovate AI (Integrated AI API Wholesale Platform)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Simplified: Centered Contact Only) -->
+    <footer class="bg-black pt-16 pb-10 border-t border-zinc-900">
+        <div class="container mx-auto px-6 text-center">
+            
+            <div class="flex flex-col items-center justify-center mb-10">
+                <p class="text-gray-300 text-lg mb-6">
+                    Contact Can Chan directly for membership details.
+                </p>
+                <div class="flex space-x-6">
+                        <a href="#" class="p-3 bg-zinc-900 rounded-full text-white hover:bg-blue-600 transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                        <a href="#" class="p-3 bg-zinc-900 rounded-full text-white hover:bg-pink-600 transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+
+            <div class="border-t border-zinc-900 pt-8 text-gray-600 text-sm">
+                <p>&copy; <span id="year"></span> TopTier League. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        lucide.createIcons();
+    </script>
+</body>
+</html>
