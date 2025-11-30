@@ -7,8 +7,6 @@
     <script>
         const hostname = 'toptierleague.com'
         if (window.location.hostname === hostname) window.location.replace(`https://www.${hostname}` + window.location.pathname + window.location.search);
-        if (window.location.hostname === hostname) document.write('hostname')
-        else document.write('www.toptierleague.com')
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -295,6 +293,11 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
         lucide.createIcons();
+    </script>
+    <script>
+        const hostname = 'toptierleague.com'
+        if (window.location.hostname === hostname) document.write('hostname')
+        else document.write('www.toptierleague.com')
     </script>
 </body>
 </html>
