@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membership - TopTier League</title>
+    <script>
+        const hostname = 'toptierleague.com'
+        if (window.location.hostname === hostname) window.location.replace(`https://www.${hostname}` + window.location.pathname + window.location.search);
+        if (window.location.hostname === hostname) document.write('hostname')
+        else document.write('www.toptierleague.com')
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -22,7 +28,7 @@
         }
     </style>
 </head>
-<body class="font-sans bg-black text-slate-50 selection:bg-red-500 selection:text-white antialiased">
+<body style="display: none;" class="font-sans bg-black text-slate-50 selection:bg-red-500 selection:text-white antialiased">
 
     <!-- Navbar (Simplified: Logo Image Only, Centered) -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-red-900/30 py-4">
