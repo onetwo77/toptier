@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopTier Discovery Commerce Summit 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --neon-red: #FF0050;
+            --neon-cyan: #00F2EA;
+            --gold: #FFD700;
+            --highlight-pink: #FF007F;
+        }
+
+        /* Optimized for high-contrast screenshots */
+        .gradient-border-red {
+            border: 1px solid transparent;
+            background: linear-gradient(black, black) padding-box,
+                        linear-gradient(45deg, var(--neon-red), #5a001c) border-box;
+        }
+        .gradient-border-cyan {
+            border: 1px solid transparent;
+            background: linear-gradient(black, black) padding-box,
+                        linear-gradient(45deg, var(--neon-cyan), #004d4a) border-box;
+        }
+        .gradient-border-gold {
+            border: 1px solid transparent;
+            background: linear-gradient(black, black) padding-box,
+                        linear-gradient(45deg, var(--gold), #7a6600) border-box;
+        }
+
+        section { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        
+        .speaker-bg {
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .speaker-card:hover .speaker-bg {
+            border-color: var(--neon-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(0, 242, 234, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans bg-black text-slate-50 selection:bg-[#FF0050] selection:text-white antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#333] py-2">
+        <div class="container mx-auto px-6 flex justify-center">
+            <a id="text-logo" class="font-bold text-lg tracking-tighter italic" href="/" target="_blank" rel="noopener noreferrer">
+                <span class="text-[#FF0050]">TopTier</span> <span class="text-white">League</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-16 pb-6 overflow-hidden text-center border-b border-zinc-900">
+        <div class="absolute top-0 right-0 w-[300px] h-[300px] bg-[#FF0050] rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-3xl md:text-5xl font-black mb-2 tracking-tight leading-[1.1]">
+                <span class="text-[#FF0050]">TopTier</span> <br/> 
+                <span class="text-[#00F2EA]">Discovery Commerce Summit 2026</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light text-gray-300 mb-4 uppercase tracking-widest">
+                Defining the <span class="text-[#00F2EA] font-semibold italic">Next E-commerce Era</span>
+            </p>
+            
+            <div class="inline-flex items-center bg-zinc-900 border border-zinc-700 rounded-full px-4 py-1 mb-4">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#FF0050] mr-2"></i>
+                <span class="text-white font-bold text-xs md:text-sm">April 14–15, 2026 | Los Angeles Convention Center</span>
+            </div>
+
+            <div class="max-w-2xl mx-auto border-t border-zinc-800 pt-3">
+                <p class="text-[10px] md:text-xs text-[#FFD700] uppercase tracking-[0.2em] font-black italic">
+                    The Best Meeting for The World's Top Players in The Discovery Commerce
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Event Grid -->
+    <section class="bg-zinc-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-4">
+                <h2 class="text-lg font-bold text-white mb-1">
+                    Dynamic Events in One Summit + <span class="text-[#FF0050]">Mega Exhibitions</span>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2.5 mb-5">
+                <div class="gradient-border-red rounded-lg p-3">
+                    <div class="text-[#FF0050] font-black text-[9px] uppercase mb-1">Summit</div>
+                    <h3 class="text-[11px] font-bold text-white leading-tight mb-1">Cutting-Edge Growth Summit - Sharing from Industry Pioneers</h3>
+                    <p class="text-[9px] text-gray-400 italic">9:30–17:00 | April 14</p>
+                </div>
+                <div class="gradient-border-cyan rounded-lg p-3">
+                    <div class="text-[#00F2EA] font-black text-[9px] uppercase mb-1">Mastermind</div>
+                    <h3 class="text-[11px] font-bold text-white leading-tight mb-1">TopTier Seller Mastermind</h3>
+                    <p class="text-[9px] text-gray-400 italic">9:30–12:30 | April 15</p>
+                </div>
+                <div class="gradient-border-cyan rounded-lg p-3">
+                    <div class="text-[#00F2EA] font-black text-[9px] uppercase mb-1">Workshop</div>
+                    <h3 class="text-[11px] font-bold text-white leading-tight mb-1">TikTok Shop Sparkling Workshop</h3>
+                    <p class="text-[9px] text-gray-400 italic">14:00–17:00 | April 15</p>
+                </div>
+                <div class="gradient-border-gold rounded-lg p-3">
+                    <div class="text-[#FFD700] font-black text-[9px] uppercase mb-1">VIP Only</div>
+                    <h3 class="text-[11px] font-bold text-white leading-tight mb-1">VIP Party</h3>
+                    <p class="text-[9px] text-gray-300 leading-tight">Valuable Direct Access to 100 Top Creators, 50 Top Operators</p>
+                </div>
+            </div>
+
+            <!-- Exhibition Banner -->
+            <div class="bg-[#FF007F] rounded-xl p-3.5 flex items-center justify-between shadow-[0_0_20px_rgba(255,0,127,0.25)]">
+                <div>
+                    <h3 class="text-lg font-black text-white italic uppercase leading-none">Two-day Exhibitions</h3>
+                    <p class="text-white text-[10px] font-bold opacity-90 mt-1">April 14-15</p>
+                </div>
+                <div class="bg-black/20 px-3 py-1 rounded-lg border border-white/20 text-right">
+                    <span class="text-white font-black text-xs block leading-none">12,000+ ATTENDEES</span>
+                    <span class="text-[8px] text-white/80 block uppercase mt-0.5 leading-none">Creators & Brands</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE CREATORS -->
+    <section class="bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-black text-center text-[#00F2EA] uppercase italic mb-4 tracking-wider">Feature Creators</h2>
+            <div class="max-w-4xl mx-auto rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900/50">
+                <img 
+                    src="https://drive.google.com/thumbnail?id=1ky4RY5CWJgPrB_85vDiS0FLMUz-VWusK&sz=w1000" 
+                    alt="Feature Creators" 
+                    class="w-full h-auto object-cover opacity-90"
+                    onerror="this.parentElement.innerHTML='<div class=\'py-20 text-center text-zinc-500 italic\'>Creator Network Preview Available Onsite</div>'"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- [UPDATED FRAME]: VIP PARTY with Highlighting -->
+    <section class="bg-zinc-950 border-y border-zinc-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-black text-center text-[#FFD700] uppercase italic mb-4 tracking-wider">VIP Party</h2>
+            <div class="max-w-4xl mx-auto rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900/50 mb-6">
+                <img 
+                    src="https://drive.google.com/thumbnail?id=1Rt4K3Q-sIRSXREYgijgbh32VH2MR56ql&sz=w1000" 
+                    alt="VIP Party" 
+                    class="w-full h-auto object-cover"
+                />
+            </div>
+            <div class="max-w-3xl mx-auto bg-black/40 p-6 rounded-2xl border border-zinc-800">
+                <p class="text-center text-gray-300 text-sm md:text-base leading-relaxed">
+                    An <span class="text-[#FFD700] font-bold">exclusive gathering of 150 VIP guests</span>, 
+                    providing <span class="text-[#00F2EA] font-bold italic">high-value, direct access</span> 
+                    to leading <span class="text-white font-bold underline decoration-[#FF0050]">creators, sellers, platform managers</span>, 
+                    and key <span class="text-[#FF007F] font-bold">ecosystem partners</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visionary Summit Speakers - LARGER SECTION -->
+    <section class="bg-black py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black text-center text-[#FF007F] uppercase italic mb-10 tracking-tighter">
+                Visionary Summit Speakers
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Speaker 1 -->
+                <div class="speaker-card group flex flex-col items-center text-center">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full speaker-bg border-2 border-zinc-800 flex flex-col items-center justify-center p-4 mb-4 shadow-xl">
+                        <span class="text-white text-sm md:text-base font-black leading-tight">Ricky Chung</span>
+                        <div class="w-8 h-[2px] bg-[#FF0050] my-2"></div>
+                        <span class="text-zinc-400 text-[10px] md:text-xs leading-tight uppercase tracking-widest font-bold">8-figure Seller</span>
+                    </div>
+                </div>
+                <!-- Speaker 2 -->
+                <div class="speaker-card group flex flex-col items-center text-center">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full speaker-bg border-2 border-zinc-800 flex flex-col items-center justify-center p-4 mb-4 shadow-xl">
+                        <span class="text-white text-sm md:text-base font-black leading-tight">Ziwei Chen</span>
+                        <div class="w-8 h-[2px] bg-[#00F2EA] my-2"></div>
+                        <span class="text-zinc-400 text-[10px] md:text-xs leading-tight uppercase tracking-widest font-bold">Accio AI</span>
+                    </div>
+                </div>
+                <!-- Speaker 3 -->
+                <div class="speaker-card group flex flex-col items-center text-center">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full speaker-bg border-2 border-zinc-800 flex flex-col items-center justify-center p-4 mb-4 shadow-xl">
+                        <span class="text-white text-sm md:text-base font-black leading-tight">Osama</span>
+                        <div class="w-8 h-[2px] bg-[#FFD700] my-2"></div>
+                        <span class="text-zinc-400 text-[10px] md:text-xs leading-tight uppercase tracking-widest font-bold">9-figure Seller</span>
+                    </div>
+                </div>
+                <!-- Speaker 4 -->
+                <div class="speaker-card group flex flex-col items-center text-center">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full speaker-bg border-2 border-zinc-800 flex flex-col items-center justify-center p-4 mb-4 shadow-xl">
+                        <span class="text-white text-sm md:text-base font-black leading-tight">Can Chan</span>
+                        <div class="w-8 h-[2px] bg-[#FF007F] my-2"></div>
+                        <span class="text-zinc-400 text-[10px] md:text-xs leading-tight uppercase tracking-widest font-bold">Founder, TT League</span>
+                    </div>
+                </div>
+                <!-- Speaker 5 -->
+                <div class="speaker-card group flex flex-col items-center text-center">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full speaker-bg border-2 border-zinc-800 flex flex-col items-center justify-center p-4 mb-4 shadow-xl">
+                        <span class="text-white text-sm md:text-base font-black leading-tight">Xavier Lee</span>
+                        <div class="w-8 h-[2px] bg-[#00F2EA] my-2"></div>
+                        <span class="text-zinc-400 text-[10px] md:text-xs leading-tight uppercase tracking-widest font-bold">Jumpstart Commerce</span>
+                    </div>
+                </div>
+                <!-- Speaker 6 -->
+                <div class="speaker-card group flex flex-col items-center text-center">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full speaker-bg border-2 border-zinc-800 flex flex-col items-center justify-center p-4 mb-4 shadow-xl">
+                        <span class="text-white text-sm md:text-base font-black leading-tight">Evike Chang</span>
+                        <div class="w-8 h-[2px] bg-[#FF0050] my-2"></div>
+                        <span class="text-zinc-400 text-[10px] md:text-xs leading-tight uppercase tracking-widest font-bold">9-figure Seller</span>
+                    </div>
+                </div>
+                <!-- Speaker 7 -->
+                <div class="speaker-card group flex flex-col items-center text-center">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full speaker-bg border-2 border-zinc-800 flex flex-col items-center justify-center p-4 mb-4 shadow-xl">
+                        <span class="text-white text-sm md:text-base font-black leading-tight">Ali Grey</span>
+                        <div class="w-8 h-[2px] bg-[#FFD700] my-2"></div>
+                        <span class="text-zinc-400 text-[10px] md:text-xs leading-tight uppercase tracking-widest font-bold">9-Figure Multi Brand Owner</span>
+                    </div>
+                </div>
+                <!-- Speaker 8 -->
+                <div class="speaker-card group flex flex-col items-center text-center">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full speaker-bg border-2 border-zinc-800 flex flex-col items-center justify-center p-4 mb-4 shadow-xl">
+                        <span class="text-white text-sm md:text-base font-black leading-tight">Tory Gregory</span>
+                        <div class="w-8 h-[2px] bg-[#FF007F] my-2"></div>
+                        <span class="text-zinc-400 text-[10px] md:text-xs leading-tight uppercase tracking-widest font-bold">Flippa, M&A Expert</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 flex justify-center">
+                <div class="px-6 py-2 bg-zinc-900/50 border border-zinc-800 rounded-full">
+                    <p class="text-zinc-500 text-xs uppercase tracking-[0.4em] font-black italic">
+                        + more speakers to be confirmed
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE BENEFITS -->
+    <section class="bg-zinc-950 border-t border-zinc-900">
+        <div class="container mx-auto px-6 max-w-4xl pt-6">
+            <h2 class="text-xl font-black text-center text-[#FFD700] mb-5 uppercase italic tracking-widest">Core Benefits</h2>
+            <div class="space-y-2.5">
+                <div class="bg-zinc-900/40 p-3 border-l-4 border-[#00F2EA]">
+                    <p class="text-[#00F2EA] text-xs font-bold leading-snug">
+                        Direct, in-person access to top creators — <span class="text-white font-normal opacity-90">saving hundreds of hours of outreach and coordination</span>
+                    </p>
+                </div>
+                <div class="bg-zinc-900/40 p-3 border-l-4 border-[#FF0050]">
+                    <p class="text-[#FF0050] text-xs font-bold leading-snug">
+                        High-level networking with leading operators — <span class="text-white font-normal opacity-90">across TikTok, Amazon, and DTC</span>
+                    </p>
+                </div>
+                <div class="bg-zinc-900/40 p-3 border-l-4 border-[#FFD700]">
+                    <p class="text-[#FFD700] text-xs font-bold leading-snug">
+                        Actionable insights — <span class="text-white font-normal opacity-90">into the most advanced growth and monetization strategies in the industry</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Footer -->
+    <footer class="pt-10 pb-12 bg-black text-center border-t border-zinc-900 relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF0050] via-[#FFD700] to-[#00F2EA]"></div>
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-black text-white mb-2 uppercase italic">Join the Industry’s <span class="text-[#00F2EA]">Top Minds</span></h2>
+            <p class="text-[11px] text-gray-500 mb-6 max-w-lg mx-auto leading-relaxed italic uppercase tracking-widest">Two powerful days of insight, collaboration, and innovation shaping the future of commerce.</p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+                <button class="flex-1 bg-white text-black px-6 py-3 rounded-md font-black text-[10px] tracking-wider uppercase shadow-lg">
+                    Summit Ticket
+                </button>
+                <button class="flex-1 bg-gradient-to-r from-[#FF0050] to-[#FF007F] text-white px-6 py-3 rounded-md font-black text-[10px] tracking-wider uppercase shadow-lg border border-white/10 ring-2 ring-[#FFD700]/30">
+                    Summit + VIP Party
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
