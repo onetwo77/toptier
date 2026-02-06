@@ -26,7 +26,7 @@
         /* 响应式 Glitch 字体：小屏大，大屏更大，但不遮挡 */
         .glitch-text {
             position: relative;
-            font-size: 8rem;
+            font-size: 13rem;
             /* 移动端默认 */
             font-weight: 900;
             line-height: 0.85;
@@ -38,7 +38,7 @@
 
         @media (min-width: 768px) {
             .glitch-text {
-                font-size: 13rem;
+                font-size: 14rem;
                 /* 桌面端稍微缩小一点上限，确保平衡 */
             }
         }
@@ -96,14 +96,14 @@
 <body class="font-sans antialiased">
 
     <!-- 顶部导航 -->
-    <nav class="absolute top-0 left-0 right-0 p-6 md:p-10 flex justify-center z-50 bg-black/10 backdrop-blur-sm">
+    <nav class="absolute top-0 left-0 right-0 p-3 md:p-4 flex justify-center z-50 bg-black/10 backdrop-blur-sm">
         <a id="text-logo" class="font-bold text-lg tracking-tighter italic" href="/" rel="noopener noreferrer">
             <span class="text-[#FF0050]">TopTier</span> <span class="text-white">League</span>
         </a>
     </nav>
 
     <!-- 主体内容 -->
-    <main class="flex-1 flex flex-col items-center justify-center text-center px-6 pt-32 md:pt-40 pb-10">
+    <main class="flex-1 flex flex-col items-center justify-center text-center px-6 pt-32 md:pt-20 pb-10">
         <!-- 错误代码 -->
         <div class="mb-10 md:mb-16 relative inline-block">
             <h1 class="glitch-text italic">404</h1>
