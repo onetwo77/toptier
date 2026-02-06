@@ -18,7 +18,6 @@
         body {
             background-color: black;
             color: white;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -91,36 +90,10 @@
             border-radius: 50%;
             z-index: -1;
         }
-
-        .scanline {
-            width: 100%;
-            height: 100px;
-            z-index: 10;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.03) 50%, rgba(0, 0, 0, 0) 100%);
-            opacity: 0.12;
-            position: absolute;
-            bottom: 100%;
-            animation: scanline 6s linear infinite;
-        }
-
-        @keyframes scanline {
-            0% {
-                bottom: 100%;
-            }
-
-            100% {
-                bottom: -100px;
-            }
-        }
     </style>
 </head>
 
 <body class="font-sans antialiased">
-    <div class="scanline"></div>
-
-    <!-- 背景装饰 -->
-    <div class="bg-glow top-0 -left-20"></div>
-    <div class="bg-glow bottom-0 -right-20" style="background: var(--neon-cyan);"></div>
 
     <!-- 顶部导航 -->
     <nav class="absolute top-0 left-0 right-0 p-6 md:p-10 flex justify-center z-50 bg-black/10 backdrop-blur-sm">
@@ -128,7 +101,6 @@
             <span class="text-[#FF0050]">TopTier</span> <span class="text-white">League</span>
         </a>
     </nav>
-
 
     <!-- 主体内容 -->
     <main class="flex-1 flex flex-col items-center justify-center text-center px-6 pt-32 md:pt-40 pb-10">
@@ -164,7 +136,7 @@
     </main>
 
     <!-- 底部装饰线 -->
-    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF0050] via-[#FFD700] to-[#00F2EA]"></div>
+    <div class="bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF0050] via-[#FFD700] to-[#00F2EA]" style="position: fixed; bottom: 0;"></div>
 
     <script>
         // 初始化 Lucide 图标
