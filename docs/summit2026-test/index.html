@@ -50,6 +50,44 @@
             box-shadow: 0 0 15px rgba(0, 242, 234, 0.2);
         }
     </style>
+    <script>
+        // 图片自动重试与降级
+        window.addEventListener('error', function (e) {
+            const target = e.target;
+
+            // 仅处理图片标签，且确保未被标记为“彻底失败”
+            if (target.tagName === 'IMG' && !target.dataset.failed) {
+                let retries = parseInt(target.dataset.retryCount || 0);
+                const maxRetries = 10; // 设定重试 10 次
+
+                if (retries < maxRetries) {
+                    target.dataset.retryCount = retries + 1;
+
+                    // 3秒后尝试刷新
+                    setTimeout(() => {
+                        const originalSrc = target.src.split('?')[0];
+                        // 添加时间戳强制跳过缓存
+                        target.src = originalSrc + '?retry=' + Date.now();
+                    }, 3000);
+                } else {
+                    // 超过10次后的最终处理：显示 Alt 文字
+                    target.dataset.failed = "true"; // 标记为失败，防止脚本继续运行
+
+                    // 创建一个漂亮的文字占位符代替裂图
+                    const altText = target.alt || "图片加载失败";
+                    const placeholder = document.createElement('div');
+
+                    // 继承原图的部分样式类，保持布局不乱
+                    placeholder.className = target.className + "py-20 text-center text-zinc-500 italic";
+                    placeholder.innerText = altText;
+
+                    // 替换掉原来的图片节点
+                    target.parentNode.replaceChild(placeholder, target);
+                }
+            }
+        }, true); // true 表示在捕获阶段拦截，这对于不冒泡的 error 事件至关重要
+
+    </script>
 </head>
 
 <body class="font-sans bg-black text-slate-50 selection:bg-[#FF0050] selection:text-white antialiased">
@@ -91,9 +129,9 @@
             </div>
 
             <div class="max-w-xl mx-auto rounded-xl overflow-hidden pt-3 bg-zinc-900/50">
-                <img src="image/TopTier_FastMoss_YooFinds_logo-removebg-preview.png" alt="Event Partners"
+                <img src="image/TopTier_FastMoss_YooFinds_logo-removebg-preview.png"
                     class="w-full h-auto object-cover opacity-90" style="width: 1161px; height: auto;"
-                    onerror="this.parentElement.innerHTML='<div class=\'py-20 text-center text-zinc-500 italic\'>Event Partners</div>'" />
+                    alt="Event Partners" />
             </div>
         </div>
     </header>
@@ -152,8 +190,8 @@
             <h2 class="text-2xl font-black text-center text-[#00F2EA] uppercase italic mb-4 tracking-wider">Feature
                 Creators</h2>
             <div class="max-w-4xl mx-auto rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900/50">
-                <img src="image/Ycon creators.png" alt="Feature Creators" class="w-full h-auto object-cover opacity-90"
-                    onerror="this.parentElement.innerHTML='<div class=\'py-20 text-center text-zinc-500 italic\'>Creator Network Preview Available Onsite</div>'" />
+                <img src="image/Ycon creators.png" class="w-full h-auto object-cover opacity-90"
+                    alt="Feature Creators" />
             </div>
         </div>
     </section>
@@ -164,7 +202,7 @@
             <h2 class="text-2xl font-black text-center text-[#FFD700] uppercase italic mb-4 tracking-wider">VIP Party
             </h2>
             <div class="max-w-4xl mx-auto rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900/50 mb-6">
-                <img src="image/Ycon VIP Dinner.png" alt="VIP Party" class="w-full h-auto object-cover" />
+                <img src="image/Ycon VIP Dinner.png" class="w-full h-auto object-cover" alt="VIP Party" />
             </div>
             <div class="max-w-3xl mx-auto bg-black/40 p-6 rounded-2xl border border-zinc-800">
                 <p class="text-center text-gray-300 text-sm md:text-base leading-relaxed">
