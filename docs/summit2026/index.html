@@ -1,74 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TopTier Discovery Commerce Summit 2026</title>
-    <!-- 使用固定版本号以确保生产环境稳定性 -->
-    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
-    <script src="https://unpkg.com/lucide@0.475.0"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
             --neon-red: #FF0050;
             --neon-cyan: #00F2EA;
             --gold: #FFD700;
             --highlight-pink: #FF007F;
+            --ios-safe-top: env(safe-area-inset-top);
+            --ios-safe-bottom: env(safe-area-inset-bottom);
         }
 
-        .gradient-border-red {
-            border: 1px solid transparent;
-            background: linear-gradient(black, black) padding-box,
-                        linear-gradient(45deg, var(--neon-red), #5a001c) border-box;
-        }
-        .gradient-border-cyan {
-            border: 1px solid transparent;
-            background: linear-gradient(black, black) padding-box,
-                        linear-gradient(45deg, var(--neon-cyan), #004d4a) border-box;
-        }
-        .gradient-border-gold {
-            border: 1px solid transparent;
-            background: linear-gradient(black, black) padding-box,
-                        linear-gradient(45deg, var(--gold), #7a6600) border-box;
+        /* Responsive Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
         }
 
-        section { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--neon-red); }
 
-        .btn-hover {
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .btn-hover:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
-        }
-
-        /* LIGHT EFFECTS ANIMATIONS */
-        @keyframes pulse-glow-pink {
-            0%, 100% { text-shadow: 0 0 10px rgba(255, 0, 127, 0.2), 0 0 20px rgba(255, 0, 127, 0.1); }
-            50% { text-shadow: 0 0 20px rgba(255, 0, 127, 0.8), 0 0 40px rgba(255, 0, 127, 0.4); }
-        }
-        @keyframes pulse-glow-gold {
-            0%, 100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.2), 0 0 20px rgba(255, 215, 0, 0.1); }
-            50% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4); }
-        }
-        @keyframes pulse-glow-cyan {
-            0%, 100% { text-shadow: 0 0 10px rgba(0, 242, 234, 0.2), 0 0 20px rgba(0, 242, 234, 0.1); }
-            50% { text-shadow: 0 0 20px rgba(0, 242, 234, 0.8), 0 0 40px rgba(0, 242, 234, 0.4); }
-        }
-        @keyframes pulse-glow-red {
-            0%, 100% { text-shadow: 0 0 10px rgba(255, 0, 80, 0.2), 0 0 20px rgba(255, 0, 80, 0.1); }
-            50% { text-shadow: 0 0 20px rgba(255, 0, 80, 0.8), 0 0 40px rgba(255, 0, 80, 0.4); }
-        }
-        @keyframes pulse-glow-white {
-            0%, 100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 0 0 15px rgba(255, 255, 255, 0.05); }
-            50% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.2); }
-        }
-
-        .glow-pink { animation: pulse-glow-pink 3s ease-in-out infinite; }
-        .glow-gold { animation: pulse-glow-gold 3s ease-in-out infinite; }
-        .glow-cyan { animation: pulse-glow-cyan 3s ease-in-out infinite; }
-        .glow-red { animation: pulse-glow-red 3s ease-in-out infinite; }
-        .glow-white { animation: pulse-glow-white 4s ease-in-out infinite; }
-
+        /* Typography Fluidity */
         .shimmer-text {
             background: linear-gradient(to right, #fff 20%, #FF0050 40%, #FF0050 60%, #fff 80%);
             background-size: 200% auto;
@@ -78,163 +43,261 @@
             -webkit-text-fill-color: transparent;
             animation: shine 4s linear infinite;
         }
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
         
-        .logo-center-glow {
-            filter: drop-shadow(0 0 20px rgba(255, 0, 80, 0.4));
+        @keyframes shine { to { background-position: 200% center; } }
+
+        /* Gradient Borders */
+        .gradient-border {
+            position: relative;
+            background: #000;
+            background-clip: padding-box;
+            border: 1px solid transparent;
+            border-radius: 0.75rem;
         }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+        }
+        .border-red::before { background: linear-gradient(45deg, var(--neon-red), #5a001c); }
+        .border-cyan::before { background: linear-gradient(45deg, var(--neon-cyan), #004d4a); }
+        .border-gold::before { background: linear-gradient(45deg, var(--gold), #7a6600); }
+
+        /* Animations */
+        @keyframes pulse-glow {
+            0%, 100% { filter: drop-shadow(0 0 5px currentColor) opacity(0.8); }
+            50% { filter: drop-shadow(0 0 20px currentColor) opacity(1); }
+        }
+        .glow-pink { color: var(--highlight-pink); animation: pulse-glow 3s infinite; }
+        .glow-gold { color: var(--gold); animation: pulse-glow 3s infinite; }
+        .glow-cyan { color: var(--neon-cyan); animation: pulse-glow 3s infinite; }
+        .glow-red { color: var(--neon-red); animation: pulse-glow 3s infinite; }
+
+        @keyframes live-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+        .live-dot {
+            box-shadow: 0 0 10px var(--neon-red);
+            animation: live-pulse 1.5s infinite;
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.01);
+            z-index: 10;
+        }
+
+        /* Media Logo Container */
+        .media-logo-card {
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .media-logo-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+            border-color: var(--neon-red);
+        }
+
+        /* Testimonial Styles */
+        .quote-icon {
+            opacity: 0.1;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            transform: scale(2);
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 380px) {
+            .hero-title { font-size: 2.5rem !important; }
+            .hero-subtitle { font-size: 1.25rem !important; }
+        }
+
+        /* Safari Flicker Fix */
+        .bg-black { -webkit-overflow-scrolling: touch; }
     </style>
 </head>
-<body class="font-sans bg-black text-slate-50 selection:bg-[#FF0050] selection:text-white antialiased">
+<body class="bg-black text-slate-50 font-sans selection:bg-[#FF0050] selection:text-white antialiased">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#333] py-2">
-        <div class="container mx-auto px-6 flex justify-center">
-            <a href="/" target="_blank" class="font-bold text-lg tracking-tighter italic hover:opacity-80 transition-opacity">
+    <nav class="fixed top-0 left-0 right-0 z-[100] bg-black/90 backdrop-blur-xl border-b border-zinc-800" style="padding-top: var(--ios-safe-top);">
+        <div class="container h-16 flex items-center justify-center">
+            <a href="https://toptierleague.com" target="_blank" class="font-bold text-xl tracking-tighter italic flex items-center gap-2">
                 <span class="text-[#FF0050]">TopTier</span> <span class="text-white">League</span>
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative pt-28 pb-12 overflow-hidden text-center border-b border-zinc-900">
-        <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-[#FF0050] rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
-        <div class="container mx-auto px-6 relative z-10 flex flex-col items-center">
-            
-            <div class="flex flex-col items-center justify-center mb-4">
-                <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none shimmer-text">
+    <header class="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden border-b border-zinc-900">
+        <div class="absolute top-0 right-[-10%] w-[60vw] h-[60vw] bg-[#FF0050] rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-[#00F2EA] rounded-full blur-[120px] opacity-5 pointer-events-none"></div>
+        
+        <div class="container relative z-10 text-center">
+            <div class="inline-block mb-6">
+                <h1 class="hero-title text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none shimmer-text uppercase">
                     TopTier
                 </h1>
-                <h2 class="text-3xl md:text-5xl font-black mt-2 tracking-tight leading-tight text-[#00F2EA]">
+                <h2 class="hero-subtitle text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mt-2 tracking-tight leading-tight text-[#00F2EA]">
                     Discovery Commerce Summit 2026
                 </h2>
             </div>
 
-            <p class="text-lg md:text-xl font-light text-gray-300 mb-8 uppercase tracking-widest">
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-zinc-400 mb-10 uppercase tracking-[0.2em] px-4">
                 Defining the <span class="text-[#00F2EA] font-semibold italic">Next E-commerce Era</span>
             </p>
             
-            <div class="inline-flex items-center bg-zinc-900 border border-zinc-700 rounded-full px-5 py-2 mb-8 shadow-xl">
-                <i data-lucide="calendar" class="w-4 h-4 text-[#FF0050] mr-2"></i>
-                <span class="text-white font-bold text-xs md:text-sm">April 14–15, 2026 | Los Angeles Convention Center</span>
+            <div class="inline-flex items-center bg-zinc-900/80 backdrop-blur border border-zinc-700 rounded-full px-6 py-3 mb-12 shadow-2xl max-w-full">
+                <i data-lucide="calendar" class="w-4 h-4 text-[#FF0050] mr-3 flex-shrink-0"></i>
+                <span class="text-white font-bold text-xs sm:text-sm md:text-base whitespace-nowrap overflow-hidden text-ellipsis">
+                    April 14–15, 2026 | Los Angeles Convention Center
+                </span>
             </div>
 
-            <div class="max-w-2xl mx-auto border-t border-zinc-800 pt-5">
-                <p class="text-[10px] md:text-xs text-[#FFD700] uppercase tracking-[0.25em] font-black italic">
+            <div class="max-w-xl mx-auto border-t border-zinc-800 pt-8 px-4">
+                <p class="text-[10px] sm:text-xs md:text-sm text-[#FFD700] uppercase tracking-[0.25em] font-black italic leading-loose">
                     The Premier Gathering for Global Leaders in Discovery Commerce
                 </p>
             </div>
         </div>
     </header>
 
-    <!-- Logo Section Divider -->
-    <div class="bg-black py-8 flex justify-center items-center">
+    <!-- Logo Section -->
+    <div class="bg-black py-12 flex justify-center items-center overflow-hidden">
         <img 
-            src="image/TopTier_FastMoss_YooFinds_logo-removebg-preview.png" 
+            src="https://drive.google.com/thumbnail?id=14vCFhO8kpQeztWo1kBlJoDayK5XRvYzb&sz=w500" 
             alt="TopTier League Logo" 
-            class="h-20 md:h-28 w-auto object-contain logo-center-glow"
+            class="h-20 sm:h-24 md:h-32 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,0,80,0.3)]"
         />
     </div>
 
     <!-- Dynamic Events Section -->
-    <section class="bg-zinc-950 py-12">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-6">
-                <h2 class="text-xl md:text-2xl font-bold text-white mb-1 uppercase tracking-wider italic glow-white">
+    <section class="bg-zinc-950 pt-12 lg:pt-24 pb-4">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-white mb-2 uppercase tracking-wider italic glow-white">
                     Dynamic Events in One Summit + <span class="text-[#FF0050]">Mega Exhibitions</span>
                 </h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-                <div class="gradient-border-red rounded-lg p-4">
-                    <div class="text-[#FF0050] font-black text-[10px] uppercase mb-1">Summit</div>
-                    <h3 class="text-[12px] font-bold text-white leading-tight mb-2">Cutting-Edge Growth Summit - Sharing from Industry Pioneers</h3>
-                    <p class="text-[10px] text-gray-400 italic">9:30–17:00 | April 14</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="gradient-border border-red p-6 card-hover">
+                    <div class="text-[#FF0050] font-black text-[10px] uppercase mb-2 tracking-widest">Summit</div>
+                    <h3 class="text-sm font-bold text-white leading-snug mb-3">Cutting-Edge Growth Summit - Sharing from Industry Pioneers</h3>
+                    <p class="text-[10px] text-zinc-500 italic mt-auto">9:30–17:00 | April 14</p>
                 </div>
-                <div class="gradient-border-cyan rounded-lg p-4">
-                    <div class="text-[#00F2EA] font-black text-[10px] uppercase mb-1">Mastermind</div>
-                    <h3 class="text-[12px] font-bold text-white leading-tight mb-2">TopTier Seller Mastermind</h3>
-                    <p class="text-[10px] text-gray-400 italic">9:30–12:30 | April 15</p>
+                <div class="gradient-border border-cyan p-6 card-hover">
+                    <div class="text-[#00F2EA] font-black text-[10px] uppercase mb-2 tracking-widest">Mastermind</div>
+                    <h3 class="text-sm font-bold text-white leading-snug mb-3">TopTier Seller Mastermind</h3>
+                    <p class="text-[10px] text-zinc-500 italic mt-auto">9:30–12:30 | April 15</p>
                 </div>
-                <div class="gradient-border-cyan rounded-lg p-4">
-                    <div class="text-[#00F2EA] font-black text-[10px] uppercase mb-1">Workshop</div>
-                    <h3 class="text-[12px] font-bold text-white leading-tight mb-2">TikTok Shop Sparkling Workshop - Insider tactics</h3>
-                    <p class="text-[10px] text-gray-400 italic">14:00–17:00 | April 15</p>
+                <div class="gradient-border border-cyan p-6 card-hover">
+                    <div class="text-[#00F2EA] font-black text-[10px] uppercase mb-1 tracking-widest">Workshop</div>
+                    <h3 class="text-sm font-bold text-white leading-snug mb-3">TikTok Shop Sparkling Workshop - Insider tactics</h3>
+                    <p class="text-[10px] text-zinc-500 italic mt-auto">14:00–17:00 | April 15</p>
                 </div>
-                <div class="gradient-border-gold rounded-lg p-4">
-                    <div class="text-[#FFD700] font-black text-[10px] uppercase mb-1">VIP Only</div>
-                    <h3 class="text-[12px] font-bold text-white leading-tight mb-2">Exclusive VIP Party</h3>
-                    <p class="text-[10px] text-gray-300 leading-tight">Valuable Direct Access to 100 Top Creators, 50 Top Operators</p>
+                <div class="gradient-border border-gold p-6 card-hover">
+                    <div class="text-[#FFD700] font-black text-[10px] uppercase mb-2 tracking-widest">VIP Only</div>
+                    <h3 class="text-sm font-bold text-white leading-snug mb-3 text-[#FFD700]">Exclusive VIP Party</h3>
+                    <p class="text-[11px] text-zinc-300 leading-relaxed">Valuable Direct Access to 100 Top Creators, 50 Top Operators</p>
                 </div>
             </div>
 
-            <!-- Exhibition Banner -->
-            <div class="bg-[#FF007F] rounded-xl p-5 flex flex-col md:flex-row items-center justify-between shadow-[0_0_30px_rgba(255,0,127,0.3)] border border-white/10">
-                <div class="text-center md:text-left mb-3 md:mb-0">
-                    <h3 class="text-xl font-black text-white italic uppercase leading-none">Two-day Mega Exhibitions</h3>
-                    <p class="text-white text-xs font-bold opacity-90 mt-1 uppercase tracking-widest">April 14-15 | All Access</p>
+            <div class="bg-gradient-to-r from-[#FF007F] to-[#FF0050] rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between shadow-2xl border border-white/10 gap-6">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl sm:text-3xl font-black text-white italic uppercase leading-none">Two-day Mega Exhibitions</h3>
+                    <p class="text-white/90 text-xs sm:text-sm font-bold mt-2 uppercase tracking-[0.2em]">April 14-15 | All Access Pass Required</p>
                 </div>
-                <div class="bg-black/20 px-4 py-2 rounded-lg border border-white/20 text-center md:text-right">
-                    <span class="text-white font-black text-sm block leading-none">12,000+ ATTENDEES</span>
-                    <span class="text-[9px] text-white/80 block uppercase mt-1 leading-none tracking-widest">Creators & Brands</span>
+                <div class="bg-black/20 backdrop-blur-sm px-6 py-4 rounded-xl border border-white/20 text-center min-w-[200px]">
+                    <span class="text-white font-black text-xl sm:text-2xl block leading-none">12,000+ ATTENDEES</span>
+                    <span class="text-[10px] text-white/70 block uppercase mt-1 tracking-widest font-bold">Industry Creators & Brands</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Visionary Summit Speakers -->
-    <section class="bg-black py-16">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-black text-center text-[#FF007F] uppercase italic mb-10 tracking-tighter glow-pink">
-                Visionary Summit Speakers
+    <!-- Join Summit CTA & Speakers Section -->
+    <section class="bg-black pt-12 pb-20">
+        <div class="container text-center">
+            <div class="mb-14">
+                <a 
+                    href="https://www.eventbrite.com/event/toptier-discovery-commerce-summit-tickets-2026" 
+                    target="_blank" 
+                    class="inline-flex items-center gap-3 bg-white text-black hover:bg-[#00F2EA] transition-colors duration-300 px-8 py-5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)] group"
+                >
+                    Join the summit
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#FF007F] uppercase italic mb-12 tracking-tighter glow-pink px-4 leading-[1.1]">
+                Visionary Speakers in Main Stage & Mastermind
             </h2>
-            <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl mb-6">
+            
+            <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl mb-6 group">
                 <img 
-                    src="image/Visionary Speakers.png" 
+                    src="https://drive.google.com/thumbnail?id=1Al6sdimjtDapAST20Ofz86BcjJqIlIX2&sz=w1200" 
                     alt="Visionary Summit Speakers" 
-                    class="w-full h-auto object-cover opacity-90"
+                    class="w-full h-auto object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
                 />
             </div>
-            <p class="text-xs md:text-sm font-bold text-[#FF0050] tracking-[0.2em] italic uppercase">
-                <i data-lucide="info" class="inline-block w-3 h-3 mr-1 align-middle"></i>
-                More speakers to be confirmed
-            </p>
+            <div class="flex justify-center items-center gap-2 text-zinc-400">
+                <i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
+                <p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">More speakers to be unveiled</p>
+            </div>
         </div>
     </section>
 
-    <!-- Feature Creators -->
-    <section class="bg-black py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-2xl md:text-4xl font-black text-center text-[#00F2EA] uppercase italic mb-8 tracking-wider glow-cyan">Feature Creators</h2>
-            <div class="max-w-4xl mx-auto rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900/50 shadow-2xl">
+    <!-- Creators Section -->
+    <section class="bg-black py-20">
+        <div class="container">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-12 tracking-wider glow-cyan">Feature Creators</h2>
+            <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 shadow-2xl mb-12">
                 <img 
-                    src="image/Ycon creators.png" 
+                    src="https://drive.google.com/thumbnail?id=1ky4RY5CWJgPrB_85vDiS0FLMUz-VWusK&sz=w1000" 
                     alt="Feature Creators" 
-                    class="w-full h-auto object-cover opacity-90"
+                    class="w-full h-auto object-cover"
                 />
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="p-[1px] rounded-3xl bg-gradient-to-r from-transparent via-[#FF0050] to-transparent">
+                    <div class="bg-zinc-950 px-6 py-10 sm:px-12 sm:py-12 rounded-[1.7rem] text-center">
+                        <p class="text-white text-base sm:text-xl lg:text-2xl font-bold leading-relaxed tracking-wide italic">
+                            <span class="live-dot inline-block w-3 h-3 rounded-full bg-[#FF0050] mr-3 align-middle"></span>
+                            Get in touch with <span class="text-[#FF0050]">high-performing TikTok creators</span> in person at the TopTier Discovery Commerce Summit and YFCon — <span class="text-[#00F2EA]">not just through texts on a screen.</span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- VIP Party -->
-    <section class="bg-zinc-950 border-y border-zinc-900 py-16 relative">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-black text-center text-[#FFD700] uppercase italic mb-8 tracking-widest glow-gold">
+    <section class="bg-zinc-950 py-20 border-y border-zinc-900">
+        <div class="container">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-center text-[#FFD700] uppercase italic mb-12 tracking-widest glow-gold">
                 VIP Party
             </h2>
-            <div class="max-w-4xl mx-auto rounded-3xl overflow-hidden border-4 border-zinc-900 bg-zinc-900/50 mb-10 shadow-2xl">
+            <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden border-4 border-zinc-900 mb-12 shadow-[0_0_50px_rgba(255,215,0,0.1)]">
                 <img 
-                    src="image/Ycon VIP Dinner.png" 
+                    src="https://drive.google.com/thumbnail?id=1Rt4K3Q-sIRSXREYgijgbh32VH2MR56ql&sz=w1200" 
                     alt="VIP Party" 
                     class="w-full h-auto object-cover"
                 />
             </div>
-            <div class="max-w-3xl mx-auto bg-black/40 p-8 rounded-3xl border border-zinc-800">
-                <p class="text-center text-gray-300 text-base md:text-lg leading-relaxed">
+            <div class="max-w-3xl mx-auto bg-black/60 p-8 sm:p-12 rounded-[2.5rem] border border-zinc-800 backdrop-blur-md">
+                <p class="text-center text-zinc-300 text-lg sm:text-xl leading-relaxed">
                     An <span class="text-[#FFD700] font-bold">exclusive gathering of 150 VIP guests</span>, 
                     providing <span class="text-[#00F2EA] font-bold italic">Valuable Direct Access to 100 Top Creators, 50 Top Operators</span>, 
-                    leading <span class="text-white font-bold underline decoration-[#FF0050] decoration-2">sellers, platform managers</span>, 
+                    leading <span class="text-white font-bold">sellers, platform managers</span>, 
                     and key <span class="text-[#FF007F] font-bold">ecosystem partners</span>.
                 </p>
             </div>
@@ -242,110 +305,271 @@
     </section>
 
     <!-- Who Attends -->
-    <section class="bg-black py-16 border-b border-zinc-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-12 tracking-wider glow-cyan">Who Attends</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800 text-center group hover:border-[#FF0050] transition-colors">
-                    <i data-lucide="users" class="w-10 h-10 text-[#FF0050] mx-auto mb-4"></i>
-                    <p class="text-zinc-300 font-bold uppercase text-sm italic">High-level eCommerce sellers across TikTok Shop, Amazon, and DTC</p>
+    <section class="bg-black py-20">
+        <div class="container">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-16 tracking-wider glow-cyan">Who Attends</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
+                    <i data-lucide="users" class="w-12 h-12 text-[#FF0050] mx-auto mb-6"></i>
+                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">High-level eCommerce sellers across TikTok Shop, Amazon, and DTC</p>
                 </div>
-                <div class="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800 text-center group hover:border-[#FF007F] transition-colors">
-                    <i data-lucide="users" class="w-10 h-10 text-[#FF007F] mx-auto mb-4"></i>
-                    <p class="text-zinc-300 font-bold uppercase text-sm italic">10,000+ creators attending the two-day exhibition</p>
+                <div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
+                    <i data-lucide="trending-up" class="w-12 h-12 text-[#FF007F] mx-auto mb-6"></i>
+                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">10,000+ creators attending the two-day exhibition</p>
                 </div>
-                <div class="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800 text-center group hover:border-[#FFD700] transition-colors">
-                    <i data-lucide="users" class="w-10 h-10 text-[#FFD700] mx-auto mb-4"></i>
-                    <p class="text-zinc-300 font-bold uppercase text-sm italic">Senior ecosystem partners and platform leaders</p>
+                <div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
+                    <i data-lucide="zap" class="w-12 h-12 text-[#FFD700] mx-auto mb-6"></i>
+                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">AI specialists, ecosystem partners and platform leaders</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Core Benefits -->
-    <section class="bg-black py-16">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h2 class="text-xl md:text-2xl font-black text-center text-[#FFD700] mb-10 uppercase italic tracking-[0.3em] glow-gold">Core Benefits</h2>
-            <div class="grid gap-4 text-left">
-                <div class="bg-zinc-900/40 p-5 border-l-4 border-[#00F2EA] rounded-r-xl">
-                    <p class="text-[#00F2EA] text-sm md:text-base font-bold leading-snug">
-                        Direct Access: <span class="text-white font-normal opacity-90 italic">Direct, in-person access to top creators — saving hundreds of hours of outreach and coordination.</span>
-                    </p>
+    <section class="bg-zinc-950 py-20">
+        <div class="container max-w-4xl">
+            <h2 class="text-2xl sm:text-3xl font-black text-center text-[#FFD700] mb-12 uppercase italic tracking-[0.4em] glow-gold">Core Benefits</h2>
+            <div class="space-y-4">
+                <div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#00F2EA] rounded-xl card-hover">
+                    <p class="text-[#00F2EA] text-base sm:text-lg font-black uppercase mb-1">Direct Access</p>
+                    <p class="text-white text-sm sm:text-base opacity-90 italic">Direct, in-person access to top creators — saving hundreds of hours of outreach and coordination.</p>
                 </div>
-                <div class="bg-zinc-900/40 p-5 border-l-4 border-[#FF0050] rounded-r-xl">
-                    <p class="text-[#FF0050] text-sm md:text-base font-bold leading-snug">
-                        Network Power: <span class="text-white font-normal opacity-90 italic">High-level networking with leading operators across TikTok, Amazon, and DTC.</span>
-                    </p>
+                <div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#FF0050] rounded-xl card-hover">
+                    <p class="text-[#FF0050] text-base sm:text-lg font-black uppercase mb-1">Network Power</p>
+                    <p class="text-white text-sm sm:text-base opacity-90 italic">High-level networking with leading operators across TikTok, Amazon, and DTC.</p>
                 </div>
-                <div class="bg-zinc-900/40 p-5 border-l-4 border-[#FFD700] rounded-r-xl">
-                    <p class="text-[#FFD700] text-sm md:text-base font-bold leading-snug">
-                        Intelligence: <span class="text-white font-normal opacity-90 italic">Actionable insights into the most advanced growth and monetization strategies in the industry.</span>
-                    </p>
+                <div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#FFD700] rounded-xl card-hover">
+                    <p class="text-[#FFD700] text-base sm:text-lg font-black uppercase mb-1">Intelligence</p>
+                    <p class="text-white text-sm sm:text-base opacity-90 italic">Actionable insights into the most advanced growth and monetization strategies in the industry.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- What We'll Explore -->
-    <section class="bg-zinc-950 py-20 border-t border-zinc-900">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-black italic uppercase mb-12 tracking-tighter glow-red">What We'll <span class="text-[#FF0050]">Explore</span></h2>
-            <div class="max-w-4xl mx-auto space-y-6 text-left">
-                <div class="flex items-center gap-6 p-6 bg-zinc-900/60 rounded-2xl border border-zinc-800 hover:border-[#FF0050] transition-all group">
-                    <div class="w-14 h-14 bg-[#FF0050]/20 text-[#FF0050] rounded-2xl flex-shrink-0 flex items-center justify-center font-black text-2xl group-hover:bg-[#FF0050] group-hover:text-white transition-colors">1</div>
-                    <h4 class="font-bold uppercase italic text-lg md:text-xl text-white tracking-wide">The future of discovery-driven commerce growth</h4>
+    <!-- Exploration Topics -->
+    <section class="bg-black py-24 border-t border-zinc-900">
+        <div class="container">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black italic uppercase text-center mb-16 tracking-tighter glow-red">
+                What We'll <span class="text-[#FF0050]">Explore</span>
+            </h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 gap-4">
+                <div class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF0050] transition-all group cursor-default">
+                    <div class="w-12 h-12 bg-[#FF0050]/10 text-[#FF0050] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF0050] group-hover:text-white transition-all duration-300">1</div>
+                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">The future of discovery-driven commerce growth</h4>
                 </div>
-                <div class="flex items-center gap-6 p-6 bg-zinc-900/60 rounded-2xl border border-zinc-800 hover:border-[#00F2EA] transition-all group">
-                    <div class="w-14 h-14 bg-[#00F2EA]/20 text-[#00F2EA] rounded-2xl flex-shrink-0 flex items-center justify-center font-black text-2xl group-hover:bg-[#00F2EA] group-hover:text-black transition-colors">2</div>
-                    <h4 class="font-bold uppercase italic text-lg md:text-xl text-white tracking-wide">Scaling brands in the creator and influencer economy</h4>
+                <div class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#00F2EA] transition-all group cursor-default">
+                    <div class="w-12 h-12 bg-[#00F2EA]/10 text-[#00F2EA] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#00F2EA] group-hover:text-black transition-all duration-300">2</div>
+                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">Scaling brands in the creator and influencer economy</h4>
                 </div>
-                <div class="flex items-center gap-6 p-6 bg-zinc-900/60 rounded-2xl border border-zinc-800 hover:border-[#FFD700] transition-all group">
-                    <div class="w-14 h-14 bg-[#FFD700]/20 text-[#FFD700] rounded-2xl flex-shrink-0 flex items-center justify-center font-black text-2xl group-hover:bg-[#FFD700] group-hover:text-black transition-colors">3</div>
-                    <h4 class="font-bold uppercase italic text-lg md:text-xl text-white tracking-wide">TikTok × Amazon × DTC ecosystem synergies</h4>
+                <div class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FFD700] transition-all group cursor-default">
+                    <div class="w-12 h-12 bg-[#FFD700]/10 text-[#FFD700] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FFD700] group-hover:text-black transition-all duration-300">3</div>
+                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">TikTok × Amazon × DTC ecosystem synergies</h4>
                 </div>
-                <div class="flex items-center gap-6 p-6 bg-zinc-900/60 rounded-2xl border border-zinc-800 hover:border-[#FF007F] transition-all group">
-                    <div class="w-14 h-14 bg-[#FF007F]/20 text-[#FF007F] rounded-2xl flex-shrink-0 flex items-center justify-center font-black text-2xl group-hover:bg-[#FF007F] group-hover:text-white transition-colors">4</div>
-                    <h4 class="font-bold uppercase italic text-lg md:text-xl text-white tracking-wide">AI-driven monetization and automation strategies</h4>
+                <div class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF007F] transition-all group cursor-default">
+                    <div class="w-12 h-12 bg-[#FF007F]/10 text-[#FF007F] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF007F] group-hover:text-white transition-all duration-300">4</div>
+                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">AI-driven monetization and automation strategies</h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="pt-16 pb-20 bg-black text-center border-t border-zinc-900 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF0050] via-[#FFD700] to-[#00F2EA]"></div>
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-6xl font-black text-white mb-4 uppercase italic tracking-tighter glow-cyan">Join the Industry’s <span class="text-[#00F2EA]">Top Minds</span></h2>
-            <p class="text-xs md:text-sm text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed italic uppercase tracking-[0.3em]">
+    <!-- Gallery Campaigns -->
+    <section id="campaigns" class="bg-black py-24 border-t border-zinc-900">
+        <div class="container text-center">
+            <h2 class="text-3xl sm:text-5xl font-black italic uppercase mb-16 tracking-tighter px-4 leading-tight">
+                PREVIOUS <span class="text-[#FFD700]">TOPTIER</span> & <span class="text-[#FF0050]">YFCON</span> CAMPAIGNS
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
+                <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://drive.google.com/thumbnail?id=1YDjmGXHF_PtlvqK5Vv7X7CNCARXW0qEB&sz=w800" alt="Mega Expo" class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                    <div class="p-6 bg-zinc-950 border-t border-zinc-800">
+                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Mega Expo</h4>
+                    </div>
+                </div>
+                <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://drive.google.com/thumbnail?id=1jUOXelgCG32zfyDZ09QsYxjugWXmpcxf&sz=w800" alt="Productive Meetings" class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                    <div class="p-6 bg-zinc-950 border-t border-zinc-800">
+                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Productive Meetings</h4>
+                    </div>
+                </div>
+                <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://drive.google.com/thumbnail?id=1_ck62I6pddeFys5_AMM4zvhWoipMRcbt&sz=w800" alt="YFCon Summit" class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                    <div class="p-6 bg-zinc-950 border-t border-zinc-800">
+                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">YFCon Summit</h4>
+                    </div>
+                </div>
+                <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://drive.google.com/thumbnail?id=1W0g3nZ1w7T7LJbiBl5WRr9zSJJPwtEtM&sz=w800" alt="TopTier Mastermind" class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                    <div class="p-6 bg-zinc-950 border-t border-zinc-800">
+                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">TopTier Mastermind</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Coverage Section -->
+    <section id="media-coverage" class="bg-zinc-950 py-24 border-t border-zinc-900">
+        <div class="container text-center">
+            <h2 class="text-3xl sm:text-5xl font-black italic uppercase mb-16 tracking-tighter px-4 leading-tight text-white">
+                Media <span class="text-[#FF0050]">Coverage</span>
+            </h2>
+            <p class="text-zinc-400 text-sm sm:text-base mb-12 italic tracking-widest uppercase">The YFCon was reported and recognized by leading global news outlets.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
+                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+                    <img src="https://drive.google.com/thumbnail?id=1fOwOAGEYcXazGGpLmVvx1-PT3uD7cs9t&sz=w400" alt="Yahoo Finance" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+                    <img src="https://drive.google.com/thumbnail?id=1KtfWmETQT5kasWaOuH-JfRKaTYk71vHT&sz=w400" alt="AP News" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+                    <img src="https://drive.google.com/thumbnail?id=1lt7TaWXUziQSM5sx84SUNLURWRDqnPJz&sz=w400" alt="Street Insider" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+                    <img src="https://drive.google.com/thumbnail?id=19b5WdGHWNockreTYz93jUvwiEj1Lr1PO&sz=w400" alt="The Globe and Mail" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+                    <img src="https://drive.google.com/thumbnail?id=1KWcwUrNkiz7rP2WppRIBa5i_AD57ELyk&sz=w400" alt="The Chronicle Journal" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+                    <img src="https://drive.google.com/thumbnail?id=1IG0zxm4Uw3qXKRvG4v0YbXSHJshopRoj&sz=w400" alt="Barchart" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+                    <img src="https://drive.google.com/thumbnail?id=1j3kuvrcLLTgjsM1bAJXzJTiklP8I1aLr&sz=w400" alt="CBS News" class="max-h-full max-w-full object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-black py-24 border-t border-zinc-900">
+        <div class="container">
+            <h2 class="text-3xl sm:text-5xl font-black italic uppercase text-center mb-16 tracking-tighter px-4 leading-tight text-white">
+                What Previous <span class="text-[#00F2EA]">Attendees</span> Are Saying
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
+                    <i data-lucide="quote" class="quote-icon text-[#FF0050]"></i>
+                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
+                        "Everything was great. Great group of peers to network with, liked the length of the format. Can did a great job introducing attendees to each other. Event not too big or small just the right size"
+                    </p>
+                    <div class="mt-auto pt-6 border-t border-zinc-800">
+                        <p class="text-white font-black uppercase text-xs tracking-widest">Ariana Pareja</p>
+                        <p class="text-[#FF0050] text-[10px] uppercase font-bold tracking-tighter mt-1">Cofounder, Mighty Minis</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
+                    <i data-lucide="quote" class="quote-icon text-[#00F2EA]"></i>
+                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
+                        "It's all about networking. Just one conversation can make the entire trip worth it."
+                    </p>
+                    <div class="mt-auto pt-6 border-t border-zinc-800">
+                        <p class="text-white font-black uppercase text-xs tracking-widest">Alex Bonilla</p>
+                        <p class="text-[#00F2EA] text-[10px] uppercase font-bold tracking-tighter mt-1">Founder, Pura Vida Moringa</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
+                    <i data-lucide="quote" class="quote-icon text-[#FFD700]"></i>
+                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
+                        "Highly recommended. I found the event to be exceptionally well-organized, with insightful speakers and valuable networking opportunities."
+                    </p>
+                    <div class="mt-auto pt-6 border-t border-zinc-800">
+                        <p class="text-white font-black uppercase text-xs tracking-widest">Ali Shahzad</p>
+                        <p class="text-[#FFD700] text-[10px] uppercase font-bold tracking-tighter mt-1">Rimal Global</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Tickets -->
+    <footer class="pt-24 pb-32 bg-zinc-950 text-center border-t border-zinc-900 relative overflow-hidden" style="padding-bottom: calc(5rem + var(--ios-safe-bottom));">
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#FF0050] via-[#FFD700] to-[#00F2EA]"></div>
+        
+        <div class="container px-6">
+            <h2 class="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 uppercase italic tracking-tighter px-4 leading-[0.9] glow-cyan">
+                Join the Industry’s <br class="hidden sm:block"> <span class="text-[#00F2EA]">Top Minds</span>
+            </h2>
+            <p class="text-xs sm:text-sm text-zinc-500 mb-16 max-w-2xl mx-auto leading-loose italic uppercase tracking-[0.4em] px-4">
                 Two powerful days of insight, collaboration, and innovation shaping the future of commerce.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto mb-16">
+            <div class="flex flex-col sm:flex-row gap-6 justify-center max-w-3xl mx-auto mb-20 px-4">
                 <a 
-                    href="https://www.eventbrite.com/e/top-tier-league-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator" 
+                    href="https://www.eventbrite.com/event/toptier-discovery-commerce-summit-tickets-2026" 
                     target="_blank" 
-                    class="btn-hover flex-1 bg-white text-black px-8 py-5 rounded-2xl font-black text-sm tracking-widest uppercase shadow-2xl text-center group"
+                    class="btn-hover flex-1 bg-white text-black px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl text-center group transition-all hover:ring-8 hover:ring-white/10"
                 >
-                    <span class="block text-[10px] opacity-60 mb-1">General Access</span>
-                    Summit Ticket <span class="block text-xl mt-1">$699</span>
+                    <span class="block text-[10px] opacity-60 mb-1 tracking-[0.2em]">General Access</span>
+                    <span class="block text-lg">Summit Ticket</span>
+                    <span class="block text-3xl mt-2 font-black">$699</span>
                 </a>
                 
                 <a 
-                    href="https://www.eventbrite.com/e/top-tier-league-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator" 
+                    href="https://www.eventbrite.com/event/toptier-discovery-commerce-summit-tickets-2026" 
                     target="_blank" 
-                    class="btn-hover flex-1 bg-gradient-to-r from-[#FF0050] to-[#FF007F] text-white px-8 py-5 rounded-2xl font-black text-sm tracking-widest uppercase shadow-2xl border border-white/10 ring-4 ring-[#FFD700]/20 text-center"
+                    class="btn-hover flex-1 bg-gradient-to-br from-[#FF0050] to-[#FF007F] text-white px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl border border-white/10 text-center ring-4 ring-[#FFD700]/20 hover:ring-8 transition-all"
                 >
-                    <span class="block text-[10px] opacity-80 mb-1 text-[#FFD700]">The Elite Experience</span>
-                    Summit + VIP Party <span class="block text-xl mt-1">$1999</span>
+                    <span class="block text-[10px] opacity-80 mb-1 text-[#FFD700] tracking-[0.2em]">The Elite Experience</span>
+                    <span class="block text-lg">Summit + VIP Party</span>
+                    <span class="block text-3xl mt-2 font-black">$1999</span>
                 </a>
             </div>
 
-            <p class="text-[10px] text-zinc-600 uppercase tracking-widest italic">© 2026 TopTier League • Los Angeles, California</p>
+            <div class="flex flex-col items-center gap-6 mb-16">
+                <p class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-[0.5em] font-black">Contact the Organizer</p>
+                <a 
+                    href="https://www.linkedin.com/in/can-chan-966a632b/" 
+                    target="_blank" 
+                    class="group flex items-center gap-4 px-8 py-4 bg-zinc-900/50 hover:bg-[#0077B5]/10 border border-zinc-800 hover:border-[#0077B5] rounded-full transition-all backdrop-blur-sm"
+                >
+                    <i data-lucide="linkedin" class="w-6 h-6 text-[#0077B5] group-hover:scale-110 transition-transform"></i>
+                    <span class="text-white text-xs sm:text-sm font-black uppercase tracking-widest">Connect with Can Chan</span>
+                </a>
+            </div>
+
+            <p class="text-[10px] text-zinc-700 uppercase tracking-[0.4em] italic font-bold">© 2026 TopTier League • Los Angeles, California</p>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
+
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
