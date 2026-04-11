@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -29,22 +27,10 @@
         }
 
         /* Modern Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #000;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--neon-red);
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--neon-red); }
 
         /* Typography Fluidity */
         .shimmer-text {
@@ -56,12 +42,8 @@
             -webkit-text-fill-color: transparent;
             animation: shine 4s linear infinite;
         }
-
-        @keyframes shine {
-            to {
-                background-position: 200% center;
-            }
-        }
+        
+        @keyframes shine { to { background-position: 200% center; } }
 
         /* Gradient Borders */
         .gradient-border {
@@ -71,96 +53,40 @@
             border: 1px solid transparent;
             border-radius: 0.75rem;
         }
-
         .gradient-border::before {
             content: '';
             position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            top: 0; right: 0; bottom: 0; left: 0;
             z-index: -1;
             margin: -1px;
             border-radius: inherit;
         }
-
-        .border-red::before {
-            background: linear-gradient(45deg, var(--neon-red), #5a001c);
-        }
-
-        .border-cyan::before {
-            background: linear-gradient(45deg, var(--neon-cyan), #004d4a);
-        }
-
-        .border-gold::before {
-            background: linear-gradient(45deg, var(--gold), #7a6600);
-        }
+        .border-red::before { background: linear-gradient(45deg, var(--neon-red), #5a001c); }
+        .border-cyan::before { background: linear-gradient(45deg, var(--neon-cyan), #004d4a); }
+        .border-gold::before { background: linear-gradient(45deg, var(--gold), #7a6600); }
 
         /* Animations */
         @keyframes pulse-glow {
-
-            0%,
-            100% {
-                filter: drop-shadow(0 0 5px currentColor) opacity(0.8);
-            }
-
-            50% {
-                filter: drop-shadow(0 0 20px currentColor) opacity(1);
-            }
+            0%, 100% { filter: drop-shadow(0 0 5px currentColor) opacity(0.8); }
+            50% { filter: drop-shadow(0 0 20px currentColor) opacity(1); }
         }
-
-        .glow-pink {
-            color: var(--highlight-pink);
-            animation: pulse-glow 3s infinite;
-        }
-
-        .glow-gold {
-            color: var(--gold);
-            animation: pulse-glow 3s infinite;
-        }
-
-        .glow-cyan {
-            color: var(--neon-cyan);
-            animation: pulse-glow 3s infinite;
-        }
-
-        .glow-red {
-            color: var(--neon-red);
-            animation: pulse-glow 3s infinite;
-        }
+        .glow-pink { color: var(--highlight-pink); animation: pulse-glow 3s infinite; }
+        .glow-gold { color: var(--gold); animation: pulse-glow 3s infinite; }
+        .glow-cyan { color: var(--neon-cyan); animation: pulse-glow 3s infinite; }
+        .glow-red { color: var(--neon-red); animation: pulse-glow 3s infinite; }
 
         @keyframes title-pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                text-shadow: 0 0 20px rgba(0, 242, 234, 0.4);
-            }
-
-            50% {
-                transform: scale(1.02);
-                text-shadow: 0 0 40px rgba(0, 242, 234, 0.8);
-            }
+            0%, 100% { transform: scale(1); text-shadow: 0 0 20px rgba(0, 242, 234, 0.4); }
+            50% { transform: scale(1.02); text-shadow: 0 0 40px rgba(0, 242, 234, 0.8); }
         }
-
         .animate-agenda-title {
             animation: title-pulse 4s ease-in-out infinite;
         }
 
         @keyframes live-pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.5;
-                transform: scale(1.2);
-            }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
         }
-
         .live-dot {
             box-shadow: 0 0 10px var(--neon-red);
             animation: live-pulse 1.5s infinite;
@@ -169,7 +95,6 @@
         .card-hover {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-
         .card-hover:hover {
             transform: translateY(-8px) scale(1.01);
             z-index: 10;
@@ -182,7 +107,6 @@
             transition: all 0.4s ease;
             height: 100%;
         }
-
         .speaker-card:hover {
             border-color: var(--highlight-pink);
             box-shadow: 0 10px 30px -10px rgba(255, 0, 127, 0.3);
@@ -201,7 +125,6 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-
         .media-logo-card:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
@@ -219,29 +142,20 @@
 
         /* Responsive Fixes */
         @media (max-width: 380px) {
-            .hero-title {
-                font-size: 2.5rem !important;
-            }
-
-            .hero-subtitle {
-                font-size: 1.25rem !important;
-            }
+            .hero-title { font-size: 2.5rem !important; }
+            .hero-subtitle { font-size: 1.25rem !important; }
         }
 
         /* Safari Flicker Fix */
-        .bg-black {
-            -webkit-overflow-scrolling: touch;
-        }
+        .bg-black { -webkit-overflow-scrolling: touch; }
     </style>
 </head>
-
 <body class="bg-black text-slate-50 font-sans selection:bg-[#FF0050] selection:text-white antialiased">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-[100] bg-black/90 backdrop-blur-xl border-b border-zinc-800"
-        style="padding-top: var(--ios-safe-top);">
+    <nav class="fixed top-0 left-0 right-0 z-[100] bg-black/90 backdrop-blur-xl border-b border-zinc-800" style="padding-top: var(--ios-safe-top);">
         <div class="container h-16 flex items-center justify-center">
-            <a href="/" target="_blank" class="font-bold text-xl tracking-tighter italic flex items-center gap-2">
+            <a href="https://toptierleague.com" target="_blank" class="font-bold text-xl tracking-tighter italic flex items-center gap-2">
                 <span class="text-[#FF0050]">TopTier</span> <span class="text-white">League</span>
             </a>
         </div>
@@ -249,42 +163,32 @@
 
     <!-- Hero Section -->
     <header class="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden border-b border-zinc-900">
-        <div
-            class="absolute top-0 right-[-10%] w-[60vw] h-[60vw] bg-[#FF0050] rounded-full blur-[120px] opacity-10 pointer-events-none">
-        </div>
-        <div
-            class="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-[#00F2EA] rounded-full blur-[120px] opacity-5 pointer-events-none">
-        </div>
-
+        <div class="absolute top-0 right-[-10%] w-[60vw] h-[60vw] bg-[#FF0050] rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-[#00F2EA] rounded-full blur-[120px] opacity-5 pointer-events-none"></div>
+        
         <div class="container relative z-10 text-center">
             <div class="inline-block mb-6">
-                <h1
-                    class="hero-title text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none shimmer-text uppercase">
+                <h1 class="hero-title text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none shimmer-text uppercase">
                     TopTier
                 </h1>
-                <h2
-                    class="hero-subtitle text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mt-2 tracking-tight leading-tight text-[#00F2EA]">
+                <h2 class="hero-subtitle text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mt-2 tracking-tight leading-tight text-[#00F2EA]">
                     Discovery Commerce Summit 2026
                 </h2>
             </div>
 
-            <p
-                class="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-zinc-400 mb-10 uppercase tracking-[0.2em] px-4">
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-zinc-400 mb-10 uppercase tracking-[0.2em] px-4">
                 Defining the <span class="text-[#00F2EA] font-semibold italic">Next E-commerce Era</span>
             </p>
-
-            <div
-                class="inline-flex items-center bg-zinc-900/80 backdrop-blur border border-zinc-700 rounded-full px-6 py-3 mb-12 shadow-2xl max-w-full">
+            
+            <div class="inline-flex items-center bg-zinc-900/80 backdrop-blur border border-zinc-700 rounded-full px-6 py-3 mb-12 shadow-2xl max-w-full">
                 <i data-lucide="calendar" class="w-4 h-4 text-[#FF0050] mr-3 flex-shrink-0"></i>
-                <span
-                    class="text-white font-bold text-xs sm:text-sm md:text-base whitespace-nowrap overflow-hidden text-ellipsis">
+                <span class="text-white font-bold text-xs sm:text-sm md:text-base whitespace-nowrap overflow-hidden text-ellipsis">
                     April 14–15 | Los Angeles Convention Center
                 </span>
             </div>
 
             <div class="max-w-xl mx-auto border-t border-zinc-800 pt-8 px-4">
-                <p
-                    class="text-[10px] sm:text-xs md:text-sm text-[#FFD700] uppercase tracking-[0.25em] font-black italic leading-loose">
+                <p class="text-[10px] sm:text-xs md:text-sm text-[#FFD700] uppercase tracking-[0.25em] font-black italic leading-loose">
                     The Premier Gathering for Global Leaders in Discovery Commerce
                 </p>
             </div>
@@ -294,124 +198,96 @@
     <!-- Logo Section -->
     <div class="bg-black py-12 flex flex-col items-center justify-center overflow-hidden">
         <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
-            <span class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-[0.4em] font-black italic">Hosted
-                by</span>
-            <img src="image/img_01.jpg"
-                alt="TopTier League Logo"
-                class="h-20 sm:h-24 md:h-28 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,0,80,0.3)]" />
+            <span class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-[0.4em] font-black italic">Hosted by</span>
+            <img 
+                src="https://drive.google.com/thumbnail?id=14vCFhO8kpQeztWo1kBlJoDayK5XRvYzb&sz=w500" 
+                alt="TopTier League Logo" 
+                class="h-20 sm:h-24 md:h-28 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,0,80,0.3)]"
+            />
         </div>
     </div>
 
     <!-- Dynamic Events Section -->
     <section class="bg-zinc-950 pt-16 lg:pt-32 pb-6 relative overflow-hidden">
-        <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none">
-        </div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div class="container relative z-10">
             <div class="text-center mb-16 px-4">
-                <h2
-                    class="animate-agenda-title text-2xl sm:text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter italic leading-none">
-                    <span
-                        class="bg-gradient-to-r from-[#00F2EA] via-white to-[#00F2EA] bg-clip-text text-transparent">Dynamic
-                        Agenda:</span>
+                <h2 class="animate-agenda-title text-2xl sm:text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter italic leading-none">
+                    <span class="bg-gradient-to-r from-[#00F2EA] via-white to-[#00F2EA] bg-clip-text text-transparent">Dynamic Agenda:</span>
                     <br class="sm:hidden">
                     <span class="text-white">TopTier Summit + YFCon Mega Expo</span>
                 </h2>
-                <div
-                    class="w-24 h-1 bg-gradient-to-r from-transparent via-[#00F2EA] to-transparent mx-auto mt-4 opacity-50">
-                </div>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-[#00F2EA] to-transparent mx-auto mt-4 opacity-50"></div>
             </div>
-
+            
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 <!-- Card 1 -->
-                <div
-                    class="gradient-border border-red p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
+                <div class="gradient-border border-red p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
                     <div class="flex justify-between items-start mb-4">
                         <div class="text-[#FF0050] font-black text-xs uppercase tracking-[0.2em]">Summit</div>
                         <i data-lucide="mic-2" class="w-5 h-5 text-[#FF0050]/50"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">Cutting-Edge Growth Summit -
-                        Sharing from Industry Pioneers</h3>
-                    <div
-                        class="mt-auto inline-flex items-center gap-2 bg-[#FF0050]/10 border border-[#FF0050]/20 px-3 py-1.5 rounded-lg">
+                    <h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">Cutting-Edge Growth Summit - Sharing from Industry Pioneers</h3>
+                    <div class="mt-auto inline-flex items-center gap-2 bg-[#FF0050]/10 border border-[#FF0050]/20 px-3 py-1.5 rounded-lg">
                         <i data-lucide="clock" class="w-4 h-4 text-[#FF0050]"></i>
                         <span class="text-xs font-black text-white uppercase italic">9:30–17:00 | April 14</span>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div
-                    class="gradient-border border-cyan p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
+                <div class="gradient-border border-cyan p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
                     <div class="flex justify-between items-start mb-4">
                         <div class="text-[#00F2EA] font-black text-xs uppercase tracking-[0.2em]">Mastermind</div>
                         <i data-lucide="brain-circuit" class="w-5 h-5 text-[#00F2EA]/50"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">TopTier Seller Mastermind
-                    </h3>
-                    <div
-                        class="mt-auto inline-flex items-center gap-2 bg-[#00F2EA]/10 border border-[#00F2EA]/20 px-3 py-1.5 rounded-lg">
+                    <h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">TopTier Seller Mastermind</h3>
+                    <div class="mt-auto inline-flex items-center gap-2 bg-[#00F2EA]/10 border border-[#00F2EA]/20 px-3 py-1.5 rounded-lg">
                         <i data-lucide="clock" class="w-4 h-4 text-[#00F2EA]"></i>
                         <span class="text-xs font-black text-white uppercase italic">9:30–12:30 | April 15</span>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div
-                    class="gradient-border border-cyan p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
+                <div class="gradient-border border-cyan p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
                     <div class="flex justify-between items-start mb-4">
                         <div class="text-[#00F2EA] font-black text-xs uppercase tracking-[0.2em]">Workshop</div>
                         <i data-lucide="lightbulb" class="w-5 h-5 text-[#00F2EA]/50"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">TikTok Shop Sparkling
-                        Workshop - Insider tactics</h3>
-                    <div
-                        class="mt-auto inline-flex items-center gap-2 bg-[#00F2EA]/10 border border-[#00F2EA]/20 px-3 py-1.5 rounded-lg">
+                    <h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">TikTok Shop Sparkling Workshop - Insider tactics</h3>
+                    <div class="mt-auto inline-flex items-center gap-2 bg-[#00F2EA]/10 border border-[#00F2EA]/20 px-3 py-1.5 rounded-lg">
                         <i data-lucide="clock" class="w-4 h-4 text-[#00F2EA]"></i>
                         <span class="text-xs font-black text-white uppercase italic">14:00–17:00 | April 15</span>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div
-                    class="gradient-border border-gold p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/40 backdrop-blur-md">
+                <div class="gradient-border border-gold p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/40 backdrop-blur-md">
                     <div class="flex justify-between items-start mb-4">
                         <div class="text-[#FFD700] font-black text-xs uppercase tracking-[0.2em]">VIP Only</div>
                         <i data-lucide="star" class="w-5 h-5 text-[#FFD700]/50"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-black text-[#FFD700] leading-tight mb-2 uppercase italic">
-                        Exclusive VIP Party</h3>
-                    <p class="text-[10px] text-white/60 uppercase tracking-widest font-bold mb-4">Top 1% creators &
-                        elite brands</p>
-                    <div
-                        class="mt-auto inline-flex items-center gap-2 bg-[#FFD700]/10 border border-[#FFD700]/20 px-3 py-1.5 rounded-lg">
+                    <h3 class="text-lg sm:text-xl font-black text-[#FFD700] leading-tight mb-2 uppercase italic">Exclusive VIP Party</h3>
+                    <p class="text-[10px] text-white/60 uppercase tracking-widest font-bold mb-4">Top 1% creators & elite brands</p>
+                    <div class="mt-auto inline-flex items-center gap-2 bg-[#FFD700]/10 border border-[#FFD700]/20 px-3 py-1.5 rounded-lg">
                         <i data-lucide="clock" class="w-4 h-4 text-[#FFD700]"></i>
-                        <span class="text-xs font-black text-white uppercase italic">from 20:00 | April 15</span>
+                        <span class="text-xs font-black text-white uppercase italic">from 18:30 | April 15</span>
                     </div>
                 </div>
             </div>
 
             <!-- Redesigned Mega Exhibition Callout -->
-            <div
-                class="bg-gradient-to-br from-[#FF007F] via-[#FF0050] to-[#990030] rounded-[2rem] p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between shadow-[0_20px_50px_rgba(255,0,80,0.3)] border border-white/20 gap-8 max-w-5xl mx-auto">
+            <div class="bg-gradient-to-br from-[#FF007F] via-[#FF0050] to-[#990030] rounded-[2rem] p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between shadow-[0_20px_50px_rgba(255,0,80,0.3)] border border-white/20 gap-8 max-w-5xl mx-auto">
                 <div class="text-center md:text-left">
-                    <div
-                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-[9px] font-black uppercase tracking-[0.3em] mb-4">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-[9px] font-black uppercase tracking-[0.3em] mb-4">
                         <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Flagship Event
                     </div>
-                    <h3
-                        class="text-2xl sm:text-3xl md:text-4xl font-black text-white italic uppercase leading-[0.95] tracking-tighter">
-                        Two-Day Mega <br class="hidden sm:block"> Exhibition</h3>
-                    <p class="text-white/80 text-[11px] sm:text-xs font-bold mt-4 uppercase tracking-[0.25em]">April
-                        14-15 | All Access Pass Required</p>
+                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-black text-white italic uppercase leading-[0.95] tracking-tighter">Two-Day Mega <br class="hidden sm:block"> Exhibition</h3>
+                    <p class="text-white/80 text-[11px] sm:text-xs font-bold mt-4 uppercase tracking-[0.25em]">April 14-15 | All Access Pass Required</p>
                 </div>
-                <div
-                    class="bg-black/30 backdrop-blur-md px-8 py-6 rounded-[1.5rem] border border-white/10 text-center min-w-[240px] shadow-2xl">
-                    <span
-                        class="text-white font-black text-2xl sm:text-3xl block leading-none tracking-tighter">12,000+</span>
-                    <span
-                        class="text-[10px] sm:text-xs text-white/90 block font-black uppercase mt-2 tracking-widest">EXPECTED
-                        ATTENDEES</span>
+                <div class="bg-black/30 backdrop-blur-md px-8 py-6 rounded-[1.5rem] border border-white/10 text-center min-w-[240px] shadow-2xl">
+                    <span class="text-white font-black text-2xl sm:text-3xl block leading-none tracking-tighter">12,000+</span>
+                    <span class="text-[10px] sm:text-xs text-white/90 block font-black uppercase mt-2 tracking-widest">EXPECTED ATTENDEES</span>
                 </div>
             </div>
         </div>
@@ -421,436 +297,381 @@
     <section class="bg-black pt-12 pb-20 overflow-hidden border-b border-zinc-900">
         <div class="container text-center">
             <div class="mb-14">
-                <a href="https://www.eventbrite.com/e/toptier-discovery-commence-summit-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator"
-                    target="_blank"
-                    class="inline-flex items-center gap-3 bg-white text-black hover:bg-[#00F2EA] transition-colors duration-300 px-8 py-5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)] group">
+                <a 
+                    href="https://www.eventbrite.com/e/toptier-discovery-commence-summit-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator" 
+                    target="_blank" 
+                    class="inline-flex items-center gap-3 bg-white text-black hover:bg-[#00F2EA] transition-colors duration-300 px-8 py-5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)] group"
+                >
                     Join the summit
                     <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                 </a>
             </div>
 
-            <h2
-                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#FF007F] uppercase italic mb-16 tracking-tighter glow-pink px-4 leading-[1.1]">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#FF007F] uppercase italic mb-16 tracking-tighter glow-pink px-4 leading-[1.1]">
                 VISIONARY SPEAKERS - SUMMIT STAGE, YFCON STAGE & MASTERMIND
             </h2>
 
             <!-- Speakers Grid -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto mb-16 px-2">
+                
+<!-- Aileen Zou -->
+                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+                        <img src="https://drive.google.com/thumbnail?id=1JHxgqVCnGq6Ubu0zqsM6UDyz9SVYCokO&sz=w600" alt="Aileen Zou" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+                        <h4 class="text-white font-black uppercase text-xs sm:text-sm"> Aileen Zou</h4>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Head of Global Key Accounts, Head of US Personal Care and Lifestyle Category, TikTok Shop</p>
+                    </div>
+                </div>
+
 
                 <!-- Mattia Miglio -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_02.jpg"
-                            alt="Mattia Miglio"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1DNvWf7MWw0NQYa_Gj4FaTp5zwuIOrG-N&sz=w600" alt="Mattia Miglio" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm"> Mattia Miglio</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Senior
-                            Director at Alibaba.com, Business Development & Partnerships</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Senior Director at Alibaba.com, Business Development & Partnerships</p>
                     </div>
                 </div>
 
                 <!-- Can Chan -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_03.jpg"
-                            alt="Can Chan"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1JCleG_LHNa8vl__z7MI9ReV3aDA_N6bl&sz=w600" alt="Can Chan" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Can Chan</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of TopTier League, Pioneering ecom seller community</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Founder of TopTier League, Pioneering ecom seller community</p>
                     </div>
                 </div>
 
                 <!-- Josh Hadley -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_04.jpg"
-                            alt="Josh Hadley"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1cUArs8hK6LUn-HOrUfiQ-7k3bXIVdmtJ&sz=w600" alt="Josh Hadley" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Josh Hadley</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">CEO,
-                            8-figure ecommerce business owner</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">CEO, 8-figure ecommerce business owner</p>
                     </div>
                 </div>
 
                 <!-- Muskaan Nanda -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_05.jpg"
-                            alt="Muskaan Nanda"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1WShVcomHB8yrOLxEoWT1BRsIHF3ZNMIP&sz=w600" alt="Muskaan Nanda" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Muskaan Nanda</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Director at GuruNanda, Top-Selling Oral Care Brand on TikTok Shop</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Director at GuruNanda, Top-Selling Oral Care Brand on TikTok Shop</p>
+                    </div>
+                </div>
+
+<!-- Chelsea Chen -->
+                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+                        <img src="https://drive.google.com/thumbnail?id=1EEtETrWSUa6pom2T8GBMChpcIDQH_UXe&sz=w600" alt="Chelsea Chen" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Chelsea Chen</h4>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">TikTok Shop Category Manager, Appliances & Virtual Goods</p>
                     </div>
                 </div>
 
                 <!-- Timothy Sanchez-Vega -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_06.jpg"
-                            alt="Timothy Sanchez-Vega"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1Y80zYGiPTXVSNn1MCJiehhu1HBVL1fOS&sz=w600" alt="Timothy Sanchez-Vega" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Timothy Sanchez-Vega</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$3M in
-                            GMV, 6M followers across platforms</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$3M in GMV, 6M followers across platforms</p>
                     </div>
                 </div>
 
                 <!-- Ricky Chung -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_07.jpg"
-                            alt="Ricky Chung"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=16dlxvchxOFtkXLyq6yvaBHx4YqSOJr9k&sz=w600" alt="Ricky Chung" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Ricky Chung</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Freshware, 8-figure Amazon seller</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Founder of Freshware, 8-figure Amazon seller</p>
                     </div>
                 </div>
 
                 <!-- Ashley Wright -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_08.jpg"
-                            alt="Ashley Wright"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1W-8dYdESL1-bAOaceKq5ArBh5RgMw9Ip&sz=w600" alt="Ashley Wright" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Ashley Wright</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder & CEO, Social Tale</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Founder & CEO, Social Tale</p>
                     </div>
                 </div>
 
                 <!-- Roger MZ Yin -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_09.jpg"
-                            alt="Roger MZ Yin"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1LA29nozKwib19pg-7lJWNangr5gUhY7p&sz=w600" alt="Roger MZ Yin" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Roger MZ Yin</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Co-Founder of HashMatrix, the SEO/GEO operator behind top brands</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Co-Founder of HashMatrix, the SEO/GEO operator behind top brands</p>
                     </div>
                 </div>
 
                 <!-- Alex Bonilla -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_10.jpg"
-                            alt="Alex Bonilla"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1qBnnk9Qq2CSY5JFkhdjHiGWl7hgfnq8s&sz=w600" alt="Alex Bonilla" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Alex Bonilla</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Owner/Founder of Delta Brands/Pura Vida Moringa</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Owner/Founder of Delta Brands/Pura Vida Moringa</p>
                     </div>
                 </div>
 
                 <!-- Andrew Erickson -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_11.jpg"
-                            alt="Andrew Erickson"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1zIVJzJWqCe6Cb2By6-lquaDNwEuKYgGT&sz=w600" alt="Andrew Erickson" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Andrew Erickson</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">two
-                            7-figure FBA brand exits</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">two 7-figure FBA brand exits</p>
                     </div>
                 </div>
 
                 <!-- Joey Glyshaw -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_12.jpg"
-                            alt="Joey Glyshaw"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=10RnNP4sTAxlvJ7g6hDC6gLn-quMcWXP6&sz=w600" alt="Joey Glyshaw" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Joey Glyshaw</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of ZonFlip, turning AI into real productivity for TikTok and Amazon</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Founder of ZonFlip, turning AI into real productivity for TikTok and Amazon</p>
                     </div>
                 </div>
 
                 <!-- Yibo Wei -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_13.jpg"
-                            alt="Yibo Wei"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1d01S9p7Y0VICzLzgG29_dXgE-_qRM3rz&sz=w600" alt="Yibo Wei" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Yibo Wei</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Co-founder of XLSEAFOOD & THINKPRO, Master of Rednote</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Co-founder of XLSEAFOOD & THINKPRO, Master of Rednote</p>
                     </div>
                 </div>
 
-                <!-- Brian Kelsey -->
+                <!-- Brian Kelsey (NEW) -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_14.jpg"
-                            alt="Brian Kelsey"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1oN-BKymygz_4IJHN5anpZo1pnATl4Gt6&sz=w600" alt="Brian Kelsey" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Brian Kelsey</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">8
-                            Figure Ecom Brand Owner, AI TikTok Posts with 20M Views/Month</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">8 Figure Ecom Brand Owner, AI TikTok Posts with 20M Views/Month</p>
                     </div>
                 </div>
 
-                <!-- Michelle Barnum Smith -->
+                <!-- Michelle Barnum Smith (NEW) -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_15.jpg"
-                            alt="Michelle Barnum Smith"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1FD1KX6cTr73qqWyau98FU9dwPc9viKvf&sz=w600" alt="Michelle Barnum Smith" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Michelle Barnum Smith</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Social Sellers, Award-winning Marketing Strategist</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Founder of Social Sellers, Award-winning Marketing Strategist</p>
                     </div>
                 </div>
-
+                
                 <!-- Mazen Bon -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_16.jpg"
-                            alt="Mazen Bon"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1wRgr90vzjle7HCxk2PHNnZywLKm2gU71&sz=w600" alt="Mazen Bon" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Mazen Bon</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Oudlash, $30M+ GMV fragrance brand on TikTok Shop</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Founder of Oudlash, $30M+ GMV fragrance brand on TikTok Shop</p>
                     </div>
                 </div>
 
                 <!-- Kaley -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_17.jpg"
-                            alt="Kaley"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1K_0KXFX1jDTfFwvg3Ph3892UupaYOViO&sz=w600" alt="Kaley" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Kaley (@curvefitacademy)</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1%
-                            TikTok Shop affiliate in Beauty & Personal Care</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1% TikTok Shop affiliate in Beauty & Personal Care</p>
                     </div>
                 </div>
 
                 <!-- Matt Kahla -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_18.jpg"
-                            alt="Matt Kahla"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1ztmdqwxNvhLmjR-5q0se8hsiIytq77qW&sz=w600" alt="Matt Kahla" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Matt Kahla</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$22M
-                            TikTok Shop GMV, Owner of MattKahla</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$22M TikTok Shop GMV, Owner of MattKahla</p>
                     </div>
                 </div>
 
                 <!-- Daniella Britt -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_19.jpg"
-                            alt="Daniella Britt"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1RSbjxwVJtXXufFRPD3a5uNDlmtZL5gfw&sz=w600" alt="Daniella Britt" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Daniella Britt</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$5.9M
-                            TikTok Shop GMV, Trusted by Top Global Brands</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$5.9M TikTok Shop GMV, Trusted by Top Global Brands</p>
                     </div>
                 </div>
 
                 <!-- Tinashe Chaponda -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_20.jpg"
-                            alt="Tinashe Chaponda"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1ld6nP-pl6wPgh2HMkWy-ZLeCYEya7nqz&sz=w600" alt="Tinashe Chaponda" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Tinashe Chaponda</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Forbes' 30 Under 30, Founder of Sosani Studios</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Forbes' 30 Under 30, Founder of Sosani Studios</p>
                     </div>
                 </div>
 
                 <!-- Melissa Vicendese -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_21.jpg"
-                            alt="Melissa Vicendese"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1_bginRij2Mw4_XpH-PIs8Q5gLpPCBRY1&sz=w600" alt="Melissa Vicendese" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Melissa Vicendese</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1%
-                            Affiliate, Content & communication expert</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1% Affiliate, Content & communication expert</p>
                     </div>
                 </div>
 
-                <!-- Janine Mora -->
+<!-- Thomas Ruster -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_22.jpg"
-                            alt="Janine Mora"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1LSvslOQX81piAtUsr_vQ1OyYJ01RJnkX&sz=w600" alt="Thomas Ruster" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Thomas Ruster</h4>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">The creator of 3rd and Pearl, $4M+ GMV on TikTok Shop</p>
+                    </div>
+                </div>
+
+<!-- Janine Mora -->
+                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+                        <img src="https://drive.google.com/thumbnail?id=1Vqv6S1Vg7u4tFDDVh3s_PzqsAcf1uK70&sz=w600" alt="Janine Mora" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Janine Mora</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1%
-                            affiliate, High-Converting Content Expert</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1% affiliate, High-Converting Content Expert</p>
                     </div>
                 </div>
 
-                <!-- Candi Osuna -->
+<!-- Candi Osuna -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_23.jpg"
-                            alt="Candi Osuna"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=168AdooUBOxL_RNWolQ2Mj0vIbacpjbkz&sz=w600" alt="Candi Osuna" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Candi Osuna</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top
-                            TikTok Shop Creator in Mexico</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top TikTok Shop Creator in Mexico</p>
                     </div>
                 </div>
 
-                <!-- Lawrence Tope -->
+<!-- Lawrence Tope -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_24.jpg"
-                            alt="Lawrence Tope"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1vNn7evnssaEq7_vdYpi2bo4hofbYlQrd&sz=w600" alt="Lawrence Tope" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Lawrence Tope</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top
-                            Industry MC, Marketing Director at AdTiger</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top Industry MC, Marketing Director at AdTiger</p>
                     </div>
                 </div>
 
                 <!-- Janel -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_25.jpg"
-                            alt="Janel"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1ZLL3-ukzDbTg7g5lefkIEbI5BgFi7xOn&sz=w600" alt="Janel" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Janel (@janelmcqueen)</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Fashion affiliate who drove $4.2M GMV in 2025</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Fashion affiliate who drove $4.2M GMV in 2025</p>
                     </div>
                 </div>
 
                 <!-- Marquis Jackson -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_26.jpg"
-                            alt="Marquis Jackson"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1o-GxD3FFknluP-yac4qx4Af1ADIvSeez&sz=w600" alt="Marquis Jackson" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Marquis Jackson</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Co-owner of BetterBrand, Top 150 all-time TikTok revenue brand</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Co-owner of BetterBrand, Top 150 all-time TikTok revenue brand</p>
                     </div>
                 </div>
 
                 <!-- Ayanna Sabrina -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_27.jpg"
-                            alt="Ayanna Sabrina"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=11xUQrdTRvpeCu9J3NhxRBTV7bFlWDzzl&sz=w600" alt="Ayanna Sabrina" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Ayanna Sabrina (@ayannasabrina)
-                        </h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top
-                            TikTok Beauty Creator $7M+ GMV</p>
+                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Ayanna Sabrina (@ayannasabrina)</h4>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top TikTok Beauty Creator $7M+ GMV</p>
                     </div>
                 </div>
 
                 <!-- Victoria Prince -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_28.jpg"
-                            alt="Victoria Prince"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1CcEVFNSYLDr-LWG3x3Ha9nRK0uUlmCle&sz=w600" alt="Victoria Prince" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Victoria Prince (@vprincemusic)
-                        </h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Kawela Skin, fashion & beauty creator, $6.7M+ GMV</p>
+                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Victoria Prince (@vprincemusic)</h4>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Founder of Kawela Skin, fashion & beauty creator, $6.7M+ GMV</p>
                     </div>
                 </div>
 
                 <!-- Lexie Heckman -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_29.jpg"
-                            alt="Lexie Heckman"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=140R9POFLdJ5MdCTTYjEqzlN-m3SgmI_g&sz=w600" alt="Lexie Heckman" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Lexie Heckman</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Beauty
-                            and fitness creator, $3M+ GMV</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Beauty and fitness creator, $3M+ GMV</p>
                     </div>
                 </div>
 
                 <!-- Amber Ulrey -->
                 <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
                     <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="image/img_30.jpg"
-                            alt="Amber Ulrey"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+                        <img src="https://drive.google.com/thumbnail?id=1IhefqTzzsPapJ3OD_5gf5nZJ4UU8V_SW&sz=w600" alt="Amber Ulrey" class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
                     </div>
                     <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
                         <h4 class="text-white font-black uppercase text-xs sm:text-sm">Amber Ulrey</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top
-                            TikTok Shop creator with $13M GMV, focused on conversion</p>
+                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top TikTok Shop creator with $13M GMV, focused on conversion</p>
                     </div>
                 </div>
 
             </div>
-
+            
             <div class="flex justify-center items-center gap-2 text-zinc-400">
                 <i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
-                <p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">More speakers to be
-                    unveiled</p>
+                <p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">More speakers to be unveiled</p>
             </div>
         </div>
     </section>
@@ -858,24 +679,20 @@
     <!-- Creators Section -->
     <section class="bg-black py-20 border-b border-zinc-900">
         <div class="container">
-            <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-12 tracking-wider glow-cyan">
-                Featured Creators</h2>
-            <div
-                class="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 shadow-2xl mb-12">
-                <img src="image/img_31.jpg"
-                    alt="Featured Creators" class="w-full h-auto object-cover" />
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-12 tracking-wider glow-cyan">Featured Creators</h2>
+            <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 shadow-2xl mb-12">
+                <img 
+                    src="https://drive.google.com/thumbnail?id=1ky4RY5CWJgPrB_85vDiS0FLMUz-VWusK&sz=w1000" 
+                    alt="Featured Creators" 
+                    class="w-full h-auto object-cover"
+                />
             </div>
             <div class="max-w-3xl mx-auto">
                 <div class="p-[1px] rounded-3xl bg-gradient-to-r from-transparent via-[#FF0050] to-transparent">
                     <div class="bg-zinc-950 px-6 py-10 sm:px-12 sm:py-12 rounded-[1.7rem] text-center">
-                        <p
-                            class="text-white text-base sm:text-xl lg:text-2xl font-bold leading-relaxed tracking-wide italic">
-                            <span
-                                class="live-dot inline-block w-3 h-3 rounded-full bg-[#FF0050] mr-3 align-middle"></span>
-                            Get in touch with <span class="text-[#FF0050]">high-performing TikTok creators</span> in
-                            person at the TopTier Discovery Commerce Summit and YFCon — <span class="text-[#00F2EA]">not
-                                just through texts on a screen.</span>
+                        <p class="text-white text-base sm:text-xl lg:text-2xl font-bold leading-relaxed tracking-wide italic">
+                            <span class="live-dot inline-block w-3 h-3 rounded-full bg-[#FF0050] mr-3 align-middle"></span>
+                            Get in touch with <span class="text-[#FF0050]">high-performing TikTok creators</span> in person at the TopTier Discovery Commerce Summit and YFCon — <span class="text-[#00F2EA]">not just through texts on a screen.</span>
                         </p>
                     </div>
                 </div>
@@ -886,25 +703,23 @@
     <!-- VIP Party Section -->
     <section class="bg-zinc-950 py-20 border-b border-zinc-900">
         <div class="container">
-            <h2
-                class="text-4xl sm:text-5xl md:text-6xl font-black text-center text-[#FFD700] uppercase italic mb-12 tracking-widest glow-gold">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-center text-[#FFD700] uppercase italic mb-12 tracking-widest glow-gold">
                 VIP Party
             </h2>
-            <div
-                class="max-w-5xl mx-auto rounded-3xl overflow-hidden border-4 border-zinc-900 mb-12 shadow-[0_0_50px_rgba(255,215,0,0.1)]">
-                <img src="image/img_32.jpg"
-                    alt="VIP Party" class="w-full h-auto object-cover" />
+            <div class="max-w-5xl mx-auto rounded-3xl overflow-hidden border-4 border-zinc-900 mb-12 shadow-[0_0_50px_rgba(255,215,0,0.1)]">
+                <img 
+                    src="https://drive.google.com/thumbnail?id=1Rt4K3Q-sIRSXREYgijgbh32VH2MR56ql&sz=w1200" 
+                    alt="VIP Party" 
+                    class="w-full h-auto object-cover"
+                />
             </div>
-            <div
-                class="max-w-3xl mx-auto bg-black/60 p-8 sm:p-12 rounded-[2.5rem] border border-zinc-800 backdrop-blur-md">
+            <div class="max-w-3xl mx-auto bg-black/60 p-8 sm:p-12 rounded-[2.5rem] border border-zinc-800 backdrop-blur-md">
                 <div class="text-center">
-                    <p class="text-[#FFD700] font-black text-lg mb-2 tracking-[0.3em] uppercase">from 20:00 | April 15
-                    </p>
+                    <p class="text-[#FFD700] font-black text-lg mb-2 tracking-[0.3em] uppercase">from 18:30 | April 15</p>
                     <p class="text-zinc-300 text-lg sm:text-xl leading-relaxed">
-                        An <span class="text-[#FFD700] font-bold">exclusive gathering of 150 VIP guests</span>,
-                        providing <span class="text-[#00F2EA] font-bold italic">Valuable Direct Access to 100 Top
-                            Creators, 50 Top Operators</span>,
-                        leading <span class="text-white font-bold">sellers, platform managers</span>,
+                        An <span class="text-[#FFD700] font-bold">exclusive gathering of 150 VIP guests</span>, 
+                        providing <span class="text-[#00F2EA] font-bold italic">Valuable Direct Access to 100 Top Creators, 50 Top Operators</span>, 
+                        leading <span class="text-white font-bold">sellers, platform managers</span>, 
                         and key <span class="text-[#FF007F] font-bold">ecosystem partners</span>.
                     </p>
                 </div>
@@ -912,240 +727,176 @@
         </div>
     </section>
 
-    <!-- VIP Party Section -->
+<!-- VIP Party Section -->
     <section class="bg-black pt-12 pb-20 overflow-hidden border-b border-zinc-900">
         <div class="container text-center">
             <div class="mb-14">
-                <a href="https://www.eventbrite.com/e/toptier-discovery-commence-summit-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator"
-                    target="_blank"
-                    class="inline-flex items-center gap-3 bg-white text-black hover:bg-[#00F2EA] transition-colors duration-300 px-8 py-5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)] group">
+                <a 
+                    href="https://www.eventbrite.com/e/toptier-discovery-commence-summit-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator" 
+                    target="_blank" 
+                    class="inline-flex items-center gap-3 bg-white text-black hover:bg-[#00F2EA] transition-colors duration-300 px-8 py-5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)] group"
+                >
                     Join the summit
                     <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
                 </a>
             </div>
 
-            <!-- Event Agenda Section -->
-            <section class="bg-black py-24 border-b border-zinc-900 overflow-hidden relative">
-                <!-- Background Accents -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-[#FF0050] rounded-full blur-[120px] opacity-10"></div>
-                <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#00F2EA] rounded-full blur-[120px] opacity-10"></div>
+    <!-- Event Agenda Section -->
+    <section class="bg-black py-24 border-b border-zinc-900 overflow-hidden relative">
+        <!-- Background Accents -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-[#FF0050] rounded-full blur-[120px] opacity-10"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#00F2EA] rounded-full blur-[120px] opacity-10"></div>
 
-                <div class="container relative z-10">
-                    <h2
-                        class="text-4xl sm:text-6xl font-black text-center mb-20 tracking-tighter italic uppercase text-white">
-                        Event <span class="text-[#FF0050]">Agenda</span>
-                    </h2>
+        <div class="container relative z-10">
+            <h2 class="text-4xl sm:text-6xl font-black text-center mb-20 tracking-tighter italic uppercase text-white">
+                Event <span class="text-[#FF0050]">Agenda</span>
+            </h2>
 
-                    <!-- April 13 -->
-                    <div class="max-w-4xl mx-auto">
-                        <div class="flex items-center gap-4 mb-10">
-                            <div
-                                class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
-                                April 13
-                            </div>
-                            <div class="h-[2px] flex-1 bg-gradient-to-r from-[#00F2EA] to-transparent"></div>
-                        </div>
-
-                        <div class="text-left mb-8 px-4">
-                            <h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">
-                                Pre-Event: TikTok Shop HQ Tour & Talk</h3>
-                            <p
-                                class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">
-                                14:00 – 16:00</p>
-                        </div>
-
-                        </h2>
-                        <p
-                            class="text-white text-base sm:text-xl font-bold mb-12 italic max-w-3xl mx-auto leading-relaxed">
-                            Enjoy a meaningful office tour at TikTok Shop, along with a closed-door sharing session and
-                            networking with speakers and all-access pass holders.
-                        </p>
-
-                        <div class="flex justify-center items-center gap-2 text-zinc-400">
-                            <i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
-                            <p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">Note: RSVP
-                                required due to limited capacity. </p>
-                        </div>
+            <!-- April 13 -->
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
+                        April 13
                     </div>
-            </section>
+                    <div class="h-[2px] flex-1 bg-gradient-to-r from-[#00F2EA] to-transparent"></div>
+                </div>
+
+<div class="text-left mb-8 px-4">
+                    <h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">Pre-Event: TikTok Shop HQ Tour & Talk</h3>
+                    <p class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">14:00 – 16:00</p>
+                </div>
+
+</h2>
+            <p class="text-white text-base sm:text-xl font-bold mb-12 italic max-w-3xl mx-auto leading-relaxed">
+            Enjoy a meaningful office tour at TikTok Shop, along with a closed-door sharing session and networking with speakers and all-access pass holders.
+            </p>
+
+<div class="flex justify-center items-center gap-2 text-zinc-400">
+                <i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
+                <p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">Note: RSVP required due to limited capacity. </p>
+            </div>
+        </div>
+</section>
 
 
             <!-- April 14 -->
             <div class="max-w-4xl mx-auto mb-20">
                 <div class="flex items-center gap-4 mb-10">
-                    <div
-                        class="bg-[#FF0050] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(255,0,80,0.4)]">
+                    <div class="bg-[#FF0050] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(255,0,80,0.4)]">
                         April 14
                     </div>
                     <div class="h-[2px] flex-1 bg-gradient-to-r from-[#FF0050] to-transparent"></div>
                 </div>
-
+                
                 <div class="text-left mb-8 px-4">
-                    <h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">Cutting-Edge
-                        Growth Summit</h3>
-                    <p class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">
-                        Summit Stage</p>
+                    <h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">Cutting-Edge Growth Summit</h3>
+                    <p class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">Summit Stage</p>
                 </div>
 
                 <!-- Timeline April 14 -->
                 <div class="space-y-4 px-2">
                     <!-- Row 1 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            9:30</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">9:30</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Grand
-                                opening</h4>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Grand opening</h4>
                         </div>
                     </div>
                     <!-- Row 2 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            9:40-9:50</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">9:40-9:50</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">
-                                Opening speech: 5X Growth with TikTok & AI</h4>
-                            <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Can Chan</p>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Opening speech: The Next Wave of Commerce: How Brands Win on TikTok Shop</h4>
+                            <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Aileen Zou</p>
                         </div>
                     </div>
                     <!-- Row 3 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            9:50-10:25</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">9:50-10:25</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How
-                                Brands Win Big on TikTok Shop: The New Playbook</h4>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How Brands Win Big on TikTok Shop: The New Playbook</h4>
                             <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Muskaan Nanda</p>
                         </div>
                     </div>
                     <!-- Row 4 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            10:25-11:00</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">10:25-11:00</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The
-                                Golden Tips of a Brand Cold Start on TikTok Shop</h4>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The Golden Tips of a Brand Cold Start on TikTok Shop</h4>
                             <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Alex Bonilla</p>
                         </div>
                     </div>
                     <!-- Row 5 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            11:00-11:35</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">11:00-11:35</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How to
-                                Make AI (ChatGPT, Perplexity) Recommend Your Brand</h4>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How to Make AI (ChatGPT, Perplexity) Recommend Your Brand</h4>
                             <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Roger Yin</p>
                         </div>
                     </div>
                     <!-- Row 6 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-[#FF007F]/30 hover:border-[#FF007F]/60 transition-all shadow-[0_0_15px_rgba(255,0,127,0.1)]">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF007F] font-black text-sm text-center sm:min-w-[120px]">
-                            11:35-12:00</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-[#FF007F]/30 hover:border-[#FF007F]/60 transition-all shadow-[0_0_15px_rgba(255,0,127,0.1)]">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF007F] font-black text-sm text-center sm:min-w-[120px]">11:35-12:00</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">AMA
-                                with Top 1% Affiliate: Building Strong Brands Through High-Performing Creator Content
-                            </h4>
-                            <p class="text-[#FF007F] font-bold text-xs uppercase tracking-widest mt-1">Daniella Britt,
-                                Janine Mora & Brand Operators</p>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">AMA with Top 1% Affiliate: Building Strong Brands Through High-Performing Creator Content</h4>
+                            <p class="text-[#FF007F] font-bold text-xs uppercase tracking-widest mt-1">Daniella Britt, Thomas Ruster, Janine Mora & Brand Operators</p>
                         </div>
                     </div>
                     <!-- Lunch -->
                     <div class="flex items-center gap-4 py-8">
                         <div class="h-[1px] flex-1 bg-zinc-800"></div>
-                        <div
-                            class="flex items-center gap-3 text-zinc-500 uppercase font-black text-[10px] tracking-[0.4em] italic">
+                        <div class="flex items-center gap-3 text-zinc-500 uppercase font-black text-[10px] tracking-[0.4em] italic">
                             <i data-lucide="utensils" class="w-4 h-4"></i>
                             Lunch Break & Exhibition Visit (12:00-14:00)
                         </div>
                         <div class="h-[1px] flex-1 bg-zinc-800"></div>
                     </div>
                     <!-- Row 7 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            14:00-14:35</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">14:00-14:35</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">
-                                CoCreating the Future with AI: How Creators Turn Trends into Products and Sales</h4>
-                            <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1"> Mattia Miglio
-                            </p>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">CoCreating the Future with AI: How Creators Turn Trends into Products and Sales</h4>
+                            <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1"> Mattia Miglio</p>
                         </div>
                     </div>
                     <!-- Row 8 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            14:35-15:10</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">14:35-15:10</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The
-                                Attention Economy Roadmap: Turning Cross-Platform Reach into Millions</h4>
-                            <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Timothy
-                                Sanchez-Vega</p>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The Attention Economy Roadmap: Turning Cross-Platform Reach into Millions</h4>
+                            <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Timothy Sanchez-Vega</p>
                         </div>
                     </div>
                     <!-- Row 9 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            15:10-15:45</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">15:10-15:45</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The
-                                Non-Negotiable Foundations For Million Dollar TikTok Shops</h4>
-                            <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Michelle Smith
-                            </p>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The Non-Negotiable Foundations For Million Dollar TikTok Shops</h4>
+                            <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Michelle Smith</p>
                         </div>
                     </div>
                     <!-- Row 10 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            15:45-16:20</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">15:45-16:20</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The
-                                10,000 Creator TikTok Shop Playbook That Turns Small Creators Into Big Sales</h4>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The 10,000 Creator TikTok Shop Playbook That Turns Small Creators Into Big Sales</h4>
                             <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Josh Hadley</p>
                         </div>
                     </div>
                     <!-- Row 11 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                            16:20-16:55</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">16:20-16:55</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">From a
-                                Rednote QR Code to Selling Out Trepangs on the Alaska Coast</h4>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">From a Rednote QR Code to Selling Out Trepangs on the Alaska Coast</h4>
                             <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Yibo Wei</p>
                         </div>
                     </div>
                     <!-- Row 12 -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-[#FF007F]/30 hover:border-[#FF007F]/60 transition-all shadow-[0_0_15px_rgba(255,0,127,0.1)]">
-                        <div
-                            class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF007F] font-black text-sm text-center sm:min-w-[120px]">
-                            16:55-17:30</div>
+                    <div class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-[#FF007F]/30 hover:border-[#FF007F]/60 transition-all shadow-[0_0_15px_rgba(255,0,127,0.1)]">
+                        <div class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF007F] font-black text-sm text-center sm:min-w-[120px]">16:55-17:30</div>
                         <div>
-                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">AMA
-                                with Top 1% Affiliate: How Creators and Brands Win Together on TikTok Shop</h4>
-                            <p class="text-[#FF007F] font-bold text-xs uppercase tracking-widest mt-1">Matt Kahla, Candi
-                                Osuna & Brand Operators</p>
+                            <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">AMA with Top 1% Affiliate: How Creators and Brands Win Together on TikTok Shop</h4>
+                            <p class="text-[#FF007F] font-bold text-xs uppercase tracking-widest mt-1">Matt Kahla, Candi Osuna & Brand Operators</p>
                         </div>
                     </div>
                 </div>
@@ -1154,51 +905,37 @@
             <!-- April 15 -->
             <div class="max-w-4xl mx-auto">
                 <div class="flex items-center gap-4 mb-10">
-                    <div
-                        class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
+                    <div class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
                         April 15
                     </div>
                     <div class="h-[2px] flex-1 bg-gradient-to-r from-[#00F2EA] to-transparent"></div>
                 </div>
 
                 <!-- Mastermind Session -->
-                <div
-                    class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
+                <div class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-[#00F2EA]/5 blur-3xl rounded-full"></div>
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="md:w-1/3">
-                            <h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">TopTier
-                                Seller Mastermind</h3>
-                            <p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">VIP
-                                Lounge</p>
-                            <div
-                                class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">
-                                9:30-12:00</div>
+                            <h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">TopTier Seller Mastermind</h3>
+                            <p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">VIP Lounge</p>
+                            <div class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">9:30-12:00</div>
                         </div>
                         <div class="md:w-2/3 border-l md:border-zinc-800 md:pl-8 space-y-6">
                             <div>
-                                <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
-                                    Group Discussion & Sharing</p>
+                                <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">Group Discussion & Sharing</p>
                                 <ul class="space-y-2 text-zinc-200 text-xs sm:text-sm font-bold uppercase italic">
                                     <li>- AI TikTok External Traffic At Scale</li>
                                     <li>- Building an AI-First Operations Stack for TikTok Shop</li>
                                     <li>- The Era of Internal AI Systems for TikTok and all E-commerce</li>
-                                </ul>
+                                                                   </ul>
                             </div>
                             <div class="pt-4 border-t border-zinc-800">
-                                <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
-                                    Featured Speakers</p>
+                                <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">Featured Speakers</p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Brian
-                                        Kelsey</span>
-                                    <span
-                                        class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Andrew
-                                        Erickson</span>
-                                    <span
-                                        class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Joey
-                                        Glyshaw</span>
-
+                                    <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Brian Kelsey</span>
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Andrew Erickson</span>
+                                    <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Joey Glyshaw</span>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -1208,8 +945,7 @@
                 <!-- Lunch -->
                 <div class="flex items-center gap-4 py-8 px-4">
                     <div class="h-[1px] flex-1 bg-zinc-800"></div>
-                    <div
-                        class="flex items-center gap-3 text-zinc-500 uppercase font-black text-[10px] tracking-[0.4em] italic">
+                    <div class="flex items-center gap-3 text-zinc-500 uppercase font-black text-[10px] tracking-[0.4em] italic">
                         <i data-lucide="utensils" class="w-4 h-4"></i>
                         Lunch Break & Exhibition Visit (12:00-14:00)
                     </div>
@@ -1217,50 +953,32 @@
                 </div>
 
                 <!-- Workshop Session -->
-                <div
-                    class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
+                <div class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="md:w-1/3">
-                            <h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">
-                                Sparkling TikTok Shop Workshop</h3>
-                            <p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">VIP
-                                Lounge</p>
-                            <div
-                                class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">
-                                14:00-17:00</div>
+                            <h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">Sparkling TikTok Shop Workshop</h3>
+                            <p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">VIP Lounge</p>
+                            <div class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">14:00-17:00</div>
                         </div>
                         <div class="md:w-2/3 border-l md:border-zinc-800 md:pl-8 space-y-6">
                             <div>
-                                <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
-                                    Group Discussion & Sharing</p>
+                                <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">Group Discussion & Sharing</p>
                                 <ul class="space-y-2 text-zinc-200 text-xs sm:text-sm font-bold uppercase italic">
-                                    <li>- How to Build a 8-Figure TikTok Shop Channel (Without Burning Cash)</li>
+                                    <li>- How to Build a 8-Figure TikTok Shop Channel  (Without Burning Cash)</li>
                                     <li>- Bridging the Gap Between Brand and Creator Content</li>
                                     <li>- Dos and Don'ts of High-Performing Seller-Creator Collaborations</li>
-                                    <li>- Beyond GMV: How Brands Build Creator Programs That Drive Sales and Brand
-                                        Equity</li>
-                                    <li>- TikTok Shop AMA with Account Managers</li>
+                                    <li>- Beyond GMV: How Brands Build Creator Programs That Drive Sales and Brand Equity</li>
+                                    <li>- Where Content Meets Commerce: Unlocking Growth with TikTok Shop</li>
                                 </ul>
                             </div>
                             <div class="pt-4 border-t border-zinc-800">
-                                <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
-                                    Featured Speakers</p>
+                                <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">Featured Speakers</p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Ashley
-                                        Wright</span>
-                                    <span
-                                        class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Tinashe
-                                        Chaponda</span>
-                                    <span
-                                        class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Kaley
-                                        Birge</span>
-                                    <span
-                                        class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Melissa
-                                        Vicendese</span>
-                                    <span
-                                        class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">TikTok
-                                        Shop Account Managers</span>
+                                    <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Ashley Wright</span>
+                                    <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Tinashe Chaponda</span>
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Kaley Birge</span>
+                                    <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Melissa Vicendese</span>
+                                    <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Chelsea Chen</span>
                                 </div>
                             </div>
                         </div>
@@ -1268,19 +986,13 @@
                 </div>
 
                 <!-- VIP Party Reveal -->
-                <div
-                    class="bg-gradient-to-br from-[#FFD700]/10 to-transparent border border-[#FFD700]/30 rounded-3xl p-8 text-center group">
+                <div class="bg-gradient-to-br from-[#FFD700]/10 to-transparent border border-[#FFD700]/30 rounded-3xl p-8 text-center group">
                     <div class="flex flex-col items-center">
-                        <div
-                            class="text-[#FFD700] font-black uppercase tracking-[0.3em] text-[10px] sm:text-xs italic mb-4">
-                            Evening Event</div>
-                        <h3 class="text-2xl sm:text-4xl font-black text-white italic uppercase tracking-tighter mb-4">
-                            VIP <span class="text-[#FFD700]">Party</span></h3>
-                        <p class="text-zinc-400 font-bold uppercase text-[10px] tracking-widest mb-6">Venue revealed
-                            soon • from 20:00</p>
+                        <div class="text-[#FFD700] font-black uppercase tracking-[0.3em] text-[10px] sm:text-xs italic mb-4">Evening Event</div>
+                        <h3 class="text-2xl sm:text-4xl font-black text-white italic uppercase tracking-tighter mb-4">VIP <span class="text-[#FFD700]">Party</span></h3>
+                        <p class="text-zinc-400 font-bold uppercase text-[10px] tracking-widest mb-6">Venue revealed soon • from 18:30</p>
                         <div class="max-w-md text-zinc-300 text-xs sm:text-sm italic font-bold leading-relaxed">
-                            Get ready to join the party with <span class="text-[#FFD700]">TOP 1% CREATORS, ELITE BRAND
-                                OWNERS & KEY ECOSYSTEM PARTNERS</span>.
+                            Get ready to join the party with <span class="text-[#FFD700]">TOP 1% CREATORS, ELITE BRAND OWNERS & KEY ECOSYSTEM PARTNERS</span>.
                         </div>
                     </div>
                 </div>
@@ -1297,27 +1009,27 @@
             <p class="text-white text-base sm:text-xl font-bold mb-12 italic max-w-3xl mx-auto leading-relaxed">
                 Experience the energy of a 10,000-attendee social commerce exhibition like nowhere else.
             </p>
-
-            <div
-                class="max-w-5xl mx-auto rounded-[2.5rem] overflow-hidden border-4 border-zinc-800 shadow-[0_20px_50px_rgba(0,242,234,0.15)] mb-12 transition-transform duration-700 hover:scale-[1.01]">
-                <img src="image/img_33.jpg"
-                    alt="YFCon Mega Exhibition" class="w-full h-auto object-cover" />
+            
+            <div class="max-w-5xl mx-auto rounded-[2.5rem] overflow-hidden border-4 border-zinc-800 shadow-[0_20px_50px_rgba(0,242,234,0.15)] mb-12 transition-transform duration-700 hover:scale-[1.01]">
+                <img 
+                    src="https://drive.google.com/thumbnail?id=1XwwdxJaG1Iej6JI9dzEY49srb_rSBKtP&sz=w1200" 
+                    alt="YFCon Mega Exhibition" 
+                    class="w-full h-auto object-cover"
+                />
             </div>
 
-            <div
-                class="max-w-2xl mx-auto bg-black/40 backdrop-blur-md border border-zinc-800 p-8 sm:p-10 rounded-[2rem]">
+            <div class="max-w-2xl mx-auto bg-black/40 backdrop-blur-md border border-zinc-800 p-8 sm:p-10 rounded-[2rem]">
                 <p class="text-zinc-400 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-8 leading-loose">
-                    Want to showcase your brand in the exhibition alongside <span class="text-white">Tesla, Goli,
-                        leading K-beauty brands</span>, and more? Get in touch below 👇
+                    Want to showcase your brand in the exhibition alongside <span class="text-white">Tesla, Goli, leading K-beauty brands</span>, and more? Get in touch below 👇
                 </p>
-
-                <a href="https://www.linkedin.com/in/can-chan-966a632b" target="_blank"
-                    class="group inline-flex items-center gap-4 px-8 py-4 bg-[#0077B5]/10 border border-[#0077B5]/40 hover:bg-[#0077B5] hover:border-[#0077B5] rounded-full transition-all duration-300">
-                    <i data-lucide="linkedin"
-                        class="w-6 h-6 text-[#0077B5] group-hover:text-white transition-colors"></i>
-                    <span
-                        class="text-white text-xs sm:text-sm font-black uppercase tracking-widest group-hover:text-white">Can
-                        Chan</span>
+                
+                <a 
+                    href="https://www.linkedin.com/in/can-chan-966a632b" 
+                    target="_blank" 
+                    class="group inline-flex items-center gap-4 px-8 py-4 bg-[#0077B5]/10 border border-[#0077B5]/40 hover:bg-[#0077B5] hover:border-[#0077B5] rounded-full transition-all duration-300"
+                >
+                    <i data-lucide="linkedin" class="w-6 h-6 text-[#0077B5] group-hover:text-white transition-colors"></i>
+                    <span class="text-white text-xs sm:text-sm font-black uppercase tracking-widest group-hover:text-white">Can Chan</span>
                 </a>
             </div>
         </div>
@@ -1326,24 +1038,19 @@
     <!-- Who Attends -->
     <section class="bg-black py-20 border-b border-zinc-900">
         <div class="container">
-            <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-16 tracking-wider glow-cyan">
-                Who Attends</h2>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-16 tracking-wider glow-cyan">Who Attends</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
                     <i data-lucide="users" class="w-12 h-12 text-[#FF0050] mx-auto mb-6"></i>
-                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">High-level
-                        eCommerce sellers across TikTok Shop, Amazon, and DTC</p>
+                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">High-level eCommerce sellers across TikTok Shop, Amazon, and DTC</p>
                 </div>
                 <div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
                     <i data-lucide="trending-up" class="w-12 h-12 text-[#FF007F] mx-auto mb-6"></i>
-                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">10,000+
-                        creators attending the two-day exhibition</p>
+                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">10,000+ creators attending the two-day exhibition</p>
                 </div>
                 <div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
                     <i data-lucide="zap" class="w-12 h-12 text-[#FFD700] mx-auto mb-6"></i>
-                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">AI
-                        specialists, ecosystem partners and platform leaders</p>
+                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">AI specialists, ecosystem partners and platform leaders</p>
                 </div>
             </div>
         </div>
@@ -1352,24 +1059,19 @@
     <!-- Core Benefits -->
     <section class="bg-zinc-950 py-20 border-b border-zinc-900">
         <div class="container max-w-4xl text-center">
-            <h2
-                class="text-2xl sm:text-3xl font-black mb-12 uppercase italic tracking-[0.4em] glow-gold text-[#FFD700]">
-                Core Benefits</h2>
+            <h2 class="text-2xl sm:text-3xl font-black mb-12 uppercase italic tracking-[0.4em] glow-gold text-[#FFD700]">Core Benefits</h2>
             <div class="space-y-4">
                 <div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#00F2EA] rounded-xl text-left card-hover">
                     <p class="text-[#00F2EA] text-base sm:text-lg font-black uppercase mb-1">Direct Access</p>
-                    <p class="text-white text-sm sm:text-base opacity-90 italic">Direct, in-person access to top
-                        creators — saving hundreds of hours of outreach and coordination.</p>
+                    <p class="text-white text-sm sm:text-base opacity-90 italic">Direct, in-person access to top creators — saving hundreds of hours of outreach and coordination.</p>
                 </div>
                 <div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#FF0050] rounded-xl text-left card-hover">
                     <p class="text-[#FF0050] text-base sm:text-lg font-black uppercase mb-1">Network Power</p>
-                    <p class="text-white text-sm sm:text-base opacity-90 italic">High-level networking with leading
-                        operators across TikTok, Amazon, and DTC.</p>
+                    <p class="text-white text-sm sm:text-base opacity-90 italic">High-level networking with leading operators across TikTok, Amazon, and DTC.</p>
                 </div>
                 <div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#FFD700] rounded-xl text-left card-hover">
                     <p class="text-[#FFD700] text-base sm:text-lg font-black uppercase mb-1">Intelligence</p>
-                    <p class="text-white text-sm sm:text-base opacity-90 italic">Actionable insights into the most
-                        advanced growth and monetization strategies in the industry.</p>
+                    <p class="text-white text-sm sm:text-base opacity-90 italic">Actionable insights into the most advanced growth and monetization strategies in the industry.</p>
                 </div>
             </div>
         </div>
@@ -1382,37 +1084,21 @@
                 What We'll <span class="text-[#FF0050]">Explore</span>
             </h2>
             <div class="max-w-4xl mx-auto grid grid-cols-1 gap-4">
-                <div
-                    class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF0050] transition-all group cursor-default">
-                    <div
-                        class="w-12 h-12 bg-[#FF0050]/10 text-[#FF0050] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF0050] group-hover:text-white transition-all duration-300">
-                        1</div>
-                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">The future of
-                        discovery-driven commerce growth</h4>
+                <div class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF0050] transition-all group cursor-default">
+                    <div class="w-12 h-12 bg-[#FF0050]/10 text-[#FF0050] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF0050] group-hover:text-white transition-all duration-300">1</div>
+                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">The future of discovery-driven commerce growth</h4>
                 </div>
-                <div
-                    class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#00F2EA] transition-all group cursor-default">
-                    <div
-                        class="w-12 h-12 bg-[#00F2EA]/10 text-[#00F2EA] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#00F2EA] group-hover:text-black transition-all duration-300">
-                        2</div>
-                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">Scaling
-                        brands in the creator and influencer economy</h4>
+                <div class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#00F2EA] transition-all group cursor-default">
+                    <div class="w-12 h-12 bg-[#00F2EA]/10 text-[#00F2EA] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#00F2EA] group-hover:text-black transition-all duration-300">2</div>
+                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">Scaling brands in the creator and influencer economy</h4>
                 </div>
-                <div
-                    class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FFD700] transition-all group cursor-default">
-                    <div
-                        class="w-12 h-12 bg-[#FFD700]/10 text-[#FFD700] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FFD700] group-hover:text-black transition-all duration-300">
-                        3</div>
-                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">TikTok ×
-                        Amazon × DTC ecosystem synergies</h4>
+                <div class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FFD700] transition-all group cursor-default">
+                    <div class="w-12 h-12 bg-[#FFD700]/10 text-[#FFD700] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FFD700] group-hover:text-black transition-all duration-300">3</div>
+                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">TikTok × Amazon × DTC ecosystem synergies</h4>
                 </div>
-                <div
-                    class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF007F] transition-all group cursor-default">
-                    <div
-                        class="w-12 h-12 bg-[#FF007F]/10 text-[#FF007F] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF007F] group-hover:text-white transition-all duration-300">
-                        4</div>
-                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">AI-driven
-                        monetization and automation strategies</h4>
+                <div class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF007F] transition-all group cursor-default">
+                    <div class="w-12 h-12 bg-[#FF007F]/10 text-[#FF007F] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF007F] group-hover:text-white transition-all duration-300">4</div>
+                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">AI-driven monetization and automation strategies</h4>
                 </div>
             </div>
         </div>
@@ -1422,52 +1108,39 @@
     <section id="campaigns" class="bg-black py-24 border-b border-zinc-900">
         <div class="container text-center">
             <h2 class="text-3xl sm:text-5xl font-black italic uppercase mb-16 tracking-tighter px-4 leading-tight">
-                PREVIOUS <span class="text-[#FFD700]">TOPTIER</span> & <span class="text-[#FF0050]">YFCON</span>
-                CAMPAIGNS
+                PREVIOUS <span class="text-[#FFD700]">TOPTIER</span> & <span class="text-[#FF0050]">YFCON</span> CAMPAIGNS
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
                 <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
                     <div class="aspect-video overflow-hidden">
-                        <img src="image/img_34.jpg"
-                            alt="Mega Expo"
-                            class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+                        <img src="https://drive.google.com/thumbnail?id=1YDjmGXHF_PtlvqK5Vv7X7CNCARXW0qEB&sz=w800" alt="Mega Expo" class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
                     </div>
                     <div class="p-6 bg-zinc-950 border-t border-zinc-800">
-                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Mega Expo
-                        </h4>
+                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Mega Expo</h4>
                     </div>
                 </div>
                 <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
                     <div class="aspect-video overflow-hidden">
-                        <img src="image/img_35.jpg"
-                            alt="Productive Meetings"
-                            class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+                        <img src="https://drive.google.com/thumbnail?id=1jUOXelgCG32zfyDZ09QsYxjugWXmpcxf&sz=w800" alt="Productive Meetings" class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
                     </div>
                     <div class="p-6 bg-zinc-950 border-t border-zinc-800">
-                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Productive
-                            Meetings</h4>
+                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Productive Meetings</h4>
                     </div>
                 </div>
                 <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
                     <div class="aspect-video overflow-hidden">
-                        <img src="image/img_36.jpg"
-                            alt="YFCon Summit"
-                            class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+                        <img src="https://drive.google.com/thumbnail?id=1_ck62I6pddeFys5_AMM4zvhWoipMRcbt&sz=w800" alt="YFCon Summit" class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
                     </div>
                     <div class="p-6 bg-zinc-950 border-t border-zinc-800">
-                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">YFCon
-                            Summit</h4>
+                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">YFCon Summit</h4>
                     </div>
                 </div>
                 <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
                     <div class="aspect-video overflow-hidden">
-                        <img src="image/img_37.jpg"
-                            alt="TopTier Mastermind"
-                            class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+                        <img src="https://drive.google.com/thumbnail?id=1W0g3nZ1w7T7LJbiBl5WRr9zSJJPwtEtM&sz=w800" alt="TopTier Mastermind" class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
                     </div>
                     <div class="p-6 bg-zinc-950 border-t border-zinc-800">
-                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">TopTier
-                            Mastermind</h4>
+                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">TopTier Mastermind</h4>
                     </div>
                 </div>
             </div>
@@ -1477,41 +1150,32 @@
     <!-- Media Coverage Section -->
     <section id="media-coverage" class="bg-zinc-950 py-24 border-b border-zinc-900">
         <div class="container text-center">
-            <h2
-                class="text-3xl sm:text-5xl font-black italic uppercase mb-16 tracking-tighter px-4 leading-tight text-white text-center">
+            <h2 class="text-3xl sm:text-5xl font-black italic uppercase mb-16 tracking-tighter px-4 leading-tight text-white text-center">
                 Media <span class="text-[#FF0050]">Coverage</span>
             </h2>
-            <p class="text-zinc-400 text-sm sm:text-base mb-12 italic tracking-widest uppercase">The YFCon was reported
-                and recognized by leading global news outlets.</p>
-
+            <p class="text-zinc-400 text-sm sm:text-base mb-12 italic tracking-widest uppercase">The YFCon was reported and recognized by leading global news outlets.</p>
+            
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
                 <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="image/img_38.jpg"
-                        alt="Yahoo Finance" class="max-h-full max-w-full object-contain">
+                    <img src="https://drive.google.com/thumbnail?id=1fOwOAGEYcXazGGpLmVvx1-PT3uD7cs9t&sz=w400" alt="Yahoo Finance" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="image/img_39.jpg"
-                        alt="AP News" class="max-h-full max-w-full object-contain">
+                    <img src="https://drive.google.com/thumbnail?id=1KtfWmETQT5kasWaOuH-JfRKaTYk71vHT&sz=w400" alt="AP News" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="image/img_40.jpg"
-                        alt="Street Insider" class="max-h-full max-w-full object-contain">
+                    <img src="https://drive.google.com/thumbnail?id=1lt7TaWXUziQSM5sx84SUNLURWRDqnPJz&sz=w400" alt="Street Insider" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="image/img_41.jpg"
-                        alt="The Globe and Mail" class="max-h-full max-w-full object-contain">
+                    <img src="https://drive.google.com/thumbnail?id=19b5WdGHWNockreTYz93jUvwiEj1Lr1PO&sz=w400" alt="The Globe and Mail" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="image/img_42.jpg"
-                        alt="The Chronicle Journal" class="max-h-full max-w-full object-contain">
+                    <img src="https://drive.google.com/thumbnail?id=1KWcwUrNkiz7rP2WppRIBa5i_AD57ELyk&sz=w400" alt="The Chronicle Journal" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="image/img_43.jpg"
-                        alt="Barchart" class="max-h-full max-w-full object-contain">
+                    <img src="https://drive.google.com/thumbnail?id=1IG0zxm4Uw3qXKRvG4v0YbXSHJshopRoj&sz=w400" alt="Barchart" class="max-h-full max-w-full object-contain">
                 </div>
                 <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="image/img_44.jpg"
-                        alt="CBS News" class="max-h-full max-w-full object-contain">
+                    <img src="https://drive.google.com/thumbnail?id=1j3kuvrcLLTgjsM1bAJXzJTiklP8I1aLr&sz=w400" alt="CBS News" class="max-h-full max-w-full object-contain">
                 </div>
             </div>
         </div>
@@ -1520,23 +1184,19 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="bg-black py-24 border-b border-zinc-900">
         <div class="container">
-            <h2
-                class="text-3xl sm:text-5xl font-black italic uppercase text-center mb-16 tracking-tighter px-4 leading-tight text-white">
+            <h2 class="text-3xl sm:text-5xl font-black italic uppercase text-center mb-16 tracking-tighter px-4 leading-tight text-white">
                 What Previous <span class="text-[#00F2EA]">Attendees</span> Are Saying
             </h2>
-
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
                     <i data-lucide="quote" class="quote-icon text-[#FF0050]"></i>
                     <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
-                        "Everything was great. Great group of peers to network with, liked the length of the format. Can
-                        did a great job introducing attendees to each other. Event not too big or small just the right
-                        size"
+                        "Everything was great. Great group of peers to network with, liked the length of the format. Can did a great job introducing attendees to each other. Event not too big or small just the right size"
                     </p>
                     <div class="mt-auto pt-6 border-t border-zinc-800">
                         <p class="text-white font-black uppercase text-xs tracking-widest">Ariana Pareja</p>
-                        <p class="text-[#FF0050] text-[10px] uppercase font-bold tracking-tighter mt-1">Cofounder,
-                            Mighty Minis</p>
+                        <p class="text-[#FF0050] text-[10px] uppercase font-bold tracking-tighter mt-1">Cofounder, Mighty Minis</p>
                     </div>
                 </div>
 
@@ -1547,16 +1207,14 @@
                     </p>
                     <div class="mt-auto pt-6 border-t border-zinc-800">
                         <p class="text-white font-black uppercase text-xs tracking-widest">Alex Bonilla</p>
-                        <p class="text-[#00F2EA] text-[10px] uppercase font-bold tracking-tighter mt-1">Founder, Pura
-                            Vida Moringa</p>
+                        <p class="text-[#00F2EA] text-[10px] uppercase font-bold tracking-tighter mt-1">Founder, Pura Vida Moringa</p>
                     </div>
                 </div>
 
                 <div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
                     <i data-lucide="quote" class="quote-icon text-[#FFD700]"></i>
                     <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
-                        "Highly recommended. I found the event to be exceptionally well-organized, with insightful
-                        speakers and valuable networking opportunities."
+                        "Highly recommended. I found the event to be exceptionally well-organized, with insightful speakers and valuable networking opportunities."
                     </p>
                     <div class="mt-auto pt-6 border-t border-zinc-800">
                         <p class="text-white font-black uppercase text-xs tracking-widest">Ali Shahzad</p>
@@ -1568,61 +1226,59 @@
     </section>
 
     <!-- Footer / Tickets -->
-    <footer class="pt-24 pb-32 bg-zinc-950 text-center border-t border-zinc-900 relative overflow-hidden"
-        style="padding-bottom: calc(5rem + var(--ios-safe-bottom));">
-        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#FF0050] via-[#FFD700] to-[#00F2EA]">
-        </div>
-
+    <footer class="pt-24 pb-32 bg-zinc-950 text-center border-t border-zinc-900 relative overflow-hidden" style="padding-bottom: calc(5rem + var(--ios-safe-bottom));">
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#FF0050] via-[#FFD700] to-[#00F2EA]"></div>
+        
         <div class="container px-6">
-            <h2
-                class="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 uppercase italic tracking-tighter px-4 leading-[0.9] glow-cyan">
+            <h2 class="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 uppercase italic tracking-tighter px-4 leading-[0.9] glow-cyan">
                 Join the Industry’s <br class="hidden sm:block"> <span class="text-[#00F2EA]">Top Minds</span>
             </h2>
-            <p
-                class="text-xs sm:text-sm text-zinc-500 mb-16 max-w-2xl mx-auto leading-loose italic uppercase tracking-[0.4em] px-4">
+            <p class="text-xs sm:text-sm text-zinc-500 mb-16 max-w-2xl mx-auto leading-loose italic uppercase tracking-[0.4em] px-4">
                 Two powerful days of insight, collaboration, and innovation shaping the future of commerce.
             </p>
-
+            
             <div class="flex flex-col sm:flex-row gap-6 justify-center max-w-3xl mx-auto mb-20 px-4">
-                <a href="https://www.eventbrite.com/e/toptier-discovery-commence-summit-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator"
-                    target="_blank"
-                    class="btn-hover flex-1 bg-white text-black px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl text-center group transition-all hover:ring-8 hover:ring-white/10">
+                <a 
+                    href="https://www.eventbrite.com/e/toptier-discovery-commence-summit-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator" 
+                    target="_blank" 
+                    class="btn-hover flex-1 bg-white text-black px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl text-center group transition-all hover:ring-8 hover:ring-white/10"
+                >
                     <span class="block text-[10px] opacity-60 mb-1 tracking-[0.2em]">General Access</span>
                     <span class="block text-lg">Summit Ticket</span>
                     <span class="block text-3xl mt-2 font-black">$699</span>
                 </a>
-
-                <a href="https://www.eventbrite.com/e/toptier-discovery-commence-summit-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator"
-                    target="_blank"
-                    class="btn-hover flex-1 bg-gradient-to-br from-[#FF0050] to-[#FF007F] text-white px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl border border-white/10 text-center ring-4 ring-[#FFD700]/20 hover:ring-8 transition-all">
-                    <span class="block text-[10px] opacity-80 mb-1 text-[#FFD700] tracking-[0.2em]">The Elite
-                        Experience</span>
+                
+                <a 
+                    href="https://www.eventbrite.com/e/toptier-discovery-commence-summit-yfcon2026-spring-picks-tickets-1982359149580?aff=oddtdtcreator" 
+                    target="_blank" 
+                    class="btn-hover flex-1 bg-gradient-to-br from-[#FF0050] to-[#FF007F] text-white px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl border border-white/10 text-center ring-4 ring-[#FFD700]/20 hover:ring-8 transition-all"
+                >
+                    <span class="block text-[10px] opacity-80 mb-1 text-[#FFD700] tracking-[0.2em]">The Elite Experience</span>
                     <span class="block text-lg">Summit + VIP Party</span>
                     <span class="block text-3xl mt-2 font-black">$1999</span>
                 </a>
             </div>
 
             <div class="flex flex-col items-center gap-6 mb-16">
-                <p class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-[0.5em] font-black">Contact the
-                    Organizer</p>
-                <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank"
-                    class="group flex items-center gap-4 px-8 py-4 bg-zinc-900/50 hover:bg-[#0077B5]/10 border border-zinc-800 hover:border-[#0077B5] rounded-full transition-all backdrop-blur-sm">
-                    <i data-lucide="linkedin"
-                        class="w-6 h-6 text-[#0077B5] group-hover:scale-110 transition-transform"></i>
-                    <span class="text-white text-xs sm:text-sm font-black uppercase tracking-widest">Connect with Can
-                        Chan</span>
+                <p class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-[0.5em] font-black">Contact the Organizer</p>
+                <a 
+                    href="https://www.linkedin.com/in/can-chan-966a632b/" 
+                    target="_blank" 
+                    class="group flex items-center gap-4 px-8 py-4 bg-zinc-900/50 hover:bg-[#0077B5]/10 border border-zinc-800 hover:border-[#0077B5] rounded-full transition-all backdrop-blur-sm"
+                >
+                    <i data-lucide="linkedin" class="w-6 h-6 text-[#0077B5] group-hover:scale-110 transition-transform"></i>
+                    <span class="text-white text-xs sm:text-sm font-black uppercase tracking-widest">Connect with Can Chan</span>
                 </a>
             </div>
 
-            <p class="text-[10px] text-zinc-700 uppercase tracking-[0.4em] italic font-bold">© 2026 TopTier League • Los
-                Angeles, California</p>
+            <p class="text-[10px] text-zinc-700 uppercase tracking-[0.4em] italic font-bold">© 2026 TopTier League • Los Angeles, California</p>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
 
-        document.addEventListener('touchstart', function (event) {
+        document.addEventListener('touchstart', function(event) {
             if (event.touches.length > 1) {
                 event.preventDefault();
             }
@@ -1647,5 +1303,4 @@
         });
     </script>
 </body>
-
 </html>
