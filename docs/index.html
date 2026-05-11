@@ -1,440 +1,483 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership - TopTier League</title>
-    <script>
-        const hostname = 'toptierleague.com'
-        if (window.location.hostname === hostname) window.location.replace(`https://www.${hostname}` + window.location.pathname + window.location.search);
-    </script>
-    <!-- 使用固定版本号以确保生产环境稳定性 -->
-    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
-    <script src="https://unpkg.com/lucide@0.475.0"></script>
-    <script src="https://www.paypal.com/sdk/js?client-id=BAA8RbmAHapDLMUxzNWsfLpe7UuPrJ6JgyUOAnaIBf2qy7Arrjjbi1neZTl5lw-DhLU5htd7XpgJ3MqNk8&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-    <style>
-        /* Custom Animation for Lighting Text */
-        .lighting-text {
-            background: linear-gradient(to right, #fff 20%, #ff0000 40%, #ff0000 60%, #fff 80%);
-            background-size: 200% auto;
-            color: #000;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shine 4s linear infinite;
-        }
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>TopTier League | Global Social Commerce & AI Community</title>
+  <meta name="description" content="TopTier League is a pioneering global eCommerce community for TikTok Shop sellers, Amazon sellers, creators, agencies, and operators scaling with social commerce and AI." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#050505" />
+  <link rel="canonical" href="https://toptierleague.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TopTier League | Global Social Commerce & AI Community" />
+  <meta property="og:description" content="Join elite sellers, creators, and operators to scale faster across TikTok Shop, Amazon, AI commerce, and cross-platform growth." />
+  <meta property="og:url" content="https://toptierleague.com/" />
+  <meta property="og:site_name" content="TopTier League" />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/d/1pMmdf1sUNgpDZmkgLBjtsohswpVks-BH" />
+  <meta property="og:image:alt" content="TopTier League logo" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TopTier League | Global Social Commerce & AI Community" />
+  <meta name="twitter:description" content="A pioneering global eCommerce community for sellers, creators, agencies, and operators." />
+  <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1pMmdf1sUNgpDZmkgLBjtsohswpVks-BH" />
+
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" as="image" href="https://lh3.googleusercontent.com/d/1pMmdf1sUNgpDZmkgLBjtsohswpVks-BH" fetchpriority="high">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "tt-black": "#050505",
+            "tt-red": "#FF0032",
+            "tt-gold": "#D4AF37",
+            "tt-dark-gray": "#111111",
+          },
+          fontFamily: { sans: ["Inter", "sans-serif"] },
+          animation: {
+            float: "float 6s ease-in-out infinite",
+            glow: "glow 2s ease-in-out infinite alternate",
+          },
+          keyframes: {
+            float: { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-14px)" } },
+            glow: {
+              "0%": { textShadow: "0 0 8px rgba(255,0,50,.35)" },
+              "100%": { textShadow: "0 0 20px rgba(255,0,50,.75)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body{background:#050505;color:#fff;overflow-x:hidden}
+    .glass{background:rgba(5,5,5,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1)}
+    .hero-gradient{background:radial-gradient(circle at 50% 50%,rgba(255,0,50,.15) 0%,rgba(5,5,5,1) 70%)}
+    .premium-card{background:linear-gradient(145deg,#111 0%,#050505 100%);border:1px solid rgba(255,255,255,.06);transition:all .3s ease}
+    .premium-card:hover{border-color:#FF0032;transform:translateY(-4px);box-shadow:0 14px 28px rgba(255,0,50,.14)}
+    .reveal{opacity:0;transform:translateY(20px);transition:all .7s ease-out}
+    .reveal.active{opacity:1;transform:none}
+    .member-img-container{position:relative;overflow:hidden;border-radius:20px;border:2px solid transparent;transition:all .35s ease}
+    .member-img-container:hover{border-color:#FF0032;box-shadow:0 0 22px rgba(255,0,50,.32)}
+    .glow-text{text-shadow:0 0 10px rgba(255,0,50,.55),0 0 24px rgba(255,0,50,.35)}
+    .faq-content{transition:all .25s ease}
+    ::-webkit-scrollbar{width:8px}
+    ::-webkit-scrollbar-track{background:#050505}
+    ::-webkit-scrollbar-thumb{background:#333;border-radius:10px}
+    ::-webkit-scrollbar-thumb:hover{background:#FF0032}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"TopTier League",
+    "url":"https://toptierleague.com/",
+    "logo":"https://lh3.googleusercontent.com/d/1pMmdf1sUNgpDZmkgLBjtsohswpVks-BH",
+    "sameAs":[
+      "https://www.linkedin.com/in/can-chan-966a632b/",
+      "https://toptiersummit.live",
+      "https://www.patreon.com/c/Can_TikTok"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is TopTier League?","acceptedAnswer":{"@type":"Answer","text":"TopTier League is a pioneering global eCommerce community where sellers, creators, agencies, and operators connect, learn, and grow together in the era of social commerce and AI."}},
+      {"@type":"Question","name":"Who should join TopTier League?","acceptedAnswer":{"@type":"Answer","text":"Our community is designed for TikTok Shop sellers, Amazon sellers, creators, agencies, brand owners, and eCommerce entrepreneurs looking to scale faster."}},
+      {"@type":"Question","name":"Is this community beginner-friendly?","acceptedAnswer":{"@type":"Answer","text":"Yes. We have members ranging from beginners to multi-million-dollar sellers and agencies in the social commerce area."}},
+      {"@type":"Question","name":"How does onboarding work after I join the community, and what should I prepare?","acceptedAnswer":{"@type":"Answer","text":"Once you join, you’ll first receive a short status survey so we can better understand your business stage, goals, and focus areas. After that, you’ll be added to our Lark group and WeChat group for communication and networking. We recommend setting up your Lark account in advance for a smooth onboarding experience."}},
+      {"@type":"Question","name":"What is the TopTier Summit?","acceptedAnswer":{"@type":"Answer","text":"It is our flagship in-person event featuring keynote speeches, workshops, networking, mastermind sessions, and creator-brand matchmaking opportunities."}},
+      {"@type":"Question","name":"Where are your events held?","acceptedAnswer":{"@type":"Answer","text":"Our events are hosted globally, including locations such as Los Angeles, Bangkok, Hanoi, Guangzhou, and other major eCommerce hubs."}},
+      {"@type":"Question","name":"Does TopTier League focus only on TikTok Shop?","acceptedAnswer":{"@type":"Answer","text":"No. While TikTok Shop is a major focus, we also cover Amazon, Shopify, Whatnot, Walmart, AI commerce, and cross-platform growth strategies."}},
+      {"@type":"Question","name":"Do you teach AI applications in ecommerce?","acceptedAnswer":{"@type":"Answer","text":"Yes. We regularly share workshops, mastermind discussions, and case studies around AI-driven commerce."}},
+      {"@type":"Question","name":"How can I join TopTier League?","acceptedAnswer":{"@type":"Answer","text":"You can apply through our website or join through one of our events or referral channels."}}
+    ]
+  }
+  </script>
 </head>
-<body class="font-sans bg-black text-slate-50 selection:bg-red-500 selection:text-white antialiased">
 
-    <!-- Navbar: logo + contact button -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-red-900/30 py-4">
-        <div class="container mx-auto px-6">
-            <a href="https://toptierleague.com" class="inline-block hover:opacity-80 transition-opacity">
-                <div id="text-logo" class="font-bold text-2xl tracking-tighter italic">
-                    <span class="text-red-600">TopTier</span> <span class="text-white">League</span>
-                </div>
-            </a>
+<body class="font-sans antialiased">
+
+<header>
+  <nav class="fixed top-0 w-full z-50 glass py-4" aria-label="Main navigation">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <a href="https://toptierleague.com" target="_blank" rel="noopener noreferrer" aria-label="TopTier League Home">
+        <img src="https://lh3.googleusercontent.com/d/1pMmdf1sUNgpDZmkgLBjtsohswpVks-BH" alt="TopTier League logo" class="w-10 h-10 object-contain">
+      </a>
+
+      <!-- UPDATED DESKTOP NAV -->
+      <div class="hidden md:flex items-center space-x-8 font-semibold text-sm uppercase tracking-widest">
+        <a href="#about" class="hover:text-tt-red transition-colors">About</a>
+        <a href="#membership" class="hover:text-tt-red transition-colors">Membership</a>
+        <a href="#pioneers" class="hover:text-tt-red transition-colors">Pioneers</a>
+        <a href="#workshops" class="hover:text-tt-red transition-colors">Workshops</a>
+        <a href="#summits" class="hover:text-tt-red transition-colors">Summits</a>
+        <a href="#faq" class="hover:text-tt-red transition-colors">FAQ</a>
+      </div>
+
+      <button class="md:hidden text-2xl" onclick="toggleMenu()" aria-label="Open mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- UPDATED MOBILE NAV -->
+  <div id="mobileMenu" class="fixed inset-0 bg-tt-black z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-bold uppercase tracking-widest hidden">
+    <button class="absolute top-8 right-8 text-3xl" onclick="toggleMenu()" aria-label="Close mobile menu">×</button>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#membership" onclick="toggleMenu()">Membership</a>
+    <a href="#pioneers" onclick="toggleMenu()">Pioneers</a>
+    <a href="#workshops" onclick="toggleMenu()">Workshops</a>
+    <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-gradient">
+    <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="reveal">
+        <h2 class="text-tt-red font-bold tracking-[0.3em] uppercase mb-4 text-lg">TopTier League</h2>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 text-tt-red glow-text animate-glow">
+          The Pioneering<br>E-Commerce Seller Community
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-xl leading-relaxed">
+          Join a pioneering global e-commerce community where elite brand owners, social commerce pioneers, AI builders, and forward-thinking entrepreneurs connect, learn, and grow.
+        </p>
+        <a href="https://www.paypal.com/ncp/payment/KW2KS2U6N6FJU" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-5 bg-tt-red text-white font-bold rounded-full hover:shadow-[0_0_20px_rgba(255,0,50,0.5)] transition-all hover:-translate-y-1">
+          Become a Member <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 reveal" style="transition-delay:160ms;">
+        <div class="member-img-container aspect-square mt-8 animate-float"><img src="https://lh3.googleusercontent.com/d/1Vg8NjXBSqKeWRiQYBAcTe6bIVSStq4MS" alt="TopTier member" class="w-full h-full object-cover" loading="eager" decoding="async"></div>
+        <div class="member-img-container aspect-square animate-float" style="animation-delay:1.2s;"><img src="https://lh3.googleusercontent.com/d/1Fb4ES6ohtguhc_0fMJPi65CV41_6R8AR" alt="TopTier member" class="w-full h-full object-cover" loading="lazy" decoding="async"></div>
+        <div class="member-img-container aspect-square -mt-8 animate-float" style="animation-delay:.7s;"><img src="https://lh3.googleusercontent.com/d/19bEJnswnPrC8X72Emwy8XNANLCkLAfrl" alt="TopTier member" class="w-full h-full object-cover" loading="lazy" decoding="async"></div>
+        <div class="member-img-container aspect-square animate-float" style="animation-delay:1.9s;"><img src="https://lh3.googleusercontent.com/d/1N-4A1iYPGetMqKGpXVjyk25gtVg5oXFU" alt="TopTier member" class="w-full h-full object-cover" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="membership" class="py-24 bg-tt-black border-y border-white/5">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-4xl md:text-5xl font-black mb-4">What You’ll Get as a Member 🚀</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Access high-level intelligence and exclusive resources built for high-scale operators.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="premium-card p-8 rounded-3xl reveal"><div class="text-4xl mb-6">📊</div><h3 class="text-xl font-bold mb-4">TikTok Shop Database</h3><p class="text-gray-400">All-in-One systematically organized TikTok Shop operations resource, field-tested by experienced sellers.</p></article>
+        <article class="premium-card p-8 rounded-3xl reveal" style="transition-delay:80ms;"><div class="text-4xl mb-6">📅</div><h3 class="text-xl font-bold mb-4">Monthly Workshops</h3><p class="text-gray-400">Cutting-edge tactics on Social Commerce, TikTok Shop, AI, and Amazon every single month.</p></article>
+        <article class="premium-card p-8 rounded-3xl reveal" style="transition-delay:140ms;"><div class="text-4xl mb-6">🔌</div><h3 class="text-xl font-bold mb-4">Internal Support</h3><p class="text-gray-400">Direct access to TikTok contacts, troubleshooting resources, and partnership opportunities.</p></article>
+        <article class="premium-card p-8 rounded-3xl reveal" style="transition-delay:200ms;"><div class="text-4xl mb-6">🏆</div><h3 class="text-xl font-bold mb-4">7–9 Figure Mentorship</h3><p class="text-gray-400">Learn directly from elite operators who have built large-scale and sustainable e-commerce brands.</p></article>
+        <article class="premium-card p-8 rounded-3xl reveal" style="transition-delay:260ms;"><div class="text-4xl mb-6">🎬</div><h3 class="text-xl font-bold mb-4">Master Class</h3><p class="text-gray-400">Foundational course covering content strategy, affiliate building, and scaling synergy.</p></article>
+        <article class="premium-card p-8 rounded-3xl reveal" style="transition-delay:320ms;"><div class="text-4xl mb-6">🎫</div><h3 class="text-xl font-bold mb-4">Priority Access</h3><p class="text-gray-400">Exclusive priority seating and early-bird access to TopTier Summit and signature events.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-black mb-16 text-center reveal">What You’ll Achieve 🎯</h2>
+      <div class="max-w-4xl mx-auto space-y-10">
+        <div class="flex flex-col md:flex-row gap-8 items-center reveal"><div class="text-6xl font-black text-tt-gold shrink-0">01</div><div class="premium-card flex-1 p-8 rounded-2xl border-l-4 border-l-tt-red"><h3 class="text-2xl font-bold mb-2">Solid Understanding</h3><p class="text-gray-400">Master TikTok Shop operations with an always-updated knowledge system that tracks every shift.</p></div></div>
+        <div class="flex flex-col md:flex-row-reverse gap-8 items-center reveal"><div class="text-6xl font-black text-tt-gold shrink-0">02</div><div class="premium-card flex-1 p-8 rounded-2xl border-r-4 border-r-tt-gold md:text-right"><h3 class="text-2xl font-bold mb-2">AI Mastery</h3><p class="text-gray-400">Learn how AI tools are applied in real business operations to build scalable content engines.</p></div></div>
+        <div class="flex flex-col md:flex-row gap-8 items-center reveal"><div class="text-6xl font-black text-tt-gold shrink-0">03</div><div class="premium-card flex-1 p-8 rounded-2xl border-l-4 border-l-tt-red"><h3 class="text-2xl font-bold mb-2">Clear Roadmap</h3><p class="text-gray-400">Gain structured social growth direction and early access to insider opportunities before they hit the mass market.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#0a0a0a]">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 reveal">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-black mb-4">Elite Seller Group</h2>
+          <p class="text-gray-400">Our members represent the top 10% of social commerce operators.</p>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="relative pt-40 pb-20 bg-zinc-950 overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
-            <div class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-red-900 rounded-full blur-[150px]"></div>
-            <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-yellow-700 rounded-full blur-[150px]"></div>
+        <div class="flex gap-4">
+          <div class="text-center"><p class="text-3xl font-black text-tt-red" id="stat-sellers">0</p><p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">8-Figure Brands</p></div>
+          <div class="w-px h-10 bg-white/10"></div>
+          <div class="text-center"><p class="text-3xl font-black text-tt-gold" id="stat-views">0</p><p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">TikTok Views</p></div>
         </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+        <article class="premium-card p-6 rounded-xl border-t-2 border-t-tt-red"><i class="fas fa-utensils text-2xl mb-4 text-tt-red"></i><h3 class="font-bold">#1 Kitchen Brand</h3><p class="text-sm text-gray-500 mt-2">Dominating Amazon & TikTok categories.</p></article>
+        <article class="premium-card p-6 rounded-xl border-t-2 border-t-tt-gold"><i class="fas fa-tools text-2xl mb-4 text-tt-gold"></i><h3 class="font-bold">Tools & Hardware</h3><p class="text-sm text-gray-500 mt-2">Scaling through viral demos.</p></article>
+        <article class="premium-card p-6 rounded-xl border-t-2 border-t-white"><i class="fas fa-dog text-2xl mb-4 text-white"></i><h3 class="font-bold">Pet Innovation</h3><p class="text-sm text-gray-500 mt-2">Massive audience engagement.</p></article>
+        <article class="premium-card p-6 rounded-xl border-t-2 border-t-tt-red"><i class="fas fa-dumbbell text-2xl mb-4 text-tt-red"></i><h3 class="font-bold">Sports & Fitness</h3><p class="text-sm text-gray-500 mt-2">AI-driven creative strategies.</p></article>
+      </div>
+    </div>
+  </section>
 
-        <div class="container mx-auto px-6 relative z-10 text-center max-w-4xl">
-            <h4 class="text-red-500 font-bold tracking-[0.2em] uppercase mb-4">Join the Elite</h4>
-            <h1 class="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
-                TopTier League <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">Membership</span>
-            </h1>
-            <p class="text-xl text-gray-300 leading-relaxed mb-8">
-                A pioneering global e-commerce community where top sellers, category leaders, and forward-thinking entrepreneurs connect, learn, and grow.
-            </p>
-            <p class="text-gray-400 text-lg max-w-3xl mx-auto">
-                We embrace the latest trends, collaborate with top industry talent, and leverage cutting-edge technology — with a strong focus on <span class="text-white font-semibold">TikTok, Amazon, and AI</span>.
-            </p>
-        </div>
-    </section>
+  <section id="pioneers" class="py-24 bg-tt-black border-y border-white/5">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-4xl md:text-5xl font-black mb-6">We Are a Community of Pioneers</h2>
+        <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          Pioneering spirit is at the core of TopTier League. Our members strive to stay ahead in social commerce and AI-driven business models by testing cutting-edge strategies, validating what works, and scaling proven results quickly.
+        </p>
+      </div>
+      <div class="premium-card rounded-3xl overflow-hidden reveal">
+        <img
+          src="https://lh3.googleusercontent.com/d/1EWciuFkSKBpMRVTzw1O0ThZM66QP11Vw"
+          alt="TopTier League pioneers community"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </div>
+  </section>
 
-    <!-- What Happens in the Community -->
-    <section class="py-20 bg-black border-y border-zinc-900">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold text-white mb-6">What Happens in the Community 💬</h2>
-                    <p class="text-gray-400 text-lg mb-8">
-                        It starts with a dedicated discussion group designed for high-level exchange. We also host monthly online workshops that keep members ahead of every major trend in e-commerce.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
-                            <div class="bg-red-600/20 p-3 rounded-full mr-4"><i data-lucide="message-circle" class="text-red-500 w-6 h-6"></i></div>
-                            <span class="text-gray-200 font-medium">Exchange insights with experienced sellers</span>
-                        </div>
-                        <div class="flex items-center p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
-                            <div class="bg-blue-600/20 p-3 rounded-full mr-4"><i data-lucide="share-2" class="text-blue-500 w-6 h-6"></i></div>
-                            <span class="text-gray-200 font-medium">Share challenges and breakthroughs</span>
-                        </div>
-                        <div class="flex items-center p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
-                            <div class="bg-yellow-600/20 p-3 rounded-full mr-4"><i data-lucide="users" class="text-yellow-500 w-6 h-6"></i></div>
-                            <span class="text-gray-200 font-medium">Build meaningful business relationships</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-600/20 to-transparent rounded-bl-full"></div>
-                    <h3 class="text-xl font-bold text-white mb-4">Monthly Workshops</h3>
-                    <p class="text-gray-400 leading-relaxed mb-6">
-                        Each month, our sessions feature <span class="text-white">real-world strategies</span>, <span class="text-white">product insights</span>, and <span class="text-white">growth frameworks</span> that members can immediately apply.
-                    </p>
-                    <div class="flex items-center text-yellow-500 font-bold text-sm uppercase tracking-wider">
-                        <i data-lucide="zap" class="w-5 h-5 mr-2"></i> Ahead of the curve
-                    </div>
-                </div>
+  <section class="py-24 bg-tt-black border-y border-white/5">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-4xl md:text-5xl font-black mb-12 text-center reveal">What We Explore In Our Group</h2>
+      <div class="space-y-4">
+        <div class="premium-card rounded-2xl p-6 reveal"> “We are soon launching some very UGC friendly products and planning to attempt a pretty big launch on TikTok”</div>
+        <div class="premium-card rounded-2xl p-6 reveal">“Still fighting TikTok’s algorithm 😂 Hoping to get better together soon.”</div>
+        <div class="premium-card rounded-2xl p-6 reveal">“Guys how can I up my FBT stock limits? ”</div>
+        <div class="premium-card rounded-2xl p-6 reveal">“Crazy growth - he has been running the AI avatar accounts to acquire customers, similar to what we discussed in our TopTier League workshops. ”</div>
+        <div class="premium-card rounded-2xl p-6 reveal">“Amazon just launched its first Global Warehouse Distribution (GWD) in Shenzhen. It can saves up to 45% in storage cost compared to AWD”</div>
+        <div class="premium-card rounded-2xl p-6 reveal">“Currently use n8n with Claude code to setup automated workflows. I have 2 people doing it, as it’s all new. ”</div>
+        <div class="premium-card rounded-2xl p-6 reveal">“Exclusive new program for TikTok Shop cold start. Limited access. True bonus for TopTier League members. ”</div>
+        <p class="text-gray-500 text-2xl px-2">......</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-tt-black">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-4xl md:text-5xl font-black mb-12 text-center reveal">Member Feedback</h2>
+      <div class="space-y-6">
+        <blockquote class="premium-card p-8 rounded-2xl reveal"><p class="text-lg text-gray-200">“Thanks for sharing the ideas. I'll definitely get my team to try with this method. ”
+- Kevin, 8-figure seller</p></blockquote>
+        <blockquote class="premium-card p-8 rounded-2xl reveal"><p class="text-lg text-gray-200">“Grateful for all these! Brave new world! ”
+- Albert, 8-figure seller</p></blockquote>
+        <blockquote class="premium-card p-8 rounded-2xl reveal"><p class="text-lg text-gray-200">“🔥That’s so cool. Nice to see TopTier League up on stage”
+- Sunder, Category leader</p></blockquote>
+        <p class="text-gray-500 text-2xl px-2">......</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="workshops" class="py-24 bg-gradient-to-b from-tt-black to-tt-dark-gray">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-4xl md:text-5xl font-black mb-4">TopTier Online Workshops</h2>
+        <p class="text-gray-400">Live knowledge drops with the world's best operators.</p>
+      </div>
+
+      <div class="max-w-5xl mx-auto premium-card rounded-3xl overflow-hidden border-2 border-tt-red/30">
+        <div class="grid md:grid-cols-2">
+          <div class="p-10 flex flex-col justify-center">
+            <div class="bg-tt-red text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-6 animate-pulse">Live Soon</div>
+            <h3 class="text-3xl font-black mb-2">Seller Workshop — May</h3>
+            <p class="text-tt-gold font-bold mb-6 italic">Presenter: Can Chan (Co-founder)</p>
+            <div class="space-y-4 mb-8 text-gray-300">
+              <p><span class="font-bold text-white">Growth Hacks:</span> TikTok Shop Live Streaming Secrets.</p>
+              <p><span class="font-bold text-white">AI in Action:</span> Building a scalable content engine.</p>
+              <p><span class="font-bold text-white">Platform Intel:</span> Latest TikTok & Amazon updates.</p>
             </div>
+            <div class="grid grid-cols-4 gap-4 text-center" id="countdown">
+              <div><p class="text-2xl font-black text-tt-red" id="days">00</p><p class="text-[8px] uppercase font-bold text-gray-500">Days</p></div>
+              <div><p class="text-2xl font-black" id="hours">00</p><p class="text-[8px] uppercase font-bold text-gray-500">Hours</p></div>
+              <div><p class="text-2xl font-black" id="minutes">00</p><p class="text-[8px] uppercase font-bold text-gray-500">Min</p></div>
+              <div><p class="text-2xl font-black" id="seconds">00</p><p class="text-[8px] uppercase font-bold text-gray-500">Sec</p></div>
+            </div>
+          </div>
+          <div class="relative min-h-[300px]">
+            <img src="https://lh3.googleusercontent.com/d/1CIGfD_TE2-T87YleTyBHFCreBKAmONKq" alt="TopTier online workshop poster" class="w-full h-full object-cover" loading="lazy" decoding="async">
+            <div class="absolute inset-0 bg-gradient-to-r from-tt-black/80 to-transparent md:block hidden"></div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Benefits Section -->
-    <section class="py-24 bg-zinc-950 relative">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black text-white mb-4">What You’ll Get as a Member 🚀</h2>
-                <div class="w-24 h-1.5 bg-red-600 mx-auto rounded-full"></div>
-            </div>
+      <div class="mt-16 text-center reveal">
+        <a href="https://www.patreon.com/c/Can_TikTok" target="_blank" rel="noopener noreferrer" class="inline-block px-12 py-5 border-2 border-white hover:border-tt-red hover:bg-tt-red transition-all rounded-full font-bold uppercase tracking-widest text-sm">More Workshops</a>
+      </div>
+    </div>
+  </section>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Benefit 1 -->
-                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-red-600 transition-all group">
-                    <div class="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                        <i data-lucide="database" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">1️⃣ All-in-One TikTok Shop Database</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Your go-to resource for systematic TikTok Shop operations — organized, updated, and field-tested by experienced sellers.
-                    </p>
-                </div>
-
-                <!-- Benefit 2 -->
-                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-red-600 transition-all group">
-                    <div class="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                        <i data-lucide="video" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">2️⃣ Monthly Online Workshops</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        Elite sellers share cutting-edge tactics, real case studies, and actionable insights. Learn scaling across platforms in just one power-packed hour.
-                    </p>
-                    <span class="text-xs font-bold text-yellow-500 bg-yellow-500/10 px-3 py-1 rounded-full">Join live or watch replay</span>
-                </div>
-
-                <!-- Benefit 3 -->
-                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-red-600 transition-all group">
-                    <div class="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                        <i data-lucide="life-buoy" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">3️⃣ TikTok Internal Support</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Access to key contacts in various TikTok functions. Stay close to official updates, troubleshooting contacts, and partnership opportunities.
-                    </p>
-                </div>
-
-                <!-- Benefit 4 -->
-                <div class="bg-black border border-zinc-800 p-8 rounded-2xl hover:border-red-600 transition-all group">
-                    <div class="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center mb-6 text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                        <i data-lucide="trending-up" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">4️⃣ 7-9 Figure Mentorship</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Get real advice from those who have built massive, sustainable e-commerce empires.
-                    </p>
-                </div>
-
-                <!-- Benefit 5: Master Class (Spans 2 columns on LG) -->
-                <div class="bg-gradient-to-br from-zinc-900 to-black border border-zinc-800 p-8 rounded-2xl md:col-span-2 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-10"><i data-lucide="graduation-cap" class="w-32 h-32 text-white"></i></div>
-                    <div class="relative z-10">
-                        <h3 class="text-2xl font-bold text-white mb-2">5️⃣ TikTok Shop Operation Master Class</h3>
-                        <p class="text-gray-400 mb-6">A foundational, 5+ hour online course that walks you through every step.</p>
-                        
-                        <div class="bg-black/50 border border-zinc-700/50 rounded-xl p-6">
-                            <h4 class="text-sm font-bold text-red-500 uppercase tracking-wider mb-4">Course Outline</h4>
-                            <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> TikTok Shop opportunities</li>
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Business models on TikTok</li>
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Seller Center essentials</li>
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Account & content strategy</li>
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Product selection</li>
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Affiliate network building</li>
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Live streaming strategy</li>
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Team structure</li>
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Amazon–TikTok synergy</li>
-                                <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i> Real case studies</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section id="summits" class="py-24 bg-tt-black">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-black mb-16 text-center reveal">TopTier Global Summits</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-24 reveal">
+        <div class="relative rounded-3xl overflow-hidden group">
+          <img src="https://lh3.googleusercontent.com/d/1UeXuTvAvhstiDvSpUAR4RgAizOsLcxAg" alt="TopTier summit atmosphere" class="w-full transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async">
+          <div class="absolute inset-0 bg-tt-red/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-6 left-6">
+            <p class="text-tt-gold font-bold uppercase tracking-widest text-xs mb-1">Featured Event</p>
+            <h3 class="text-2xl font-black">TopTier Summit 2026 — Spring</h3>
+          </div>
         </div>
-    </section>
-
-    <!-- What You'll Achieve -->
-    <section class="py-20 bg-black">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <div class="bg-zinc-900/30 border border-zinc-800 p-10 md:p-16 rounded-3xl">
-                <h2 class="text-3xl font-bold text-white mb-8 text-center">What You’ll Achieve in TopTier League 🎯</h2>
-                <ul class="space-y-6 text-lg">
-                    <li class="flex items-start">
-                        <i data-lucide="target" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-300"><strong class="text-white">Solid Understanding:</strong> Mastery of TikTok Shop operations with an always-updated reference.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-lucide="cpu" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-300"><strong class="text-white">AI Mastery:</strong> Command of AI-driven tools applied in real business operations.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-lucide="map" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-300"><strong class="text-white">Clear Roadmap:</strong> A path for growth with early access to insider resources.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-lucide="box" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-300"><strong class="text-white">Personalized Model:</strong> A TikTok business model fit for the social commerce era.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-lucide="globe" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-300"><strong class="text-white">Channel Synergy:</strong> A comprehensive Amazon–TikTok strategy to scale across platforms.</span>
-                    </li>
-                </ul>
-            </div>
+        <div>
+          <h3 class="text-3xl font-black mb-6">Immersive Experience</h3>
+          <p class="text-gray-400 mb-4 leading-relaxed">
+            Join hundreds of elite sellers, high-performing creators, AI builders, and platform managers in person. Experience high-energy networking, stage presentations, inspiring mastermind sessions, and exclusive creator-brand matchmaking opportunities.
+          </p>
+          <p class="text-gray-400 mb-8">
+            <a href="https://www.linkedin.com/posts/can-chan-966a632b_what-an-unforgettable-moment-at-toptier-activity-7451651677625147392-YMtz" target="_blank" rel="noopener noreferrer" class="text-tt-gold hover:underline">TopTier Discovery Commerce Summit Recap</a>
+          </p>
+          <a href="https://toptiersummit.live" target="_blank" rel="noopener noreferrer" class="text-tt-red font-bold">The next summit: TopTierSummit.live</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Pricing & CTA -->
-    <section class="py-24 bg-zinc-950 relative">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-900/20 via-black to-black opacity-50 pointer-events-none"></div>
-        <div class="container mx-auto px-6 max-w-3xl relative z-10">
-            
-            <div class="bg-black border border-red-900/50 shadow-[0_0_60px_-15px_rgba(220,38,38,0.3)] rounded-3xl overflow-hidden text-center">
-                <div class="bg-gradient-to-r from-red-700 to-red-900 py-4">
-                    <h3 class="text-white font-bold tracking-widest uppercase">Move 10X Faster in Social E-commerce</h3>
-                </div>
-                <div class="p-10 md:p-14">
-                    <h2 class="text-3xl font-bold text-white mb-2">Annual Community Membership</h2>
-                    <div class="flex items-center justify-center my-8">
-                        <span class="text-5xl md:text-6xl font-black text-white">$1,297</span>
-                        <span class="text-gray-500 text-xl ml-2 self-end mb-2">/ year</span>
-                    </div>
+  <section id="faq" class="py-24 bg-[#050505]">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-4xl md:text-5xl font-black mb-16 text-center reveal">Common Questions</h2>
+      <div class="space-y-4">
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">What is TopTier League?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">TopTier League is a pioneering global eCommerce community where sellers, creators, agencies, and operators connect, learn, and grow together in the era of social commerce and AI.</div></div>
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">Who should join TopTier League?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">Our community is designed for TikTok Shop sellers, Amazon sellers, creators, agencies, brand owners, and eCommerce entrepreneurs looking to scale faster.</div></div>
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">Is this community beginner-friendly?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">Yes. We have members ranging from beginners to multi-million-dollar sellers and agencies in the social commerce area.</div></div>
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">How does onboarding work after I join the community, and what should I prepare?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">Once you join, you’ll first receive a short status survey so we can better understand your business stage, goals, and focus areas. After that, you’ll be added to our Lark group and WeChat group for communication and networking.<br><br>Lark and WeChat are widely used communication tools within the TikTok ecosystem, especially when connecting with TikTok team members, agencies, sellers, and creators. We recommend setting up your Lark account in advance to ensure a smooth onboarding experience.</div></div>
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">What is the TopTier Summit?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">It is our flagship in-person event featuring keynote speeches, workshops, networking, mastermind sessions, and creator-brand matchmaking opportunities.</div></div>
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">Where are your events held?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">Our events are hosted globally, including locations such as Los Angeles, Bangkok, Hanoi, Guangzhou, and other major eCommerce hubs.</div></div>
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">Does TopTier League focus only on TikTok Shop?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">No. While TikTok Shop is a major focus, we also cover Amazon, Shopify, Whatnot, Walmart, AI commerce, and cross-platform growth strategies.</div></div>
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">Do you teach AI applications in ecommerce?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">Yes. We regularly share workshops, mastermind discussions, and case studies around AI-driven commerce.</div></div>
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">How can I join TopTier League?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">You can apply through our website or join through one of our events or referral channels.</div></div>
+        <div class="premium-card rounded-2xl overflow-hidden"><button class="w-full p-6 text-left flex justify-between items-center" onclick="toggleFaq(this)"><span class="font-bold">Is there a refund policy?</span><i class="fas fa-chevron-down transition-transform"></i></button><div class="faq-content hidden p-6 pt-0 text-gray-400 border-t border-white/5">Due to the nature of the membership being primarily a virtual service, refunds are not available once a member has been added to the Lark group and onboarding has begun. To date, we have not had members request refunds, and we aim to provide strong value and support to every member. Please review the membership details carefully before completing your payment.</div></div>
+      </div>
+    </div>
+  </section>
 
-                    <div class="bg-zinc-900/50 rounded-xl p-6 mb-10 text-left inline-block w-full max-w-md">
-                        <ul class="space-y-4 text-gray-300">
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i> Full access to monthly online workshops</li>
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i> The TikTok Shop Operation Master Class</li>
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i> Entry to private seller community group</li>
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i> Continuous access to all shared resources</li>
-                        </ul>
-                    </div>
-                    <!--
-                    <div>
-                        <a href="https://www.patreon.com/posts/141932063/" class="inline-block w-full md:w-auto bg-white text-black hover:bg-gray-200 px-10 py-4 rounded-full font-bold text-xl transition-all transform hover:scale-105 shadow-lg">
-                            Join TopTier League</a>
-                    </div>
-                    -->
-                    <div>
-                        <style>.pp-KW2KS2U6N6FJU{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
-                        <form action="https://www.paypal.com/ncp/payment/KW2KS2U6N6FJU" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                            <input class="pp-KW2KS2U6N6FJU" type="submit" value="Join TopTier League" />
-                            <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
-                            <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;filter: brightness(0) invert(1);display: inline;"/></section>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
+  <section id="join" class="py-28 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-tt-red/20 via-black to-tt-gold/10 -z-10"></div>
+    <div class="container mx-auto px-6 reveal">
+      <div class="max-w-2xl mx-auto premium-card rounded-3xl p-10 md:p-12 text-center border border-tt-red/40">
+        <p class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-4">MOVE 10X FASTER IN SOCIAL E-COMMERCE</p>
+        <h2 class="text-3xl md:text-4xl font-black mb-2">Annual Community Membership</h2>
+        <div class="my-6">
+          <p class="text-5xl font-black text-tt-red">$1,297</p>
+          <p class="text-gray-400 mt-1">/ year <span class="text-gray-500">( $1,997 / year soon )</span></p>
         </div>
-    </section>
-    <div>
-  
-</div>
+        <ul class="text-left max-w-md mx-auto space-y-3 mb-10 text-gray-300">
+          <li>• Full access to monthly online workshops</li>
+          <li>• The TikTok Shop Operation Master Class</li>
+          <li>• Entry to elite seller group</li>
+          <li>• Continuous access to key operation resources</li>
+        </ul>
+        <a href="https://www.paypal.com/ncp/payment/KW2KS2U6N6FJU" target="_blank" rel="noopener noreferrer" class="inline-block w-full md:w-auto px-12 py-4 bg-white text-black font-black rounded-full hover:bg-tt-red hover:text-white transition-all">Join TopTier League</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <!-- Profile Section -->
-    <section class="py-20 bg-black border-t border-zinc-900">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                <div class="w-32 h-32 bg-zinc-800 rounded-full border-4 border-zinc-700 flex items-center justify-center flex-shrink-0">
-                    <i data-lucide="user" class="w-16 h-16 text-gray-500"></i>
-                </div>
-                <div class="text-center md:text-left">
-                    <h3 class="text-2xl font-bold text-white mb-1">About Can Chan 👤</h3>
-                    <p class="text-red-500 font-medium mb-4">Co-founder of TopTier League</p>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-center justify-center md:justify-start"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span> Veteran Amazon & TikTok Shop seller</li>
-                        <li class="flex items-center justify-center md:justify-start"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span> Co-founder of a 100K+ member seller network</li>
-                        <li class="flex items-center justify-center md:justify-start"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span> Consultant to 10+ 8- and 9-figure Amazon sellers</li>
-                        <li class="flex items-center justify-center md:justify-start"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span> Co-founder of Minnovate AI (Integrated AI API Wholesale Platform)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="bg-tt-black pt-20 pb-10 border-t border-white/5">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-12 mb-20">
+      <div class="col-span-2">
+        <a href="https://toptierleague.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 mb-6">
+          <img src="https://lh3.googleusercontent.com/d/1pMmdf1sUNgpDZmkgLBjtsohswpVks-BH" alt="TopTier League logo" class="w-9 h-9 object-contain" loading="lazy" decoding="async">
+          <span class="text-xl font-black uppercase tracking-tighter"><span class="text-tt-red">TOPTIER</span> <span class="text-white">LEAGUE</span></span>
+        </a>
+        <p class="text-gray-500 max-w-sm">The elite global e-commerce seller community driving the next wave of social commerce innovation.</p>
+      </div>
 
-    
-    <!-- Patreon Exhibit content -->
-    <section id="patreon-exhibit" class="py-20 bg-black border-t border-zinc-900">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-gray-300">
-                <h2 class="text-xl font-semibold text-white mb-4">Previous monthly online workshop agenda</h2>
+      <div>
+        <h3 class="font-bold uppercase tracking-widest text-xs mb-6 text-gray-400">Navigation</h3>
+        <ul class="space-y-4 text-sm font-semibold">
+          <li><a href="#about" class="hover:text-tt-red">About</a></li>
+          <li><a href="#membership" class="hover:text-tt-red">Membership</a></li>
+          <li><a href="#pioneers" class="hover:text-tt-red">Pioneers</a></li>
+          <li><a href="#workshops" class="hover:text-tt-red">Workshops</a></li>
+          <li><a href="#summits" class="hover:text-tt-red">Summits</a></li>
+        </ul>
+      </div>
 
-                <!-- Months grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                    <div>
-                        <p class="text-sm text-gray-300 font-medium mb-2">Dec workshop</p>
-                        <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                            <img src="image/截屏2024-12-16 下午6.37.07.webp" alt="Dec workshop" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        </figure>
-                    </div>
+      <div>
+        <h3 class="font-bold uppercase tracking-widest text-xs mb-6 text-gray-400">Founder</h3>
+        <p class="text-sm font-bold mb-2">Can Chan</p>
+        <p class="text-xs text-gray-500 mb-4">Co-founder & Chief Strategist</p>
+        <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank" rel="noopener noreferrer" class="text-xs text-tt-gold hover:underline">Connect on LinkedIn</a>
+      </div>
+    </div>
 
-                    <div>
-                        <p class="text-sm text-gray-300 font-medium mb-2">Jan workshop</p>
-                        <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                            <img src="image/Can's AI _ VideoEcom Monthly Update Call on Jan 22.webp" alt="Jan workshop" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        </figure>
-                    </div>
+    <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase font-bold tracking-[0.2em] text-gray-600">
+      <p>© 2026 TOPTIER LEAGUE. ALL RIGHTS RESERVED.</p>
+      <div class="flex gap-8">
+        <a href="#" class="hover:text-white transition-colors">Terms</a>
+        <a href="#" class="hover:text-white transition-colors">Privacy</a>
+        <a href="#" class="hover:text-white transition-colors">Support</a>
+      </div>
+    </div>
+    <p class="text-center text-xs text-gray-500 mt-8">This page is made with AI</p>
+  </div>
+</footer>
 
-                    <div>
-                        <p class="text-sm text-gray-300 font-medium mb-2">Feb workshop</p>
-                        <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                            <img src="image/Feb Monthly Call Can Chan.webp" alt="Feb workshop" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        </figure>
-                    </div>
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("active");});},{threshold:.1});
+  reveals.forEach(r=>observer.observe(r));
 
-                    <div>
-                        <p class="text-sm text-gray-300 font-medium mb-2">March workshop</p>
-                        <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                            <img src="image/TikTok X AI Workshop - March.webp" alt="March Workshop" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        </figure>
-                    </div>
+  function animateValue(id,start,end,duration){
+    let startTimestamp=null;
+    const step=(timestamp)=>{
+      if(!startTimestamp)startTimestamp=timestamp;
+      const progress=Math.min((timestamp-startTimestamp)/duration,1);
+      const val=Math.floor(progress*(end-start)+start);
+      document.getElementById(id).innerHTML=id==="stat-sellers"?val+"%":val+"B+";
+      if(progress<1)window.requestAnimationFrame(step);
+    };
+    window.requestAnimationFrame(step);
+  }
 
-                    <div>
-                        <p class="text-sm text-gray-300 font-medium mb-2">April workshop</p>
-                        <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                            <img src="image/TikTok X AI Workshop - April.webp" alt="April Workshop" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        </figure>
-                    </div>
+  const statsSection=document.getElementById("stat-sellers");
+  new IntersectionObserver((entries,obs)=>{
+    if(entries[0].isIntersecting){
+      animateValue("stat-sellers",0,80,1800);
+      animateValue("stat-views",0,10,1800);
+      obs.unobserve(statsSection);
+    }
+  }).observe(statsSection);
 
-                    <div>
-                        <p class="text-sm text-gray-300 font-medium mb-2">May workshop</p>
-                        <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                            <img src="image/TikTok X AI Workshop - May.webp" alt="May Workshop" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        </figure>
-                    </div>
+  function toggleMenu(){
+    const menu=document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+    document.body.classList.toggle("overflow-hidden");
+  }
 
-                    <div>
-                        <p class="text-sm text-gray-300 font-medium mb-2">June workshop</p>
-                        <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                            <img src="image/TopTier League Seller Workshop - June.webp" alt="June Workshop" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        </figure>
-                    </div>
+  function toggleFaq(btn){
+    const content=btn.nextElementSibling;
+    const icon=btn.querySelector("i");
+    content.classList.toggle("hidden");
+    icon.classList.toggle("rotate-180");
+  }
 
-                    <div>
-                        <p class="text-sm text-gray-300 font-medium mb-2">July workshop</p>
-                        <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                            <img src="image/截屏2025-07-17 下午9.26.01.webp" alt="July Workshop" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        </figure>
-                    </div>
+  const countdownDate=new Date("May 21, 2026 09:00:00").getTime();
+  const countdownInterval=setInterval(()=>{
+    const now=new Date().getTime();
+    const distance=countdownDate-now;
+    const d=Math.floor(distance/(1000*60*60*24));
+    const h=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+    const m=Math.floor((distance%(1000*60*60))/(1000*60));
+    const s=Math.floor((distance%(1000*60))/1000);
 
-                    <div>
-                        <p class="text-sm text-gray-300 font-medium mb-2">September workshop</p>
-                        <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                            <img src="image/Sep Workshop.webp" alt="September Workshop" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        </figure>
-                    </div>
-                </div>
+    document.getElementById("days").innerText=String(Math.max(0,d)).padStart(2,"0");
+    document.getElementById("hours").innerText=String(Math.max(0,h)).padStart(2,"0");
+    document.getElementById("minutes").innerText=String(Math.max(0,m)).padStart(2,"0");
+    document.getElementById("seconds").innerText=String(Math.max(0,s)).padStart(2,"0");
 
-                <h4 class="text-xl font-semibold text-white mb-4">Part of the sharing</h4>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/customer engagement tools.webp" alt="customer engagement tools" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/Meoky team structure.webp" alt="Meoky team structure" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/TikTok YouTube 多手机.jpg" alt="TikTok YouTube 多手机" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/TikTok YouTube 多账号.jpg" alt="TikTok YouTube 多账号" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/AI spokeswoman-封面.jpg" alt="AI spokeswoman" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/TikTok account Matrix.webp" alt="TikTok account Matrix" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/Secret of 10X growth driven by content.webp" alt="Secret of 10X growth" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/creators are making money.webp" alt="creators are making money" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/The secrets of TikTok live.webp" alt="The secrets of TikTok live" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/High converting content- 5X margin.webp" alt="High converting content" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/Unlimited Amazon post design w_ AI.webp" alt="Unlimited Amazon post design" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/Amazon PPC Dayparting.jpg" alt="Amazon PPC Dayparting" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/Remarketing via Ads.webp" alt="Remarketing via Ads" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                    </figure>
-                </div>
-
-                <h4 class="text-xl font-semibold text-white mb-4">Examples & Support</h4>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/TikTok support screenshot.jpg" alt="TikTok support screenshot" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        <figcaption class="p-4 text-sm text-gray-400">Example of access to TikTok internal strategic support</figcaption>
-                    </figure>
-
-                    <figure class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden">
-                        <img src="image/Ricky vendor.webp" alt="Ricky vendor" loading="lazy" decoding="async" class="w-full h-auto object-cover">
-                        <figcaption class="p-4 text-sm text-gray-400">Sincere support from 7/8/9-figure ecom entrepreneurs</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer (Simplified: Centered Contact Only) -->
-    <footer class="bg-black pt-16 pb-10 border-t border-zinc-900">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex flex-col items-center justify-center mb-10">
-                <p class="text-gray-300 text-lg mb-6">
-                    Contact Can Chan directly for membership details.
-                </p>
-                <div class="flex space-x-6">
-                    <a href="https://www.linkedin.com/in/can-chan-966a632b/" class="p-3 bg-zinc-900 rounded-full text-white hover:bg-blue-600 transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                    <a href="https://www.instagram.com/canchanai/" class="p-3 bg-zinc-900 rounded-full text-white hover:bg-pink-600 transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
-                </div>
-            </div>
-            <div class="border-t border-zinc-900 pt-8 text-gray-600 text-sm">
-                <p>&copy; <span id="year"></span> TopTier League. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        lucide.createIcons();
-    </script>
+    if(distance<0){
+      clearInterval(countdownInterval);
+      document.getElementById("countdown").innerHTML="<p class='text-tt-red font-bold'>WORKSHOP STARTED</p>";
+    }
+  },1000);
+</script>
 </body>
 </html>
