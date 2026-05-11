@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI X CONTENT | Maximize Your Social Impact With AI Twin Accounts</title>
+    <meta name="description" content="Scale your personal brand with elite AI Twin accounts. Fully managed done-for-you AI content service for influencers, founders, and creators.">
+    <meta name="keywords" content="AI Twin, Social Media Content, E-commerce, Influencer AI, Content Creation, TikTok Shop, AI X CONTENT">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        :root {
+            --brand-red: #E61C23;
+            --brand-gold: #D4AF37;
+            --deep-black: #050505;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--deep-black);
+            color: #ffffff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-nav {
+            background: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #F9E29C 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .red-glow-btn {
+            background: linear-gradient(90deg, #E61C23 0%, #A01419 100%);
+            box-shadow: 0 0 20px rgba(230, 28, 35, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .red-glow-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(230, 28, 35, 0.6);
+        }
+
+        .ai-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .ai-card:hover {
+            border-color: var(--brand-red);
+            background: rgba(230, 28, 35, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background: linear-gradient(45deg, var(--brand-red), #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230, 28, 35, 0.15) 0%, transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--deep-black); }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--brand-red); }
+
+        .styled-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <img src="https://lh3.googleusercontent.com/d/10PwCXrfuTvERvliB5GAuLN7bAILvOBec" alt="AI X CONTENT Logo" class="w-12 h-12 object-contain transform group-hover:scale-110 transition-transform">
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-400">
+                <a href="#About" class="hover:text-white transition-colors">About</a>
+                <a href="#Examples" class="hover:text-white transition-colors">Examples</a>
+                <a href="#HowItWorks" class="hover:text-white transition-colors">How It Works</a>
+                <a href="#Packages" class="hover:text-white transition-colors">Packages</a>
+                <a href="#Contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <a href="#Demo" class="red-glow-btn px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest">
+                Get Your AI Twin
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="hero-glow top-[-10%] right-[-10%]"></div>
+        <div class="hero-glow bottom-[-10%] left-[-10%] opacity-50"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right" class="space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/10 border border-red-600/30 text-red-500 text-[10px] font-black uppercase tracking-[0.2em]">
+                    <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+                    100% Done-For-You Service
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1] tracking-tighter uppercase italic">
+                    Maximize Your <br>
+                    <span class="gold-gradient-text">Social Impact</span> <br>
+                    With AI Twin Accounts
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-400 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                    Scale your content like a top creator—without constant photoshoots or editing. We build and manage your AI-powered social accounts while you focus on growth.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#Demo" class="red-glow-btn px-10 py-5 rounded-2xl text-sm font-black uppercase tracking-widest flex items-center justify-center gap-2">
+                        Request a Demo <i class="fa-solid fa-bolt"></i>
+                    </a>
+                    <a href="#Examples" class="bg-white/5 border border-white/10 hover:bg-white/10 px-10 py-5 rounded-2xl text-sm font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-all">
+                        View Examples
+                    </a>
+                </div>
+
+                <div class="pt-8 flex flex-wrap justify-center lg:justify-start gap-6 text-gray-500 opacity-60">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> No Prompting</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> No Tech Skills</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-red-600"></i> Platform Ready</div>
+                </div>
+            </div>
+
+            <div class="relative" data-aos="zoom-in">
+                <div class="relative z-10 w-full aspect-[4/5] bg-zinc-900 rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="https://lh3.googleusercontent.com/d/16WFXn2sw9SmnIAzrLOaIiVGxt6-AtImv" alt="AI Twin Creator Visual" class="w-full h-full object-cover transition-all duration-700">
+                    
+                    <div class="absolute top-10 left-[-20px] floating bg-black/80 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex items-center gap-4 shadow-xl">
+                        <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center"><i class="fa-brands fa-tiktok text-xl"></i></div>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter leading-none">Monthly Reach</p>
+                            <p class="text-lg font-black leading-none">+2.4M</p>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-20 right-[-20px] floating bg-black/80 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex items-center gap-4 shadow-xl" style="animation-delay: 1.5s">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-500 to-red-600 flex items-center justify-center"><i class="fa-brands fa-instagram text-xl"></i></div>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter leading-none">Content Scale</p>
+                            <p class="text-lg font-black leading-none">Infinite</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-red-600/20 blur-[100px] rounded-full -z-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="About" class="py-24 relative bg-zinc-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-6xl font-black uppercase italic"><span class="text-red-600">Personal</span> AI Content Team</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-4">We are not a tool. We are your dedicated production house, delivering consistent, high-end visual content without you ever stepping in front of a camera.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="ai-card p-8 rounded-[2rem] space-y-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl text-red-600"><i class="fa-solid fa-camera-retro"></i></div>
+                    <h3 class="text-2xl font-bold uppercase tracking-tighter italic">Fashion & Lifestyle</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Studio-quality lookbooks and street style shots generated monthly to keep your aesthetic sharp and evolving.</p>
+                </div>
+                <div class="ai-card p-8 rounded-[2rem] space-y-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl text-red-600"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="text-2xl font-bold uppercase tracking-tighter italic">Business Authority</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Establish dominance as a founder. Professional office, stage, and networking visuals that command respect.</p>
+                </div>
+                <div class="ai-card p-8 rounded-[2rem] space-y-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl text-red-600"><i class="fa-solid fa-dumbbell"></i></div>
+                    <h3 class="text-2xl font-bold uppercase tracking-tighter italic">Fitness & Wellness</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Keep your motivation constant. Premium gym settings and athletic lifestyle shots that inspire your followers.</p>
+                </div>
+                <div class="ai-card p-8 rounded-[2rem] space-y-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-3xl text-red-600"><i class="fa-solid fa-crown"></i></div>
+                    <h3 class="text-2xl font-bold uppercase tracking-tighter italic">Luxury Branding</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Private jets, penthouses, and high-tier lifestyle assets that position your personal brand in the 1%.</p>
+                </div>
+                <div class="ai-card p-8 rounded-[2rem] space-y-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-3xl text-red-600"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="text-2xl font-bold uppercase tracking-tighter italic">AI & Tech Futurist</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Cyberpunk aesthetics and high-tech workspace visuals for creators leading the digital revolution.</p>
+                </div>
+                <div class="ai-card p-8 rounded-[2rem] bg-gradient-to-br from-red-600 to-black flex flex-col justify-center items-center text-center group cursor-pointer" data-aos="fade-up" data-aos-delay="600">
+                    <h3 class="text-3xl font-black italic uppercase leading-none mb-4">Your Custom Style</h3>
+                    <p class="text-white/80 text-sm mb-6">Have a unique vision? We build bespoke visual identities from scratch.</p>
+                    <a href="#Demo" class="bg-white text-black px-6 py-2 rounded-full font-black text-[10px] uppercase tracking-widest group-hover:bg-red-200 transition-colors">Define Style</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="HowItWorks" class="py-24 bg-black relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-black uppercase italic mb-20 text-center">How It <span class="text-red-600">Works</span></h2>
+            
+            <div class="relative">
+                <div class="hidden lg:block absolute left-0 right-0 top-1/2 h-[2px] bg-white/5 -z-10"></div>
+                <div class="grid lg:grid-cols-4 gap-8">
+                    <div class="space-y-6" data-aos="fade-right" data-aos-delay="100">
+                        <div class="ai-card p-10 rounded-[2.5rem] relative">
+                            <span class="step-number text-5xl absolute -top-10 left-1/2 -translate-x-1/2">01</span>
+                            <div class="text-center pt-4">
+                                <h4 class="text-xl font-black uppercase mb-4 tracking-tighter italic">Submit Photos</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Upload 2+ high-quality headshots. We use these to map your facial features for perfect replication.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
+                        <div class="ai-card p-10 rounded-[2.5rem] relative">
+                            <span class="step-number text-5xl absolute -top-10 left-1/2 -translate-x-1/2">02</span>
+                            <div class="text-center pt-4">
+                                <h4 class="text-xl font-black uppercase mb-4 tracking-tighter italic">Choose Style</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Select your aesthetic from our elite catalog—from business authority to luxury editorial.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6" data-aos="fade-right" data-aos-delay="300">
+                        <div class="ai-card p-10 rounded-[2.5rem] relative">
+                            <span class="step-number text-5xl absolute -top-10 left-1/2 -translate-x-1/2">03</span>
+                            <div class="text-center pt-4">
+                                <h4 class="text-xl font-black uppercase mb-4 tracking-tighter italic">Neural Training</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Our creative AI team trains a bespoke model for your identity. No technical work for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6" data-aos="fade-right" data-aos-delay="400">
+                        <div class="ai-card p-10 rounded-[2.5rem] relative border-red-600/50">
+                            <span class="step-number text-5xl absolute -top-10 left-1/2 -translate-x-1/2">04</span>
+                            <div class="text-center pt-4">
+                                <h4 class="text-xl font-black uppercase mb-4 tracking-tighter italic">Scale Daily</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Receive a curated folder of ready-to-post visuals every month. High resolution, high impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Examples" class="py-24 bg-zinc-950 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-6xl font-black uppercase italic">Golden <span class="gold-gradient-text">Standard</span></h2>
+                    <p class="text-gray-500 mt-4">Real results. Real likeness. Best-in-class Quality.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-zinc-800" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://lh3.googleusercontent.com/d/1lR8nLkSsbaZKoJMY1FVS6E_sw6DhgCoj" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Luxury Travel AI">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 p-8 flex flex-col justify-end">
+                        <span class="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Luxury Lifestyle</span>
+                        <h5 class="text-xl font-bold">Luxury Travel AI</h5>
+                    </div>
+                </div>
+                <div class="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-zinc-800" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://lh3.googleusercontent.com/d/1edySxOQzBk2Bt637AHwOTkYe7X1iMDw-" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Founder Authority AI">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 p-8 flex flex-col justify-end">
+                        <span class="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Business</span>
+                        <h5 class="text-xl font-bold">Founder Authority AI</h5>
+                    </div>
+                </div>
+                <div class="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-zinc-800" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://lh3.googleusercontent.com/d/1g3e5T84XrlGcvyYNaDBQEOw1lw4mj4ep" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Fitness Model AI">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 p-8 flex flex-col justify-end">
+                        <span class="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Athletic</span>
+                        <h5 class="text-xl font-bold">Fitness Model AI</h5>
+                    </div>
+                </div>
+                <div class="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-zinc-800" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://lh3.googleusercontent.com/d/1Ixal1qkFGvwFi2w8IOjyo4Juba31TDwi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Street Fashion AI">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 p-8 flex flex-col justify-end">
+                        <span class="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Editorial</span>
+                        <h5 class="text-xl font-bold">Street Fashion AI</h5>
+                    </div>
+                </div>
+                <div class="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-zinc-800" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://lh3.googleusercontent.com/d/1ekG9g0aGXBlntkl0OOPwzsnCQcuY_fRM" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Cozy Home Lifestyle AI">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 p-8 flex flex-col justify-end">
+                        <span class="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Lifestyle</span>
+                        <h5 class="text-xl font-bold">Cozy Home Lifestyle AI</h5>
+                    </div>
+                </div>
+                <div class="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-zinc-800" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://lh3.googleusercontent.com/d/1zMwkL7StLMPACTe0iMAX4lO3DoC7M2qw" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Glamour Lingerie AI">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 p-8 flex flex-col justify-end">
+                        <span class="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Editorial</span>
+                        <h5 class="text-xl font-bold">Glamour Lingerie AI</h5>
+                    </div>
+                </div>
+                <div class="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-zinc-800" data-aos="fade-up" data-aos-delay="700">
+                    <img src="https://lh3.googleusercontent.com/d/1AWoylRlMDmHnsBoGT4Gy0YMSltRQBxnx" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Tech Futurist AI">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 p-8 flex flex-col justify-end">
+                        <span class="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Futuristic</span>
+                        <h5 class="text-xl font-bold">Tech Futurist AI</h5>
+                    </div>
+                </div>
+                <div class="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-zinc-800" data-aos="fade-up" data-aos-delay="800">
+                    <img src="https://lh3.googleusercontent.com/d/14c276eY209ueBJM4vAh4a91Nbzs1CZhI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Fantasy Cosplay AI">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 p-8 flex flex-col justify-end">
+                        <span class="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Cosplay</span>
+                        <h5 class="text-xl font-bold">Fantasy Cosplay AI</h5>
+                    </div>
+                </div>
+                <div class="group relative aspect-[3/4] rounded-[2rem] overflow-hidden bg-zinc-800" data-aos="fade-up" data-aos-delay="900">
+                    <img src="https://lh3.googleusercontent.com/d/1Me8otpL9oBRQS5gw4bCfB48y3BAYPFis" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Outdoor Swimsuit AI">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 p-8 flex flex-col justify-end">
+                        <span class="text-[10px] font-black uppercase text-red-600 tracking-widest mb-1">Fashion</span>
+                        <h5 class="text-xl font-bold">Outdoor Swimsuit AI</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Packages" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-black uppercase italic mb-20 text-center italic">Service <span class="gold-gradient-text">Packages</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="ai-card p-12 rounded-[3rem] flex flex-col space-y-8" data-aos="fade-up">
+                    <div>
+                        <h3 class="text-xl font-black uppercase italic tracking-widest mb-2">Starter</h3>
+                        <p class="text-red-600 font-black text-2xl mb-2">$999</p>
+                        <p class="text-gray-500 text-sm">Perfect for establishing presence.</p>
+                    </div>
+                    <ul class="space-y-4 flex-grow">
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-red-600"></i> AI Twin Neural Setup</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-red-600"></i> 15 High-Res Images + 2 10-Sec Videos / mo</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-red-600"></i> 1 Dedicated Visual Style</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-red-600"></i> Platform-Ready Formats</li>
+                    </ul>
+                    <a href="https://www.paypal.com/ncp/payment/EMUKS24SJ6QG8" target="_blank" class="w-full py-4 rounded-2xl border border-white/20 text-center font-black uppercase text-[10px] tracking-widest hover:bg-white/5 transition-all">Select Package</a>
+                </div>
+
+                <div class="ai-card p-12 rounded-[3rem] flex flex-col space-y-8 relative border-red-600/50 shadow-2xl shadow-red-600/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-red-600 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">Most Popular</div>
+                    <div>
+                        <h3 class="text-xl font-black uppercase italic tracking-widest mb-2 text-red-500">Creator</h3>
+                        <p class="text-white font-black text-2xl mb-2">$1999</p>
+                        <p class="text-gray-500 text-sm">Aggressive growth for influencers.</p>
+                    </div>
+                    <ul class="space-y-4 flex-grow">
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-red-600"></i> Everything in Starter</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-red-600"></i> 40 High-Res Images + 2 10-Sec Videos / mo</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-red-600"></i> Multiple Content Styles</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-check text-red-600"></i> Strategy Guidance</li>
+                    </ul>
+                    <a href="https://www.paypal.com/ncp/payment/ATLVJNMGEANRW" target="_blank" class="red-glow-btn w-full py-4 rounded-2xl text-center font-black uppercase text-[10px] tracking-widest">Select Package</a>
+                </div>
+
+                <div class="ai-card p-12 rounded-[3rem] flex flex-col space-y-8 border-yellow-600/30" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <h3 class="text-xl font-black uppercase italic tracking-widest mb-2 gold-gradient-text">Elite Influencer</h3>
+                        <p class="text-gray-500 text-sm">Full digital scale for personal brands.</p>
+                    </div>
+                    <ul class="space-y-4 flex-grow">
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-star text-yellow-500"></i> Unlimited Visual Content</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-star text-yellow-500"></i> Cinematic & custom Styles</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-star text-yellow-500"></i> Priority 24h Turnaround</li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300"><i class="fa-solid fa-star text-yellow-500"></i> VIP Dedicated Creative Lead</li>
+                    </ul>
+                    <a href="https://www.linkedin.com/in/can-chan-966a632b" target="_blank" class="w-full py-4 rounded-2xl border border-yellow-600/30 text-center font-black uppercase text-[10px] tracking-widest text-yellow-500 hover:bg-yellow-600/10 transition-all">Contact for Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Demo" class="py-24 bg-zinc-950 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-6xl font-black uppercase italic">Request <span class="text-red-600">A Demo</span></h2>
+                <p class="text-gray-400 mt-4">Begin your AI transformation today. Our team will review your photos and build your initial style profile.</p>
+            </div>
+
+            <div class="ai-card p-8 md:p-12 rounded-[3rem]" data-aos="zoom-in">
+                <form id="demoForm"
+                      action="https://formsubmit.co/minnovate.ad@gmail.com"
+                      method="POST"
+                      enctype="multipart/form-data"
+                      class="grid md:grid-cols-2 gap-8">
+
+                    <input type="hidden" name="_subject" value="New AI Twin Demo Request">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://example.com/thank-you">
+
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-500">Full Name</label>
+                        <input name="Full Name" type="text" placeholder="Alex Rivera" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-red-600 outline-none transition-all" required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-500">Work Email</label>
+                        <input name="Work Email" type="email" placeholder="alex@creators.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-red-600 outline-none transition-all" required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-500">Social Handle (@)</label>
+                        <input name="Social Handle" type="text" placeholder="@alex_official" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-red-600 outline-none transition-all" required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-500">Preferred Style</label>
+                        <select name="Preferred Style" class="styled-select w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-red-600 outline-none transition-all cursor-pointer" required>
+                            <option value="Luxury Lifestyle">Luxury Lifestyle</option>
+                            <option value="Business Authority">Business Authority</option>
+                            <option value="TikTok Creator">TikTok Creator</option>
+                            <option value="Fitness / Athletic">Fitness / Athletic</option>
+                            <option value="Fashion Editorial">Fashion Editorial</option>
+                            <option value="Cozy Home Lifestyle">Cozy Home Lifestyle</option>
+                            <option value="Glamour Lingerie">Glamour Lingerie</option>
+                            <option value="AI Futurist">AI Futurist</option>
+                            <option value="Fantasy Cosplay">Fantasy Cosplay</option>
+                            <option value="Outdoor Swimsuit">Outdoor Swimsuit</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-500">Reference Photos (2 required)</label>
+                        <label for="referencePhotos" class="w-full h-32 border-2 border-dashed border-white/10 rounded-2xl flex flex-col items-center justify-center cursor-pointer hover:border-red-600/50 transition-all bg-white/5">
+                            <i class="fa-solid fa-cloud-arrow-up text-3xl mb-2 text-gray-500"></i>
+                            <p class="text-xs text-gray-400">Click to upload or drag & drop headshots</p>
+                            <p id="fileCount" class="text-[11px] text-red-400 mt-1"></p>
+                        </label>
+                        <input id="referencePhotos" name="Reference Photos" type="file" accept="image/*" multiple class="hidden" required>
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-500">Additional Notes</label>
+                        <textarea name="Additional Notes" placeholder="Tell us about your brand goals..." class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 h-32 focus:border-red-600 outline-none transition-all"></textarea>
+                    </div>
+                    <div class="md:col-span-2 pt-4">
+                        <button id="submitBtn" type="submit" class="red-glow-btn w-full py-5 rounded-2xl font-black uppercase tracking-widest text-sm flex items-center justify-center gap-3">
+                            Build My AI Twin <i class="fa-solid fa-rocket"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-black uppercase italic mb-16 text-center">Why Creators <span class="text-red-600">Love It</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="ai-card p-10 rounded-[2.5rem] relative" data-aos="fade-up">
+                    <div class="flex gap-1 text-yellow-500 mb-6"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-400 italic mb-8">"I haven't taken a real photo in 3 months. My engagement has tripled because I'm posting high-quality lifestyle content every single day now."</p>
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <p class="text-sm font-bold">Marcus T.</p>
+                            <p class="text-[10px] font-black uppercase tracking-tighter text-red-500">750k Followers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-card p-10 rounded-[2.5rem] relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 text-yellow-500 mb-6"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-400 italic mb-8">"The Business Authority style is insane. I look like a Fortune 500 CEO in settings I'd never have access to otherwise. Absolute game changer."</p>
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <p class="text-sm font-bold">Sarah K.</p>
+                            <p class="text-[10px] font-black uppercase tracking-tighter text-red-500">Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-card p-10 rounded-[2.5rem] relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 text-yellow-500 mb-6"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-gray-400 italic mb-8">"AI X Content League took the tech out of the equation. I just pick my styles and the images show up. It's like magic for my Instagram."</p>
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <p class="text-sm font-bold">Jason L.</p>
+                            <p class="text-[10px] font-black uppercase tracking-tighter text-red-500">Tech Influencer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="Contact" class="py-20 bg-zinc-950 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-12 mb-20">
+                <div class="lg:col-span-2 space-y-6">
+                    <a href="#" class="flex items-center gap-2">
+                        <img src="https://lh3.googleusercontent.com/d/10PwCXrfuTvERvliB5GAuLN7bAILvOBec" alt="AI X CONTENT Logo" class="w-10 h-10 object-contain">
+                        <span class="text-xl font-bold tracking-tighter uppercase leading-none">AI X <span class="text-red-600">CONTENT</span></span>
+                    </a>
+                    <p class="text-gray-500 max-w-sm">The world's premier AI content agency for elite creators and entrepreneurs. Scaling your influence through managed neural replication.</p>
+                </div>
+
+                <div>
+                    <h5 class="text-[10px] font-black uppercase tracking-[0.2em] text-red-500 mb-8">Navigation</h5>
+                    <ul class="space-y-4 text-sm text-gray-400 font-bold uppercase tracking-widest">
+                        <li><a href="#About" class="hover:text-white">Our Service</a></li>
+                        <li><a href="#Examples" class="hover:text-white">Twin Gallery</a></li>
+                        <li><a href="#Packages" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#Demo" class="hover:text-white">Get Started</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-[10px] font-black uppercase tracking-[0.2em] text-red-500 mb-8">Contact</h5>
+                    <ul class="space-y-4 text-sm text-gray-400 font-bold">
+                        <li><a href="https://www.linkedin.com/in/can-chan-966a632b" target="_blank" class="flex items-center gap-2 hover:text-white transition-colors">
+                            <i class="fa-brands fa-linkedin text-xl text-blue-500"></i> Can Chan
+                        </a></li>
+                        <li>Response: 24-48 Hours</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/5 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold text-gray-600 uppercase tracking-widest">
+                <p>© 2026 AI X CONTENT. All Rights Reserved.</p>
+                <p class="opacity-50">This page is made with AI.</p>
+                <div class="flex gap-8">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 via-transparent to-red-600 opacity-30"></div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.paddingTop = '10px';
+                nav.style.paddingBottom = '10px';
+                nav.style.background = 'rgba(5, 5, 5, 0.95)';
+            } else {
+                nav.style.paddingTop = '0px';
+                nav.style.paddingBottom = '0px';
+                nav.style.background = 'rgba(5, 5, 5, 0.8)';
+            }
+        });
+
+        const demoForm = document.getElementById('demoForm');
+        const photoInput = document.getElementById('referencePhotos');
+        const fileCount = document.getElementById('fileCount');
+        const submitBtn = document.getElementById('submitBtn');
+
+        photoInput.addEventListener('change', () => {
+            const count = photoInput.files.length;
+            fileCount.textContent = count > 0 ? `${count} file(s) selected` : '';
+        });
+
+        demoForm.addEventListener('submit', function(e) {
+            if (photoInput.files.length < 2) {
+                e.preventDefault();
+                alert('Please upload at least 2 reference photos.');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+        });
+    </script>
+</body>
+</html>
