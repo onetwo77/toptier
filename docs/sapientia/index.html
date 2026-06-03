@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapientia AI - Enterprise Amazon Ads Optimization Platform</title>
+    
+    <!-- Robust SEO Meta Tags -->
+    <meta name="description" content="Sapientia AI is the premier 24/7 enterprise AI-powered Amazon Ads optimization platform. Reduce waste, lower TACoS by over 1% annually, and scale your brand smarter.">
+    <meta name="keywords" content="Amazon Ads, Amazon Advertising, Amazon PPC, AI Ad Optimization, TACoS reduction, Amazon Sellers, Ecommerce AI, TopTier League, Sapientia AI, Brand Scaling">
+    <meta name="author" content="Sapientia AI">
+    <link rel="canonical" href="https://sapientia.ai">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sapientia.ai">
+    <meta property="og:title" content="Sapientia AI - Enterprise Amazon Ads Optimization Platform">
+    <meta property="og:description" content="Reduce waste, lower TACoS, and scale smarter with multi-model AI algorithms designed for enterprise Amazon sellers with $10M+ annual revenue.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1I_aGgMW8g4T7QiPmeUAm2AN5OegYreDd">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sapientia.ai">
+    <meta property="twitter:title" content="Sapientia AI - Enterprise Amazon Ads Optimization Platform">
+    <meta property="twitter:description" content="Reduce waste, lower TACoS, and scale smarter with multi-model AI algorithms designed for enterprise Amazon sellers with $10M+ annual revenue.">
+    <meta property="twitter:image" content="https://lh3.googleusercontent.com/d/1I_aGgMW8g4T7QiPmeUAm2AN5OegYreDd">
+
+    <!-- Apple-Mobile-Web-App Compatibility -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBg: '#050505',
+                        brandBlue: '#67D4FF',
+                        brandGold: '#FFD966',
+                        glassBg: 'rgba(15, 15, 15, 0.7)',
+                        glassBorder: 'rgba(255, 255, 255, 0.08)'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'glow-slow': 'glow 8s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%': { opacity: '0.3', transform: 'scale(1) translate(0px, 0px)' },
+                            '100%': { opacity: '0.6', transform: 'scale(1.1) translate(15px, -15px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ChartJS for Dashboard Metrics Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Premium custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f1f1f;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #67D4FF;
+        }
+        /* Grid background effect */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+        }
+        /* Glassmorphism gradient outline */
+        .glass-card {
+            background: rgba(10, 10, 10, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(103, 212, 255, 0.3);
+            box-shadow: 0 0 25px rgba(103, 212, 255, 0.1);
+        }
+        /* Custom timeline track */
+        .timeline-line {
+            background: linear-gradient(180deg, #67D4FF 0%, #FFD966 100%);
+        }
+        /* Moving light effect on text */
+        @keyframes shine-sweep {
+            0% {
+                background-position: -200% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+        .shine-text {
+            background: linear-gradient(120deg, #ffffff 30%, #67D4FF 45%, #FFD966 55%, #ffffff 70%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine-sweep 7s linear infinite;
+        }
+        /* OS rendering improvements for cross-device support */
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+    </style>
+</head>
+<body class="bg-brandBg text-neutral-200 font-sans selection:bg-brandBlue selection:text-black overflow-x-hidden">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-brandBg/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <div class="flex items-center space-x-3">
+                <!-- Single Brand Logo Top Left (Enlarged) and Linked -->
+                <a href="https://toptierleague.com/sapientia" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 hover:opacity-90 transition-opacity" aria-label="Visit Sapientia Home">
+                    <div class="flex items-center gap-3">
+                        <img src="https://lh3.googleusercontent.com/d/1wjvFKzar2BJXL9F66_xgOzAF9a97IwvK" 
+                             onerror="this.src='https://placehold.co/100x100/050505/67D4FF?text=S'" 
+                             class="w-12 h-12 object-contain rounded" 
+                             alt="Sapientia AI Logo">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-bold tracking-wide text-xl leading-tight">Sapientia AI</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-neutral-400">
+                <a href="#results" class="hover:text-brandBlue transition-colors">Results</a>
+                <a href="#categories" class="hover:text-brandBlue transition-colors">Categories</a>
+                <a href="#team" class="hover:text-brandBlue transition-colors">Expertise</a>
+                <a href="#advantages" class="hover:text-brandBlue transition-colors">Advantages</a>
+                <a href="#comparison" class="hover:text-brandBlue transition-colors">AI vs Rules</a>
+                <a href="#case-studies" class="hover:text-brandBlue transition-colors">Case Studies</a>
+                <a href="#pricing" class="hover:text-brandBlue transition-colors">Pricing</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex items-center space-x-4">
+                <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank" rel="noopener noreferrer" 
+                   class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-semibold rounded-full group bg-gradient-to-br from-brandBlue to-brandGold hover:text-black text-white focus:ring-4 focus:outline-none focus:ring-blue-900 transition-all duration-300"
+                   aria-label="Book a Demo on LinkedIn">
+                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-brandBg rounded-full group-hover:bg-opacity-0 flex items-center gap-2">
+                        <i class="fab fa-linkedin text-sm"></i>
+                        <span>Book a Demo</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Background Ambient Orbs -->
+<div class="absolute top-20 left-1/4 w-[500px] h-[500px] bg-brandBlue/5 rounded-full filter blur-[100px] pointer-events-none animate-glow-slow"></div>
+<div class="absolute top-[40%] right-10 w-[600px] h-[600px] bg-brandGold/3 rounded-full filter blur-[130px] pointer-events-none animate-pulse-slow"></div>
+
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 md:pt-44 md:pb-36 overflow-hidden bg-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Platform Badge -->
+        <div class="flex justify-center mb-6">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-xs text-neutral-300">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandBlue opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brandBlue"></span>
+                </span>
+                <span>24/7 AI-Powered Amazon Ads Intelligent Platform</span>
+            </span>
+        </div>
+
+        <!-- Typography Headline Stack with Animated Shiny Moving Light effect -->
+        <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-none shine-text">
+                Sapientia AI
+            </h1>
+            <p class="text-2xl sm:text-4xl md:text-5xl font-bold mt-4 tracking-tight leading-tight shine-text">
+                Reduce Waste. Scale Smarter.
+            </p>
+            <p class="mt-6 text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto font-light leading-relaxed">
+                Built on Category-Winning Strategies and Tailored to Your Brand's Unique Growth Goals. Powered by 20+ AI Models, Category-Leading Best Practices, and SKU-Level Optimization.
+            </p>
+            <div class="mt-4 text-brandBlue/90 font-medium text-sm sm:text-base tracking-wide uppercase">
+                Lower TACoS. Increase Profitability. Empower Your Team.
+            </div>
+
+            <!-- CTA & Interactive Stats Badge -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank" rel="noopener noreferrer"
+                   class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brandBlue to-blue-500 text-black hover:opacity-90 font-bold rounded-lg transition-all duration-300 shadow-[0_0_30px_rgba(103,212,255,0.25)] flex items-center justify-center gap-3"
+                   aria-label="Book a Demo on LinkedIn">
+                    <i class="fab fa-linkedin text-lg"></i>
+                    <span>Book a Demo</span>
+                </a>
+                <a href="#results" class="w-full sm:w-auto px-8 py-4 bg-neutral-900 hover:bg-neutral-800 text-white font-medium rounded-lg border border-neutral-800 transition-all duration-300 flex items-center justify-center">
+                    See Realized Value
+                </a>
+            </div>
+        </div>
+
+        <!-- High Fidelity Hero Mockup Image -->
+        <div class="mt-20 relative max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandBg via-transparent to-transparent z-10 pointer-events-none"></div>
+            <div class="relative rounded-2xl border border-white/10 overflow-hidden shadow-[0_0_50px_rgba(103,212,255,0.15)] bg-neutral-950">
+                <img src="https://lh3.googleusercontent.com/d/1I_aGgMW8g4T7QiPmeUAm2AN5OegYreDd" 
+                     onerror="this.src='https://placehold.co/1024x576/0d0d0d/67D4FF?text=Sapientia+AI+Analytics+Platform'" 
+                     class="w-full h-auto object-cover max-h-[580px]" 
+                     alt="Sapientia AI Platform Analytics Overview">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- What We Achieve Section -->
+<section id="results" class="py-24 bg-brandBg border-t border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs text-brandBlue uppercase tracking-widest font-extrabold mb-3">WHAT WE ACHIEVE FOR AMAZON SELLERS</h2>
+            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Proven Results at Scale</p>
+            <p class="text-neutral-400 mt-4">Continuous algorithmic adjustments deliver compounded advantages across your entire product listing matrix.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Stat Card 1 -->
+            <div class="glass-card p-8 rounded-xl relative group overflow-hidden transition-all duration-300 hover:-translate-y-1">
+                <div class="absolute top-0 left-0 w-2 h-full bg-brandBlue"></div>
+                <div class="text-4xl font-extrabold text-white mb-2 font-mono flex items-baseline">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-white">> 1%</span>
+                    <span class="text-xs text-brandBlue ml-2 uppercase font-sans font-semibold tracking-wider">Annual Drop</span>
+                </div>
+                <h3 class="text-lg font-bold text-neutral-100 mb-2">TACoS Reduction</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                    Reduce TACoS by over 1% annually, validated by leading Amazon sellers. This delivers immense improvements directly into net margins.
+                </p>
+            </div>
+
+            <!-- Stat Card 2 -->
+            <div class="glass-card p-8 rounded-xl relative group overflow-hidden transition-all duration-300 hover:-translate-y-1">
+                <div class="absolute top-0 left-0 w-2 h-full bg-brandGold"></div>
+                <div class="text-4xl font-extrabold text-white mb-2 font-mono flex items-baseline">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandGold to-white">$150,000+</span>
+                </div>
+                <h3 class="text-lg font-bold text-neutral-100 mb-2">Direct Ad Savings</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                    Save more than $150,000 per year in advertising costs while maintaining the same revenue performance for sellers averaging $10M in annual sales.
+                </p>
+            </div>
+
+            <!-- Stat Card 3 -->
+            <div class="glass-card p-8 rounded-xl relative group overflow-hidden transition-all duration-300 hover:-translate-y-1">
+                <div class="absolute top-0 left-0 w-2 h-full bg-brandBlue"></div>
+                <div class="text-4xl font-extrabold text-white mb-2 font-mono flex items-baseline">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-white">3x</span>
+                    <span class="text-xs text-neutral-400 ml-2 font-sans">Operator Capacity</span>
+                </div>
+                <h3 class="text-lg font-bold text-neutral-100 mb-2">SKU Management Boost</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                    Enable ads operators to effectively manage up to 3x more SKUs. Shift high-value engineering resources from manual bid updates to global scale strategies.
+                </p>
+            </div>
+
+            <!-- Stat Card 4 -->
+            <div class="glass-card p-8 rounded-xl relative group overflow-hidden transition-all duration-300 hover:-translate-y-1 col-span-1 md:col-span-1 lg:col-span-1">
+                <div class="text-brandBlue text-xl mb-4"><i class="fas fa-cubes"></i></div>
+                <h3 class="text-lg font-bold text-neutral-100 mb-2">Standardization of Playbooks</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                    Standardize advertising excellence across thousands of products and multiple brands inside one company. Eliminate operational discrepancies arising from shifting team roles.
+                </p>
+            </div>
+
+            <!-- Stat Card 5 -->
+            <div class="glass-card p-8 rounded-xl relative group overflow-hidden transition-all duration-300 hover:-translate-y-1 col-span-1 md:col-span-2 lg:col-span-2">
+                <div class="text-brandGold text-xl mb-4"><i class="fas fa-rocket"></i></div>
+                <h3 class="text-lg font-bold text-neutral-100 mb-2">Accelerated New Launch Cycles</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                    Accelerate new product launches with AI-driven optimization and faster learning cycles. Our neural algorithms immediately build highly descriptive context graphs around launching SKUs.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Trusted Categories Section -->
+<section id="categories" class="py-20 bg-neutral-950/60 border-t border-b border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-3 lg:gap-12 items-center">
+            
+            <div class="lg:col-span-1">
+                <h2 class="text-xs text-brandBlue uppercase tracking-widest font-extrabold mb-3">SECTOR VALIDATION</h2>
+                <h3 class="text-3xl font-bold text-white tracking-tight leading-tight">Trusted Across High-Growth Amazon Categories</h3>
+                <p class="text-neutral-400 mt-4 text-sm leading-relaxed">
+                    Our platform has helped brands optimize advertising performance and become category leaders across high-intensity sectors.
+                </p>
+                <div class="mt-8">
+                    <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 text-sm font-semibold text-brandBlue hover:text-brandGold transition-colors"
+                       aria-label="Initiate Category Audit on LinkedIn">
+                        <span>Initiate Audit for Your Category</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual Grid of Sectors -->
+            <div class="lg:col-span-2 mt-12 lg:mt-0 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div class="glass-card p-6 rounded-lg text-center hover:bg-neutral-900/60 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-brandBlue/10 flex items-center justify-center mx-auto mb-3 text-brandBlue text-lg">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-white text-center block">Outdoor Furniture</span>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center hover:bg-neutral-900/60 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-brandGold/10 flex items-center justify-center mx-auto mb-3 text-brandGold text-lg">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-white text-center block">Skincare & Beauty</span>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center hover:bg-neutral-900/60 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-brandBlue/10 flex items-center justify-center mx-auto mb-3 text-brandBlue text-lg">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-white text-center block">Fashion & Apparel</span>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center hover:bg-neutral-900/60 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-brandGold/10 flex items-center justify-center mx-auto mb-3 text-brandGold text-lg">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-white text-center block">Wireless Earbuds & Consumer Electronics</span>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center hover:bg-neutral-900/60 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-brandBlue/10 flex items-center justify-center mx-auto mb-3 text-brandBlue text-lg">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-white text-center block">Portable Power Stations</span>
+                </div>
+                <div class="glass-card p-6 rounded-lg text-center hover:bg-neutral-900/60 transition-colors">
+                    <div class="w-12 h-12 rounded-full bg-brandGold/10 flex items-center justify-center mx-auto mb-3 text-brandGold text-lg">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <span class="text-sm font-semibold text-white text-center block">Home & Office Products</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Our Team Section -->
+<section id="team" class="py-24 bg-brandBg relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-xs text-brandGold uppercase tracking-widest font-extrabold mb-3">OUR TEAM & FOUNDATIONS</h2>
+            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Built by AI & Amazon Advertising Pioneers</p>
+            <p class="text-neutral-400 mt-4">
+                Sapientia AI is built by a team of experts with extensive history pushing the boundaries of technology, consumer analytics, and execution.
+            </p>
+        </div>
+
+        <!-- Corporate Origin Logos with glass backdrop -->
+        <div class="glass-card p-8 rounded-xl grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center mb-12">
+            <div class="text-neutral-500 font-bold tracking-tight hover:text-white transition-colors text-lg flex items-center gap-2">
+                <i class="fab fa-alipay text-brandBlue"></i> Alibaba
+            </div>
+            <div class="text-neutral-500 font-bold tracking-tight hover:text-white transition-colors text-lg flex items-center gap-2">
+                <i class="fab fa-amazon text-brandGold"></i> Amazon
+            </div>
+            <div class="text-neutral-500 font-bold tracking-tight hover:text-white transition-colors text-lg flex items-center gap-2">
+                <i class="fab fa-meta text-brandBlue"></i> Meta
+            </div>
+            <div class="text-neutral-500 font-bold tracking-tight hover:text-white transition-colors text-lg flex items-center gap-2">
+                <i class="fab fa-google text-brandGold"></i> Google
+            </div>
+            <div class="text-neutral-500 font-bold tracking-tight hover:text-white transition-colors text-lg flex items-center gap-2">
+                <i class="fab fa-tiktok text-brandBlue"></i> ByteDance
+            </div>
+        </div>
+
+        <!-- Additional Org Accolades -->
+        <div class="text-center text-sm text-neutral-500 mb-12 flex flex-wrap justify-center gap-6">
+            <span class="px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800"><i class="fas fa-trophy text-brandGold mr-2"></i>Top Amazon Sellers</span>
+            <span class="px-4 py-2 rounded-full bg-neutral-900 border border-neutral-800"><i class="fas fa-shield-alt text-brandBlue mr-2"></i>Leading Amazon Seller Organizations</span>
+        </div>
+
+        <!-- Descriptive Block -->
+        <div class="max-w-4xl mx-auto bg-gradient-to-tr from-neutral-950 to-neutral-900 border border-neutral-800 p-8 rounded-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <h4 class="text-xl font-bold text-white">Bridging Deep Intelligence & Commerce</h4>
+                    <p class="text-neutral-400 text-sm leading-relaxed">
+                        Our unique combination of AI expertise, ecommerce algorithms, advertising automation, and growth strategy allows us to transform Amazon advertising from manual execution into intelligent decision-making.
+                    </p>
+                </div>
+                <div class="border-t md:border-t-0 md:border-l border-neutral-800 pt-6 md:pt-0 md:pl-8 space-y-4">
+                    <p class="text-brandBlue font-semibold text-lg italic">"We don't simply automate campaigns."</p>
+                    <p class="text-neutral-300 text-sm leading-relaxed">
+                        We build AI systems that continuously learn, optimize, and improve business outcomes, reducing the systemic overhead of manual adjustments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Advantages Section -->
+<section id="advantages" class="py-24 bg-neutral-950/40 border-t border-white/5 relative bg-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <h2 class="text-xs text-brandBlue uppercase tracking-widest font-extrabold mb-3">PLATFORM CAPABILITIES</h2>
+            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Core Operational Advantages</p>
+        </div>
+
+        <div class="space-y-16">
+            
+            <!-- Advantage 1 -->
+            <div class="glass-card rounded-2xl p-8 lg:p-12 border border-white/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brandBlue/5 rounded-full filter blur-[60px] pointer-events-none"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7">
+                        <div class="flex items-center gap-3 text-brandBlue mb-4 font-mono font-semibold text-sm">
+                            <span class="px-2.5 py-1 bg-brandBlue/10 rounded-full">Advantage 01</span>
+                            <span>Customized Category Strategies</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Category-Leading Best Practices + AI Customization</h3>
+                        <p class="text-brandGold font-medium mb-4">Significant Cost Reduction. Better Advertising Performance.</p>
+                    </div>
+                    <div class="lg:col-span-5 bg-black/60 p-6 rounded-xl border border-white/5 space-y-4">
+                        <h4 class="text-xs text-neutral-400 uppercase tracking-wider font-extrabold">Key Benefits</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brandBlue mt-1"></i>
+                                <span class="text-neutral-300 text-sm">Applies winning strategies from top-performing sellers in each category.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brandBlue mt-1"></i>
+                                <span class="text-neutral-300 text-sm">Continuously adapts campaigns based on changing market conditions.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brandBlue mt-1"></i>
+                                <span class="text-neutral-300 text-sm">Optimizes budget allocation across campaigns and product portfolios.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check-circle text-brandBlue mt-1"></i>
+                                <span class="text-neutral-300 text-sm">Reduces inefficient spending while maintaining growth momentum.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advantage 2 -->
+            <div class="glass-card rounded-2xl p-8 lg:p-12 border border-white/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brandGold/5 rounded-full filter blur-[60px] pointer-events-none"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 lg:order-2">
+                        <div class="flex items-center gap-3 text-brandGold mb-4 font-mono font-semibold text-sm">
+                            <span class="px-2.5 py-1 bg-brandGold/10 rounded-full">Advantage 02</span>
+                            <span>Cognitive Multi-Agent Framework</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Multi-Model AI Intelligence for Precision Automation</h3>
+                        <p class="text-brandBlue font-medium mb-4">Smarter Decisions Powered by Advanced AI</p>
+                        <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                            Sapientia leverages more than 20 leading AI models to analyze and optimize Amazon advertising from multiple business perspectives. The system generates and evaluates tens of thousands of advertising scenarios daily to identify the most effective strategies.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/5">
+                            <div>
+                                <h4 class="text-xs text-brandBlue font-bold uppercase mb-2">Variables System Evaluates</h4>
+                                <ul class="space-y-1.5 text-xs text-neutral-400">
+                                    <li>• Product Portfolio Structure</li>
+                                    <li>• Inventory Levels</li>
+                                    <li>• Product Lifecycle Stage</li>
+                                    <li>• Competitive Landscape</li>
+                                    <li>• Sales Performance</li>
+                                    <li>• Brand Growth Objectives</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-brandGold font-bold uppercase mb-2">Capabilities Include</h4>
+                                <ul class="space-y-1.5 text-xs text-neutral-400">
+                                    <li>• SKU-Level Optimization</li>
+                                    <li>• Portfolio-Level Budget Management</li>
+                                    <li>• Launch Campaign Automation</li>
+                                    <li>• Lifecycle-Based Ad Strategies</li>
+                                    <li>• Real-Time Competitive Adjustments</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Code block representation -->
+                    <div class="lg:col-span-5 lg:order-1 bg-neutral-950 p-6 rounded-xl border border-white/5 font-mono text-[11px] text-brandBlue/90 leading-relaxed overflow-x-auto">
+                        <span class="text-neutral-500">// Processing scenario matrix...</span>
+                        <div class="text-white mt-1">class MultiModelOptimizer:</div>
+                        <div class="pl-4 text-neutral-400">def evaluate_scenarios(self, asins, objectives):</div>
+                        <div class="pl-8 text-neutral-400">results = []</div>
+                        <div class="pl-8 text-brandGold">for model in self.models_suite:</div>
+                        <div class="pl-12">score = model.predict(asins.inventory_velocity, asins.lifecycle_stage)</div>
+                        <div class="pl-12">results.append(score)</div>
+                        <div class="pl-8 text-white">return max(results, key=lambda x: x.growth_yield_vacos)</div>
+                        <div class="mt-4 text-neutral-500">// Result: Enterprise-grade intelligence scaling with your business.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advantage 3 -->
+            <div class="glass-card rounded-2xl p-8 lg:p-12 border border-white/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brandBlue/5 rounded-full filter blur-[60px] pointer-events-none"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7">
+                        <div class="flex items-center gap-3 text-brandBlue mb-4 font-mono font-semibold text-sm">
+                            <span class="px-2.5 py-1 bg-brandBlue/10 rounded-full">Advantage 03</span>
+                            <span>Empowering Personnel</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Increase Productivity and Elevate Your Team</h3>
+                        <p class="text-brandGold font-medium mb-4">Shift Your Team from Execution to Strategy</p>
+                        <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+                            Most Amazon advertising teams spend significant time on repetitive operational work. Sapientia automates campaign execution so your team can focus on larger value generation avenues.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-5 bg-black/60 p-6 rounded-xl border border-white/5 space-y-4">
+                        <h4 class="text-xs text-neutral-400 uppercase tracking-wider font-extrabold">Transition Matrix</h4>
+                        <div class="space-y-3">
+                            <div>
+                                <span class="text-xs text-neutral-400">Redundant Execution</span>
+                                <div class="w-full bg-neutral-900 h-2 rounded mt-1 overflow-hidden">
+                                    <div class="bg-red-500 h-full w-[80%]"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-xs text-brandBlue">Strategic Brain Focus (Sapientia Enabled)</span>
+                                <div class="w-full bg-neutral-900 h-2 rounded mt-1 overflow-hidden">
+                                    <div class="bg-brandBlue h-full w-[95%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-xs text-neutral-300 pt-2 space-y-1.5 border-t border-neutral-800">
+                            <div><i class="fas fa-check text-brandBlue mr-2"></i> Manage up to 3x more SKUs per operator.</div>
+                            <div><i class="fas fa-check text-brandBlue mr-2"></i> Reduce repetitive campaign management tasks.</div>
+                            <div><i class="fas fa-check text-brandBlue mr-2"></i> Improve operational consistency.</div>
+                            <div><i class="fas fa-check text-brandBlue mr-2"></i> Build stronger long-term competitive advantages.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- AI vs Rule-Based Comparison Section -->
+<section id="comparison" class="py-24 bg-brandBg relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-xs text-brandGold uppercase tracking-widest font-extrabold mb-3">TECHNOLOGY CLASSIFICATION</h2>
+            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">AI-Powered Optimization vs Rule-Based Automation</p>
+            <p class="text-neutral-400 mt-4 leading-relaxed">
+                Most advertising software relies on fixed rules created by humans. This fragile method is easily disrupted in live marketplaces.
+            </p>
+        </div>
+
+        <!-- Comparative Explanation Block -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="p-8 rounded-xl bg-neutral-950 border border-red-500/20">
+                <div class="inline-flex px-3 py-1 rounded bg-red-500/10 text-red-400 text-xs font-mono uppercase mb-4">The Standard Fragile Method</div>
+                <h4 class="text-lg font-bold text-white mb-2">Legacy Rule-Based Automation</h4>
+                <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+                    "If ACOS exceeds X%, decrease bids by Y%."
+                </p>
+                <div class="text-red-400 font-semibold text-xs mb-2 uppercase tracking-wide">The Fragility Problem:</div>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                    Amazon's marketplace changes every minute. Competitors change bids, inventory fluctuates, seasonality shifts, and consumer demand turns rapidly. Fixed rules lead to critical optimization delays.
+                </p>
+            </div>
+
+            <div class="p-8 rounded-xl bg-neutral-950 border border-brandBlue/30 shadow-[0_0_20px_rgba(103,212,255,0.05)]">
+                <div class="inline-flex px-3 py-1 rounded bg-brandBlue/10 text-brandBlue text-xs font-mono uppercase mb-4">The Sapientia Engine</div>
+                <h4 class="text-lg font-bold text-white mb-2">Sapientia Uses Machine Learning Instead</h4>
+                <p class="text-neutral-300 text-sm leading-relaxed mb-4">
+                    Our AI continuously analyzes real-time marketplace signals and automatically adapts strategies based on current conditions.
+                </p>
+                <div class="text-brandBlue font-semibold text-xs mb-2 uppercase tracking-wide">The Cognitive Solution:</div>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                    Rather than following static, manual rules, Sapientia learns and evolves alongside your business, creating responsive and optimal pricing/bidding pathways dynamically.
+                </p>
+            </div>
+        </div>
+
+        <!-- Interactive Comparison Grid Table -->
+        <div class="glass-card rounded-xl overflow-hidden mt-8">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm min-w-[640px]">
+                    <thead>
+                        <tr class="bg-neutral-950 border-b border-white/10 text-xs uppercase tracking-wider text-neutral-400">
+                            <th class="p-5 font-bold">Capabilities Matrix</th>
+                            <th class="p-5 text-red-400 font-bold">Standard Rule Software</th>
+                            <th class="p-5 text-brandBlue font-bold bg-brandBlue/5">Sapientia AI Architecture</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5 text-neutral-300">
+                        <tr>
+                            <td class="p-5 font-medium text-white">Ad Decision Engine</td>
+                            <td class="p-5">Static threshold constraints</td>
+                            <td class="p-5 bg-brandBlue/5 text-brandBlue">Continuous Deep Inference</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-medium text-white">Inventory Integration</td>
+                            <td class="p-5">Completely disconnected</td>
+                            <td class="p-5 bg-brandBlue/5 text-brandBlue">Linked Dynamic Bid Safety Caps</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-medium text-white">Launch Learning Curve</td>
+                            <td class="p-5">Weeks of manual parameter building</td>
+                            <td class="p-5 bg-brandBlue/5 text-brandBlue">Rapid 24-48 hr context modeling</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-medium text-white">Multi-Brand Playbooks</td>
+                            <td class="p-5">Inconsistent operator setups</td>
+                            <td class="p-5 bg-brandBlue/5 text-brandBlue">Consistently unified playbook layer</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-medium text-white">Competitive Fluctuations</td>
+                            <td class="p-5">Fails under flash bidder shifts</td>
+                            <td class="p-5 bg-brandBlue/5 text-brandBlue">Real-Time scenario mitigation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Fully Customized Section -->
+<section class="py-24 bg-neutral-950/40 border-t border-white/5 relative bg-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-6 space-y-6">
+                <span class="inline-flex px-3 py-1 rounded bg-brandGold/10 text-brandGold text-xs font-mono uppercase tracking-widest font-bold">Tailored Precision Matrix</span>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">FULLY CUSTOMIZED FOR EVERY BRAND</h3>
+                <p class="text-neutral-400 leading-relaxed text-sm">
+                    No two Amazon businesses are the same. Sapientia creates a unique advertising framework configured to map directly into your operating margins.
+                </p>
+                
+                <div class="space-y-4">
+                    <p class="text-xs text-neutral-300 uppercase tracking-widest font-semibold">Custom Parameters Ingested:</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-2 text-xs text-neutral-300">
+                            <i class="fas fa-chart-line text-brandBlue"></i>
+                            <span>Business Objectives</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-neutral-300">
+                            <i class="fas fa-coins text-brandGold"></i>
+                            <span>Profit Targets</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-neutral-300">
+                            <i class="fas fa-warehouse text-brandBlue"></i>
+                            <span>Inventory Levels</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-neutral-300">
+                            <i class="fas fa-hourglass-half text-brandGold"></i>
+                            <span>Product Lifecycle</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-neutral-300">
+                            <i class="fas fa-users-cog text-brandBlue"></i>
+                            <span>Competitive Environment</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs text-neutral-300">
+                            <i class="fas fa-award text-brandGold"></i>
+                            <span>Category Best Practices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <p class="text-neutral-400 text-sm leading-relaxed italic">
+                        "You receive a customized advertising system tailored to your business rather than a generic SaaS tool applying the same rules to everyone."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visualization of Customization Ingestion -->
+            <div class="lg:col-span-6">
+                <div class="glass-card rounded-2xl p-6 relative overflow-hidden border border-white/10">
+                    <h4 class="text-sm font-bold text-white mb-6">Interactive AI Strategy Synthesizer</h4>
+                    
+                    <div class="space-y-6">
+                        <!-- Custom Strategy Slider simulation -->
+                        <div>
+                            <div class="flex justify-between text-xs text-neutral-400 mb-1.5">
+                                <span>Optimization Priority</span>
+                                <span class="text-brandBlue font-mono font-bold" id="priority-value">Balanced Profit</span>
+                            </div>
+                            <input type="range" id="strategy-slider" min="1" max="3" value="2" oninput="updateStrategyMockup(this.value)" class="w-full accent-brandBlue bg-neutral-900 rounded-lg h-2 cursor-pointer" aria-label="Strategy Slider Selection">
+                        </div>
+
+                        <!-- Changing visual output -->
+                        <div class="bg-black/60 p-4 rounded-xl border border-white/5 space-y-3 font-mono text-xs">
+                            <div class="flex justify-between">
+                                <span class="text-neutral-400">Target Segment:</span>
+                                <span class="text-white font-bold" id="mock-segment">Multi-Brand Matrix</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-neutral-400">Core Engine Focus:</span>
+                                <span class="text-brandGold" id="mock-focus">Continuous Marginal Drift</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-neutral-400">Synthesized Action:</span>
+                                <span class="text-brandBlue" id="mock-action">Optimizing TACoS targets to 11.2%</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-brandBlue/10 border border-brandBlue/20 rounded-lg text-[11px] text-brandBlue leading-relaxed flex items-start gap-2">
+                            <i class="fas fa-info-circle mt-0.5"></i>
+                            <span>This model structure integrates immediately into existing Seller Central structures, generating targeted playbooks without downtime.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Transparency Section -->
+<section class="py-24 bg-brandBg relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-xs text-brandBlue uppercase tracking-widest font-extrabold mb-3">TRUST & SOVEREIGNTY</h2>
+            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Full Transparency & Human Control</p>
+            <p class="text-neutral-400 mt-4">AI Recommendations. Human Oversight.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Structural Diagram of Workflow -->
+            <div class="order-2 lg:order-1 relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-brandBlue/10 to-brandGold/10 filter blur-[40px] pointer-events-none"></div>
+                <div class="glass-card rounded-2xl p-6 relative z-10 space-y-6">
+                    <h4 class="text-xs font-mono text-neutral-400 uppercase tracking-widest border-b border-white/5 pb-3">The Sapientia Decision Workflow</h4>
+                    
+                    <!-- Step 1 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-neutral-900 border border-brandBlue text-brandBlue flex items-center justify-center font-mono text-xs font-bold">01</div>
+                        <div>
+                            <span class="text-xs text-neutral-400 font-mono">STEP 1</span>
+                            <h5 class="text-sm font-bold text-white">Telemetry & Signal Extraction</h5>
+                            <p class="text-xs text-neutral-500 mt-1">Multi-Model Core tracks performance, pricing trends, and category movements continuously.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-neutral-900 border border-brandGold text-brandGold flex items-center justify-center font-mono text-xs font-bold">02</div>
+                        <div>
+                            <span class="text-xs text-neutral-400 font-mono">STEP 2</span>
+                            <h5 class="text-sm font-bold text-white">Transparency Recommendation Engine</h5>
+                            <p class="text-xs text-neutral-500 mt-1">Provides understandable step-by-step logic detailing calculated TACoS improvements.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-neutral-900 border border-brandBlue text-brandBlue flex items-center justify-center font-mono text-xs font-bold">03</div>
+                        <div>
+                            <span class="text-xs text-neutral-400 font-mono">STEP 3</span>
+                            <h5 class="text-sm font-bold text-white">Human-In-The-Loop Signoff</h5>
+                            <p class="text-xs text-neutral-500 mt-1">Operators immediately view recommendations, modify thresholds, or approve automatically.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 space-y-6">
+                <p class="text-neutral-300 text-sm leading-relaxed">
+                    Unlike black-box automation tools, Sapientia provides complete transparency. Operators retain absolute operational control over daily deployments.
+                </p>
+                <div class="space-y-3 pl-4 border-l-2 border-brandBlue">
+                    <div class="text-sm text-neutral-300 flex items-center gap-2">
+                        <i class="fas fa-eye text-brandBlue" aria-hidden="true"></i> See recommendation logic
+                    </div>
+                    <div class="text-sm text-neutral-300 flex items-center gap-2">
+                        <i class="fas fa-brain text-brandBlue" aria-hidden="true"></i> Understand optimization decisions
+                    </div>
+                    <div class="text-sm text-neutral-300 flex items-center gap-2">
+                        <i class="fas fa-check-double text-brandBlue" aria-hidden="true"></i> Accept AI recommendations
+                    </div>
+                    <div class="text-sm text-neutral-300 flex items-center gap-2">
+                        <i class="fas fa-sliders-h text-brandBlue" aria-hidden="true"></i> Modify strategies when needed
+                    </div>
+                    <div class="text-sm text-neutral-300 flex items-center gap-2">
+                        <i class="fas fa-user-shield text-brandBlue" aria-hidden="true"></i> Maintain complete control
+                    </div>
+                </div>
+                <p class="text-brandGold text-sm font-medium">
+                    The result is the perfect balance between automation and human expertise.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Free Your Team Section -->
+<section class="py-24 bg-neutral-950/40 border-t border-white/5 relative bg-grid">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        
+        <span class="px-4 py-1.5 rounded-full bg-brandBlue/10 text-brandBlue text-xs uppercase tracking-widest font-mono font-bold mb-4 inline-block">Headcount Redefining</span>
+        <h3 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">FREE YOUR TEAM TO FOCUS ON BIGGER OPPORTUNITIES</h3>
+        <p class="text-brandGold font-medium text-lg mt-4 max-w-2xl mx-auto">Many clients reduce advertising operational headcount by up to 67%.</p>
+        
+        <p class="text-neutral-400 text-sm max-w-3xl mx-auto mt-6 leading-relaxed">
+            Instead of spending time adjusting bids and managing campaigns, teams can shift cognitive capabilities into high-leverage growth avenues:
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12">
+            <div class="glass-card p-4 rounded-xl">
+                <div class="text-brandBlue text-lg mb-2"><i class="fas fa-pencil-ruler"></i></div>
+                <span class="text-xs font-semibold text-white block">Product Development</span>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <div class="text-brandGold text-lg mb-2"><i class="fas fa-bullhorn"></i></div>
+                <span class="text-xs font-semibold text-white block">Brand Building</span>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <div class="text-brandBlue text-lg mb-2"><i class="fas fa-boxes"></i></div>
+                <span class="text-xs font-semibold text-white block">Supply Chain Improvements</span>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <div class="text-brandGold text-lg mb-2"><i class="fas fa-network-wired"></i></div>
+                <span class="text-xs font-semibold text-white block">Cross-Channel Growth</span>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <div class="text-brandBlue text-lg mb-2"><i class="fas fa-map-marked-alt"></i></div>
+                <span class="text-xs font-semibold text-white block">Strategic Planning</span>
+            </div>
+        </div>
+
+        <p class="text-neutral-500 font-mono text-xs mt-10">Sapientia turns advertising management into a strategic advantage.</p>
+    </div>
+</section>
+
+<!-- Case Studies Section -->
+<section id="case-studies" class="py-24 bg-brandBg border-t border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-xs text-brandGold uppercase tracking-widest font-extrabold mb-3">SECTOR EVIDENCE</h2>
+            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Enterprise Case Studies</p>
+            <p class="text-neutral-400 mt-4 leading-relaxed">
+                Review verified metrics realized by brands running Sapientia AI across diverse scale tiers.
+            </p>
+        </div>
+
+        <!-- Case Studies Tabs Navigator -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+            <button onclick="switchCaseStudy('skincare')" id="btn-skincare" class="case-btn px-5 py-2.5 rounded-full border border-brandBlue text-brandBlue bg-brandBlue/5 text-xs font-semibold tracking-wide transition-all" aria-label="View Skincare Group Case Study">Skincare Group ($200M+)</button>
+            <button onclick="switchCaseStudy('sports')" id="btn-sports" class="case-btn px-5 py-2.5 rounded-full border border-white/5 text-neutral-400 text-xs font-semibold tracking-wide hover:border-white/10 transition-all" aria-label="View Sports Brand Case Study">Sports Brand ($150M)</button>
+            <button onclick="switchCaseStudy('office')" id="btn-office" class="case-btn px-5 py-2.5 rounded-full border border-white/5 text-neutral-400 text-xs font-semibold tracking-wide hover:border-white/10 transition-all" aria-label="View Office Products Case Study">Office Products Brand ($70M)</button>
+            <button onclick="switchCaseStudy('fashion')" id="btn-fashion" class="case-btn px-5 py-2.5 rounded-full border border-white/5 text-neutral-400 text-xs font-semibold tracking-wide hover:border-white/10 transition-all" aria-label="View Fashion Brand Case Study">Fashion Brand (DSP + AMC)</button>
+        </div>
+
+        <!-- Case Study Contents Wrapper -->
+        <div id="case-container" class="glass-card p-8 sm:p-12 rounded-2xl relative overflow-hidden">
+            
+            <!-- Global Skincare Group Content -->
+            <div id="case-skincare" class="case-content grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs text-brandBlue uppercase font-mono tracking-widest font-bold">CASE STUDY 01</span>
+                    <h3 class="text-2xl font-bold text-white">Global Skincare Group</h3>
+                    <div class="space-y-2 text-sm text-neutral-400">
+                        <p><strong class="text-white">Annual Revenue:</strong> $200M+</p>
+                        <p><strong class="text-white">Portfolio Size:</strong> 5 premium beauty brands</p>
+                        <p><strong class="text-white">Listing Scope:</strong> 800+ SKUs</p>
+                        <p><strong class="text-white">Channel Depth:</strong> Amazon contributes 75% of total revenue</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 bg-black/60 p-6 sm:p-8 rounded-xl border border-white/5 space-y-4">
+                    <h4 class="text-xs text-brandGold uppercase tracking-wider font-extrabold border-b border-white/5 pb-2">Results after implementing Sapientia AI:</h4>
+                    <ul class="space-y-3 text-sm text-neutral-300">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <span><strong class="text-white">TACoS reduced</strong> from 24.5% to 17.6%</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <span>More than <strong class="text-white">$5 million</strong> annual advertising savings</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <span>Overall profit <strong class="text-white">increased by 10%</strong></span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <span>Advertising team <strong class="text-white">reduced from 15 people to 5</strong></span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <span>New product conversion rate <strong class="text-white">increased by 65%</strong> during launch phase</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <span>Enterprise advertising playbook standardized across brands</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sports Brand Content -->
+            <div id="case-sports" class="case-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs text-brandGold uppercase font-mono tracking-widest font-bold">CASE STUDY 02</span>
+                    <h3 class="text-2xl font-bold text-white">Sports Brand</h3>
+                    <div class="space-y-2 text-sm text-neutral-400">
+                        <p><strong class="text-white">Annual Revenue:</strong> $150M</p>
+                        <p><strong class="text-white">Annual advertising spend:</strong> $13M</p>
+                        <p><strong class="text-white">Team size:</strong> 40 employees</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 bg-black/60 p-6 sm:p-8 rounded-xl border border-white/5 space-y-4">
+                    <h4 class="text-xs text-brandBlue uppercase tracking-wider font-extrabold border-b border-white/5 pb-2">After implementing Sapientia AI:</h4>
+                    <p class="text-sm text-neutral-300 leading-relaxed">
+                        Advertising teams using Sapientia achieved <strong class="text-brandBlue">more than 10% lower ACOS and TACOS</strong> compared with control groups using traditional management methods.
+                    </p>
+                    <div class="p-4 bg-neutral-900 rounded-lg text-xs text-neutral-400 flex items-center gap-3">
+                        <i class="fas fa-chart-bar text-brandGold text-lg" aria-hidden="true"></i>
+                        <span>Unified optimization across broad keyword buckets protected high-priority listings from competitor search domination.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Brand Content -->
+            <div id="case-office" class="case-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs text-brandBlue uppercase font-mono tracking-widest font-bold">CASE STUDY 03</span>
+                    <h3 class="text-2xl font-bold text-white">Office Products Brand</h3>
+                    <div class="space-y-2 text-sm text-neutral-400">
+                        <p><strong class="text-white">Annual Revenue:</strong> $70M</p>
+                        <p><strong class="text-white">Listing Scope:</strong> 4,000+ SKUs</p>
+                        <p><strong class="text-white">Annual advertising spend:</strong> $10M</p>
+                        <p><strong class="text-white">Ad Team Size:</strong> 20 people</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 bg-black/60 p-6 sm:p-8 rounded-xl border border-white/5 space-y-4">
+                    <h4 class="text-xs text-brandGold uppercase tracking-wider font-extrabold border-b border-white/5 pb-2">Results:</h4>
+                    <ul class="space-y-3 text-sm text-neutral-300">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1" aria-hidden="true"></i>
+                            <span>Unified advertising strategy across the organization</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1" aria-hidden="true"></i>
+                            <span>Improved campaign consistency across diverse item categories</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1" aria-hidden="true"></i>
+                            <span>Reduced advertising cost ratio by <strong class="text-white">15%</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Fashion Brand Content -->
+            <div id="case-fashion" class="case-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs text-brandGold uppercase font-mono tracking-widest font-bold">CASE STUDY 04</span>
+                    <h3 class="text-2xl font-bold text-white">Fashion Brand</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed">
+                        Integrated DSP + AMC + Sapientia AI Solution
+                    </p>
+                </div>
+                <div class="lg:col-span-7 bg-black/60 p-6 sm:p-8 rounded-xl border border-white/5 space-y-4">
+                    <h4 class="text-xs text-brandBlue uppercase tracking-wider font-extrabold border-b border-white/5 pb-2">Results:</h4>
+                    <ul class="space-y-3 text-sm text-neutral-300">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1" aria-hidden="true"></i>
+                            <span><strong class="text-white">40% increase</strong> in high-intent external traffic</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1" aria-hidden="true"></i>
+                            <span><strong class="text-white">35% increase</strong> in Amazon organic search traffic</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-check-circle text-brandBlue mt-1" aria-hidden="true"></i>
+                            <span>ROAS improved to <strong class="text-brandGold">4.2</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Process Timeline Section -->
+<section class="py-24 bg-neutral-950/40 border-t border-white/5 relative bg-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-xs text-brandBlue uppercase tracking-widest font-extrabold mb-3">ONBOARDING PATHWAY</h2>
+            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Implementation Process</p>
+            <p class="text-neutral-400 mt-4">Step-by-step roadmap to integrating Sapientia AI inside your brand architecture.</p>
+        </div>
+
+        <div class="relative">
+            <!-- Central Line for timeline (desktop only) -->
+            <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full timeline-line opacity-30"></div>
+            
+            <div class="space-y-12 lg:space-y-0">
+                
+                <!-- Step 1 -->
+                <div class="flex flex-col lg:flex-row items-center justify-between lg:w-full">
+                    <div class="lg:w-[45%] text-left lg:text-right space-y-2">
+                        <div class="text-xs font-mono text-brandBlue uppercase tracking-wider">Phase 01</div>
+                        <h4 class="text-lg font-bold text-white">Request a Demo</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">
+                            Connect with our strategy deployment leads to discuss portfolio goals.
+                        </p>
+                    </div>
+                    <div class="my-4 lg:my-0 w-8 h-8 rounded-full bg-brandBg border-2 border-brandBlue text-brandBlue flex items-center justify-center font-bold text-xs relative z-10">
+                        1
+                    </div>
+                    <div class="lg:w-[45%]"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col lg:flex-row items-center justify-between lg:w-full">
+                    <div class="lg:w-[45%] lg:order-2 space-y-2">
+                        <div class="text-xs font-mono text-brandGold uppercase tracking-wider">Phase 02</div>
+                        <h4 class="text-lg font-bold text-white">ASIN Advertising Audit</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">
+                            Our algorithms analyze listing historical trends to find immediately captureable leakages and low-yield bidding.
+                        </p>
+                    </div>
+                    <div class="my-4 lg:my-0 w-8 h-8 rounded-full bg-brandBg border-2 border-brandGold text-brandGold flex items-center justify-center font-bold text-xs relative z-10 lg:order-1">
+                        2
+                    </div>
+                    <div class="lg:w-[45%] lg:order-1"></div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col lg:flex-row items-center justify-between lg:w-full">
+                    <div class="lg:w-[45%] text-left lg:text-right space-y-2">
+                        <div class="text-xs font-mono text-brandBlue uppercase tracking-wider">Phase 03</div>
+                        <h4 class="text-lg font-bold text-white">Platform Setup</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">
+                            Holistic research, customized strategy development, and actionable execution planning.
+                        </p>
+                    </div>
+                    <div class="my-4 lg:my-0 w-8 h-8 rounded-full bg-brandBg border-2 border-brandBlue text-brandBlue flex items-center justify-center font-bold text-xs relative z-10">
+                        3
+                    </div>
+                    <div class="lg:w-[45%]"></div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex flex-col lg:flex-row items-center justify-between lg:w-full">
+                    <div class="lg:w-[45%] lg:order-2 space-y-2">
+                        <div class="text-xs font-mono text-brandGold uppercase tracking-wider">Phase 04</div>
+                        <h4 class="text-lg font-bold text-white">SOP Alignment & Approval</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">
+                            Coordinate brand control processes so your team retains complete final validation capabilities.
+                        </p>
+                    </div>
+                    <div class="my-4 lg:my-0 w-8 h-8 rounded-full bg-brandBg border-2 border-brandGold text-brandGold flex items-center justify-center font-bold text-xs relative z-10 lg:order-1">
+                        4
+                    </div>
+                    <div class="lg:w-[45%] lg:order-1"></div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="flex flex-col lg:flex-row items-center justify-between lg:w-full">
+                    <div class="lg:w-[45%] text-left lg:text-right space-y-2">
+                        <div class="text-xs font-mono text-brandBlue uppercase tracking-wider">Phase 05</div>
+                        <h4 class="text-lg font-bold text-white">Monthly Business Review</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">
+                            Interactive performance reviews and update upcoming strategies.
+                        </p>
+                    </div>
+                    <div class="my-4 lg:my-0 w-8 h-8 rounded-full bg-brandBg border-2 border-brandBlue text-brandBlue flex items-center justify-center font-bold text-xs relative z-10">
+                        5
+                    </div>
+                    <div class="lg:w-[45%]"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-24 bg-brandBg border-t border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-xs text-brandGold uppercase tracking-widest font-extrabold mb-3">INVESTMENT STRUCTURE</h2>
+            <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Structured for Aligned Success</p>
+            <p class="text-neutral-400 mt-4">Transparent, performance-focused tiers built for professional sellers.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- Tier 1 -->
+            <div class="glass-card p-8 rounded-2xl flex flex-col justify-between border border-white/5 transition-all duration-300 hover:border-brandBlue/30 hover:shadow-xl">
+                <div>
+                    <span class="text-xs text-neutral-400 font-mono uppercase">Preparation Ingest</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Full Store Audit + AI-Customized Strategy</h3>
+                    <div class="mt-4 mb-6">
+                        <span class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-white">$1,500</span>
+                        <span class="text-xs text-neutral-500 block mt-1">Single onboarding flat rate</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs leading-relaxed mb-6">
+                        A full deep dive diagnostic of your existing structural setup, defining exact leakage areas before full launch.
+                    </p>
+                </div>
+                <div class="pt-6 border-t border-white/5">
+                    <ul class="space-y-2.5 text-xs text-neutral-400 mb-6">
+                        <li><i class="fas fa-check text-brandBlue mr-2"></i> Thorough historic ASIN diagnostics</li>
+                        <li><i class="fas fa-check text-brandBlue mr-2"></i> Multi-agent strategy plan mockup</li>
+                        <li><i class="fas fa-check text-brandBlue mr-2"></i> Performance gap identification report</li>
+                    </ul>
+                    <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank" rel="noopener noreferrer"
+                       class="block w-full text-center py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-xs rounded transition-all"
+                       aria-label="Get Started with Full Store Audit">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tier 2 (Highlighted) -->
+            <div class="glass-card p-8 rounded-2xl flex flex-col justify-between border border-brandBlue/40 relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(103,212,255,0.15)]">
+                <div class="absolute top-0 right-0 bg-brandBlue text-black font-extrabold text-[10px] tracking-wider uppercase px-4 py-1 rounded-bl">Most Popular</div>
+                <div>
+                    <span class="text-xs text-brandBlue font-mono uppercase font-bold">Continuous Optimization</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Full AI Optimization Service</h3>
+                    <div class="mt-4 mb-6">
+                        <span class="text-3xl font-extrabold text-brandBlue">1.8%</span>
+                        <span class="text-xs text-neutral-400 ml-1">of Monthly Ad Spend</span>
+                    </div>
+                    <p class="text-neutral-400 text-xs leading-relaxed mb-6">
+                        Continuous 24/7 AI-Agent optimizations across your full store. True pricing alignment that scales linearly.
+                    </p>
+                </div>
+                <div class="pt-6 border-t border-white/5">
+                    
+                    <!-- Dynamic Interactive Pricing Calculator Widget -->
+                    <div class="bg-neutral-950 p-4 rounded-lg mb-6 border border-neutral-800">
+                        <label for="calc-spend-input" class="text-[10px] text-neutral-400 block mb-1 uppercase font-bold tracking-wide">Enter Monthly Ad Spend</label>
+                        <div class="flex items-center bg-black rounded border border-neutral-800 px-2 py-1.5">
+                            <span class="text-neutral-500 text-xs">$</span>
+                            <input type="number" id="calc-spend-input" value="150000" oninput="calculateSavings(this.value)" class="bg-transparent border-0 outline-none text-xs text-white w-full ml-1 font-mono">
+                        </div>
+                        <div class="mt-3 grid grid-cols-2 gap-2 text-[10px] pt-2 border-t border-neutral-800/60">
+                            <div>
+                                <span class="text-neutral-500 block">Est. 1.8% Fee</span>
+                                <span class="text-brandBlue font-mono font-bold" id="calc-fee">$2,700/mo</span>
+                            </div>
+                            <div>
+                                <span class="text-neutral-500 block">Typical Saved (TACoS)</span>
+                                <span class="text-brandGold font-mono font-bold" id="calc-savings">$15,000/mo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-2.5 text-xs text-neutral-400 mb-6">
+                        <li><i class="fas fa-check text-brandBlue mr-2"></i> All 20+ specialized optimization models</li>
+                        <li><i class="fas fa-check text-brandBlue mr-2"></i> Action tag features</li>
+                        <li><i class="fas fa-check text-brandBlue mr-2"></i> Automation features</li>
+                    </ul>
+                    <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank" rel="noopener noreferrer"
+                       class="block w-full text-center py-2.5 bg-gradient-to-r from-brandBlue to-blue-500 text-black font-extrabold text-xs rounded transition-all"
+                       aria-label="Onboard Now to Full AI Optimization Service">
+                        Onboard Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tier 3 -->
+            <div class="glass-card p-8 rounded-2xl flex flex-col justify-between border border-white/5 transition-all duration-300 hover:border-brandGold/30 hover:shadow-xl">
+                <div>
+                    <span class="text-xs text-neutral-400 font-mono uppercase">Strategic Scale</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Enterprise & Strategic Accounts</h3>
+                    <div class="mt-4 mb-6">
+                        <span class="text-3xl font-extrabold text-brandGold">Custom Pricing</span>
+                        <span class="text-xs text-neutral-500 block mt-1">Available for large conglomerates</span>
+                    </div>
+                </div>
+                <div class="pt-6 border-t border-white/5">
+                    <ul class="space-y-2.5 text-xs text-neutral-400 mb-6">
+                        <li><i class="fas fa-check text-brandGold mr-2"></i> Dedicated Strategy Delivery Leads</li>
+                        <li><i class="fas fa-check text-brandGold mr-2"></i> Bi-weekly business reviews</li>
+                        <li><i class="fas fa-check text-brandGold mr-2"></i> Multi-account dashboard federation</li>
+                    </ul>
+                    <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank" rel="noopener noreferrer"
+                       class="block w-full text-center py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-xs rounded transition-all"
+                       aria-label="Contact Enterprise Strategic Desk">
+                        Contact Enterprise Desk
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- BOTTOM CALL TO ACTION -->
+<section class="py-24 bg-neutral-950 relative overflow-hidden bg-grid">
+    <div class="absolute inset-0 bg-gradient-to-t from-brandBg via-transparent to-brandBg"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-none">
+            Ready to Standardize <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-brandGold">Advertising Excellence?</span>
+        </h2>
+        <p class="text-neutral-400 max-w-xl mx-auto text-sm leading-relaxed">
+            Protect your listings, maximize net margins, and eliminate systemic operational waste with the premier Amazon optimization model framework.
+        </p>
+        <div>
+            <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-brandBlue to-blue-500 text-black font-extrabold rounded-lg hover:shadow-[0_0_35px_rgba(103,212,255,0.4)] transition-all duration-300"
+               aria-label="Book a Demo on LinkedIn bottom CTA">
+                <i class="fab fa-linkedin text-xl"></i>
+                <span>Book a Demo on LinkedIn</span>
+            </a>
+        </div>
+        <p class="text-[10px] text-neutral-500 font-mono">Continuous 24/7/365 active algorithmic modeling.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-brandBg border-t border-white/5 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12 items-start">
+            
+            <!-- Left Brand Segment -->
+            <div class="md:col-span-5 space-y-6">
+                <!-- Dual Branding Display -->
+                <div class="flex flex-col sm:flex-row gap-6 sm:items-center">
+                    
+                    <!-- Sapientia AI Logo (Enlarged) Linked to TopTier League subpath -->
+                    <a href="https://toptierleague.com/sapientia" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 hover:opacity-90 transition-opacity" aria-label="Visit Sapientia Website">
+                        <img src="https://lh3.googleusercontent.com/d/1wjvFKzar2BJXL9F66_xgOzAF9a97IwvK" 
+                             onerror="this.src='https://placehold.co/120x120/050505/67D4FF?text=S'" 
+                             class="w-16 h-16 object-contain rounded" 
+                             alt="Sapientia AI Logo">
+                        <div class="flex flex-col">
+                            <span class="text-white font-bold tracking-wide text-base">Sapientia AI</span>
+                        </div>
+                    </a>
+
+                    <!-- TopTier League Logo Integration linked to toptierleague.com -->
+                    <a href="https://toptierleague.com" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center space-x-2.5 border-t sm:border-t-0 sm:border-l border-white/10 pt-4 sm:pt-0 sm:pl-6 hover:opacity-80 transition-opacity"
+                       aria-label="Visit TopTier League Website">
+                        <img src="https://lh3.googleusercontent.com/d/1pMmdf1sUNgpDZmkgLBjtsohswpVks-BH" 
+                             onerror="this.src='https://placehold.co/80x80/050505/FFD966?text=TTL'" 
+                             class="w-10 h-10 object-contain rounded border border-white/10" 
+                             alt="TopTier League Logo">
+                        <div class="flex flex-col text-left">
+                            <span class="text-white font-bold tracking-wide text-sm">TopTier League</span>
+                            <span class="text-[8px] text-brandGold uppercase tracking-widest font-semibold">Verified Ally</span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <p class="text-neutral-500 text-xs leading-relaxed max-w-sm">
+                    Leveraging advanced multi-agent optimization workflows to secure premium advertising yields for leading brands globally.
+                </p>
+
+                <!-- Raw URL image containers for search engine indexing -->
+                <div class="hidden">
+                    <img src="https://drive.google.com/file/d/1wjvFKzar2BJXL9F66_xgOzAF9a97IwvK/view?usp=sharing" alt="Sapientia AI Logo Original" onerror="this.style.display='none'">
+                    <img src="https://drive.google.com/file/d/1pMmdf1sUNgpDZmkgLBjtsohswpVks-BH/view?usp=sharing" alt="TopTier League Logo Original" onerror="this.style.display='none'">
+                </div>
+            </div>
+
+            <!-- Footer Links Links -->
+            <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Core Model</h4>
+                    <ul class="space-y-2 text-xs text-neutral-400">
+                        <li><a href="#results" class="hover:text-brandBlue transition-colors">Performance Statistics</a></li>
+                        <li><a href="#advantages" class="hover:text-brandBlue transition-colors">Category Tuning</a></li>
+                        <li><a href="#advantages" class="hover:text-brandBlue transition-colors">Telemetry Matrix</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Sovereignty</h4>
+                    <ul class="space-y-2 text-xs text-neutral-400">
+                        <li><a href="#comparison" class="hover:text-brandBlue transition-colors">Rule Vulnerability</a></li>
+                        <li><a href="#case-studies" class="hover:text-brandBlue transition-colors">Case Repository</a></li>
+                        <li><a href="#pricing" class="hover:text-brandBlue transition-colors">Aligned Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Connection</h4>
+                    <ul class="space-y-2 text-xs text-neutral-400">
+                        <li><a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank" rel="noopener noreferrer" class="hover:text-brandBlue transition-colors flex items-center gap-1.5" aria-label="Sapientia AI LinkedIn Portal"><i class="fab fa-linkedin"></i> LinkedIn Gateway</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-neutral-500 font-mono">
+            <p>© Sapientia AI | TopTier League. All Rights Reserved</p>
+            <p class="mt-2 sm:mt-0">Enterprise API Token Ingest Status: Standard Secured</p>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+    
+    // 1. Fallback Onload Behavior
+    window.onload = function() {
+        startDynamicStatsTicking();
+    };
+
+    // 2. Interactive Strategy Visual Updater
+    function updateStrategyMockup(val) {
+        const priorityVal = document.getElementById('priority-value');
+        const segment = document.getElementById('mock-segment');
+        const focus = document.getElementById('mock-focus');
+        const action = document.getElementById('mock-action');
+
+        if (!priorityVal || !segment || !focus || !action) return;
+
+        if (val == 1) {
+            priorityVal.innerText = "Aggressive Launch Growth";
+            segment.innerText = "High-velocity ASINs Matrix";
+            focus.innerText = "Immediate Organic Indexation";
+            action.innerText = "Scaling budgets on top 10 search terms";
+        } else if (val == 2) {
+            priorityVal.innerText = "Balanced Profit";
+            segment.innerText = "Multi-Brand Matrix";
+            focus.innerText = "Continuous Marginal Drift";
+            action.innerText = "Optimizing TACoS targets to 11.2%";
+        } else {
+            priorityVal.innerText = "Defensive Margin Protection";
+            segment.innerText = "Established Best-Sellers";
+            focus.innerText = "Keyword Defense Minimization";
+            action.innerText = "Reducing spend on non-yielding generic targets";
+        }
+    }
+
+    // 3. Case Studies Switcher Logic
+    function switchCaseStudy(target) {
+        // Hide all case contents
+        document.querySelectorAll('.case-content').forEach(element => {
+            element.classList.add('hidden');
+        });
+        // Show current
+        const selectedCase = document.getElementById(`case-${target}`);
+        if (selectedCase) selectedCase.classList.remove('hidden');
+
+        // Style selector buttons
+        document.querySelectorAll('.case-btn').forEach(btn => {
+            btn.className = "case-btn px-5 py-2.5 rounded-full border border-white/5 text-neutral-400 text-xs font-semibold tracking-wide hover:border-white/10 transition-all";
+        });
+        
+        // Active styled button
+        const activeBtn = document.getElementById(`btn-${target}`);
+        if (activeBtn) {
+            activeBtn.className = "case-btn px-5 py-2.5 rounded-full border border-brandBlue text-brandBlue bg-brandBlue/5 text-xs font-semibold tracking-wide transition-all";
+        }
+    }
+
+    // 4. Dynamic Live Pricing Calculator
+    function calculateSavings(adSpend) {
+        if (isNaN(adSpend) || adSpend < 0) {
+            adSpend = 0;
+        }
+        const feeVal = parseFloat(adSpend) * 0.018;
+        const savingsVal = parseFloat(adSpend) * 0.10; // Typical 10% optimization buffer realized
+
+        const feeElement = document.getElementById('calc-fee');
+        const savingsElement = document.getElementById('calc-savings');
+
+        if (feeElement) feeElement.innerText = `$${Math.round(feeVal).toLocaleString()}/mo`;
+        if (savingsElement) savingsElement.innerText = `$${Math.round(savingsVal).toLocaleString()}/mo`;
+    }
+
+    // 5. Ambient ticking micro-counter for continuous SaaS realism (Fallback Protected)
+    function startDynamicStatsTicking() {
+        setInterval(() => {
+            const tacosMetric = document.getElementById('tacos-metric');
+            const statusEl = document.getElementById('ai-status');
+            
+            if (tacosMetric && statusEl && statusEl.innerText.includes("Running Live")) {
+                const currentVal = parseFloat(tacosMetric.innerText);
+                const drift = (Math.random() * 0.1 - 0.05); // slight tick up or down
+                const roundedDrift = (currentVal + drift).toFixed(2);
+                
+                if (roundedDrift >= 10.9 && roundedDrift <= 11.5) {
+                    tacosMetric.innerText = `${roundedDrift}%`;
+                }
+            }
+        }, 4000);
+    }
+</script>
+
+</body>
+</html>
