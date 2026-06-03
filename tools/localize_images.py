@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 将 HTML 中的外部图片本地化
-用法: python tools/localize_images.py <html在项目内的相对文件路径>
+用法: python3 tools/localize_images.py <html在项目内的相对文件路径>
 
 接收一个 HTML 文件路径作为命令行参数
 在同级目录创建 {html名}_image 文件夹，冲突时交互确认
