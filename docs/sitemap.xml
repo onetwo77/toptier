@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   
+   <!-- 首页 -->
+   <url>
+      <loc>https://www.toptierleague.com/</loc>
+      <priority>1.0</priority>
+   </url>
+
+   <!-- 内页 -->
+   <url>
+      <loc>https://www.toptierleague.com/aixcontent</loc>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://www.toptierleague.com/lamastermind</loc>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://www.toptierleague.com/sapientia</loc>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://www.toptierleague.com/summit</loc>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>https://www.toptierleague.com/summit2026/</loc>
+      <priority>0.8</priority>
+   </url>
+
+</urlset>
