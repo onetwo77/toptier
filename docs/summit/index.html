@@ -2,1932 +2,1992 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TopTier Summit Peak Season Edition 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        :root {
-            --neon-red: #FF0050;
-            --neon-cyan: #00F2EA;
-            --gold: #FFD700;
-            --highlight-pink: #FF007F;
-            --ios-safe-top: env(safe-area-inset-top);
-            --ios-safe-bottom: env(safe-area-inset-bottom);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>TopTier Summit Peak Season Edition 2026</title>
+<script src="https://cdn.tailwindcss.com"></script>
 
-        /* Responsive Container */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin-right: auto;
-            margin-left: auto;
-            padding-right: 1.5rem;
-            padding-left: 1.5rem;
-        }
+<script src="https://unpkg.com/lucide@latest"></script>
 
-        /* Modern Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
+<style>
+:root {
+--neon-red: #FF0050;
+--neon-cyan: #00F2EA;
+--gold: #FFD700;
+--highlight-pink: #FF007F;
+--ios-safe-top: env(safe-area-inset-top);
+--ios-safe-bottom: env(safe-area-inset-bottom);
+}
 
-        ::-webkit-scrollbar-track {
-            background: #000;
-        }
+/* Responsive Container */
+.container {
+width: 100%;
+max-width: 1200px;
+margin-right: auto;
+margin-left: auto;
+padding-right: 1.5rem;
+padding-left: 1.5rem;
+}
 
-        ::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 10px;
-        }
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--neon-red);
-        }
+::-webkit-scrollbar-track {
+background: #000;
+}
 
-        /* Typography Fluidity */
-        .shimmer-text {
-            background: linear-gradient(to right, #fff 20%, #FF0050 40%, #FF0050 60%, #fff 80%);
-            background-size: 200% auto;
-            color: #000;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shine 4s linear infinite;
-        }
+::-webkit-scrollbar-thumb {
+background: #333;
+border-radius: 10px;
+}
 
-        @keyframes shine {
-            to {
-                background-position: 200% center;
-            }
-        }
+::-webkit-scrollbar-thumb:hover {
+background: var(--neon-red);
+}
 
-        /* Gradient Borders */
-        .gradient-border {
-            position: relative;
-            background: #000;
-            background-clip: padding-box;
-            border: 1px solid transparent;
-            border-radius: 0.75rem;
-        }
+/* Typography Fluidity */
+.shimmer-text {
+background: linear-gradient(to right, #fff 20%, #FF0050 40%, #FF0050 60%, #fff 80%);
+background-size: 200% auto;
+color: #000;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: shine 4s linear infinite;
+}
 
-        .gradient-border::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-            margin: -1px;
-            border-radius: inherit;
-        }
+@keyframes shine {
+to {
+background-position: 200% center;
+}
+}
 
-        .border-red::before {
-            background: linear-gradient(45deg, var(--neon-red), #5a001c);
-        }
+/* Gradient Borders */
+.gradient-border {
+position: relative;
+background: #000;
+background-clip: padding-box;
+border: 1px solid transparent;
+border-radius: 0.75rem;
+}
 
-        .border-cyan::before {
-            background: linear-gradient(45deg, var(--neon-cyan), #004d4a);
-        }
+.gradient-border::before {
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: -1;
+margin: -1px;
+border-radius: inherit;
+}
 
-        .border-gold::before {
-            background: linear-gradient(45deg, var(--gold), #7a6600);
-        }
+.border-red::before {
+background: linear-gradient(45deg, var(--neon-red), #5a001c);
+}
 
-        /* Animations */
-        @keyframes pulse-glow {
+.border-cyan::before {
+background: linear-gradient(45deg, var(--neon-cyan), #004d4a);
+}
 
-            0%,
-            100% {
-                filter: drop-shadow(0 0 5px currentColor) opacity(0.8);
-            }
+.border-gold::before {
+background: linear-gradient(45deg, var(--gold), #7a6600);
+}
 
-            50% {
-                filter: drop-shadow(0 0 20px currentColor) opacity(1);
-            }
-        }
+/* Animations */
+@keyframes pulse-glow {
 
-        .glow-pink {
-            color: var(--highlight-pink);
-            animation: pulse-glow 3s infinite;
-        }
+0%,
+100% {
+filter: drop-shadow(0 0 5px currentColor) opacity(0.8);
+}
 
-        .glow-gold {
-            color: var(--gold);
-            animation: pulse-glow 3s infinite;
-        }
+50% {
+filter: drop-shadow(0 0 20px currentColor) opacity(1);
+}
+}
 
-        .glow-cyan {
-            color: var(--neon-cyan);
-            animation: pulse-glow 3s infinite;
-        }
+.glow-pink {
+color: var(--highlight-pink);
+animation: pulse-glow 3s infinite;
+}
 
-        .glow-red {
-            color: var(--neon-red);
-            animation: pulse-glow 3s infinite;
-        }
+.glow-gold {
+color: var(--gold);
+animation: pulse-glow 3s infinite;
+}
 
-        @keyframes title-pulse {
+.glow-cyan {
+color: var(--neon-cyan);
+animation: pulse-glow 3s infinite;
+}
 
-            0%,
-            100% {
-                transform: scale(1);
-                text-shadow: 0 0 20px rgba(0, 242, 234, 0.4);
-            }
+.glow-red {
+color: var(--neon-red);
+animation: pulse-glow 3s infinite;
+}
 
-            50% {
-                transform: scale(1.02);
-                text-shadow: 0 0 40px rgba(0, 242, 234, 0.8);
-            }
-        }
+@keyframes title-pulse {
 
-        .animate-agenda-title {
-            animation: title-pulse 4s ease-in-out infinite;
-        }
+0%,
+100% {
+transform: scale(1);
+text-shadow: 0 0 20px rgba(0, 242, 234, 0.4);
+}
 
-        @keyframes live-pulse {
+50% {
+transform: scale(1.02);
+text-shadow: 0 0 40px rgba(0, 242, 234, 0.8);
+}
+}
 
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+.animate-agenda-title {
+animation: title-pulse 4s ease-in-out infinite;
+}
 
-            50% {
-                opacity: 0.5;
-                transform: scale(1.2);
-            }
-        }
+@keyframes live-pulse {
 
-        .live-dot {
-            box-shadow: 0 0 10px var(--neon-red);
-            animation: live-pulse 1.5s infinite;
-        }
+0%,
+100% {
+opacity: 1;
+transform: scale(1);
+}
 
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+50% {
+opacity: 0.5;
+transform: scale(1.2);
+}
+}
 
-        .card-hover:hover {
-            transform: translateY(-8px) scale(1.01);
-            z-index: 10;
-        }
+.live-dot {
+box-shadow: 0 0 10px var(--neon-red);
+animation: live-pulse 1.5s infinite;
+}
 
-        /* Speaker Card Styling */
-        .speaker-card {
-            background: #0a0a0a;
-            border: 1px solid #1a1a1a;
-            transition: all 0.4s ease;
-            height: 100%;
-        }
+.card-hover {
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-        .speaker-card:hover {
-            border-color: var(--highlight-pink);
-            box-shadow: 0 10px 30px -10px rgba(255, 0, 127, 0.3);
-        }
+.card-hover:hover {
+transform: translateY(-8px) scale(1.01);
+z-index: 10;
+}
 
-        /* Agenda Specific Styles */
-        .agenda-time-pill {
-            background: linear-gradient(90deg, #111, #000);
-            border: 1px solid #222;
-        }
+/* Speaker Card Styling */
+.speaker-card {
+background: #0a0a0a;
+border: 1px solid #1a1a1a;
+transition: all 0.4s ease;
+height: 100%;
+}
 
-        /* Media Logo Container */
-        .media-logo-card {
-            background: #FFFFFF;
-            border: 1px solid #E5E7EB;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
+.speaker-card:hover {
+border-color: var(--highlight-pink);
+box-shadow: 0 10px 30px -10px rgba(255, 0, 127, 0.3);
+}
 
-        .media-logo-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-            border-color: var(--neon-red);
-        }
+/* Agenda Specific Styles */
+.agenda-time-pill {
+background: linear-gradient(90deg, #111, #000);
+border: 1px solid #222;
+}
 
-        /* Testimonial Styles */
-        .quote-icon {
-            opacity: 0.1;
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            transform: scale(2);
-        }
+/* Media Logo Container */
+.media-logo-card {
+background: #FFFFFF;
+border: 1px solid #E5E7EB;
+transition: all 0.3s ease;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
 
-        /* Responsive Fixes */
-        @media (max-width: 380px) {
-            .hero-title {
-                font-size: 2.5rem !important;
-            }
+.media-logo-card:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+border-color: var(--neon-red);
+}
 
-            .hero-subtitle {
-                font-size: 1.25rem !important;
-            }
-        }
+/* Testimonial Styles */
+.quote-icon {
+opacity: 0.1;
+position: absolute;
+top: 1rem;
+right: 1.5rem;
+transform: scale(2);
+}
 
-        /* Safari Flicker Fix */
-        .bg-black {
-            -webkit-overflow-scrolling: touch;
-        }
-    </style>
+/* Responsive Fixes */
+@media (max-width: 380px) {
+.hero-title {
+font-size: 2.5rem !important;
+}
+
+.hero-subtitle {
+font-size: 1.25rem !important;
+}
+}
+
+/* Safari Flicker Fix */
+.bg-black {
+-webkit-overflow-scrolling: touch;
+}
+</style>
 </head>
 
 <body class="bg-black text-slate-50 font-sans selection:bg-[#FF0050] selection:text-white antialiased">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-[100] bg-black/90 backdrop-blur-xl border-b border-zinc-800"
-        style="padding-top: var(--ios-safe-top);">
-        <div class="container h-16 flex items-center justify-center">
-            <a href="https://toptierleague.com" target="_blank"
-                class="font-bold text-xl tracking-tighter italic flex items-center gap-2">
-                <span class="text-[#FF0050]">TopTier</span> <span class="text-white">League</span>
-            </a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden border-b border-zinc-900">
-        <div
-            class="absolute top-0 right-[-10%] w-[60vw] h-[60vw] bg-[#FF0050] rounded-full blur-[120px] opacity-10 pointer-events-none">
-        </div>
-        <div
-            class="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-[#00F2EA] rounded-full blur-[120px] opacity-5 pointer-events-none">
-        </div>
-
-        <div class="container relative z-10 text-center">
-            <div class="inline-block mb-6">
-                <h1
-                    class="hero-title text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none shimmer-text uppercase">
-                    TopTier Summit
-                </h1>
-                <h2
-                    class="hero-subtitle text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mt-2 tracking-tight leading-tight text-[#00F2EA]">
-                    Peak Season Edition 2026
-                </h2>
-            </div>
-
-            <p
-                class="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-zinc-400 mb-10 uppercase tracking-[0.2em] px-4">
-                Defining the <span class="text-[#00F2EA] font-semibold italic">Next E-commerce Era</span>
-            </p>
-
-            <div
-                class="inline-flex items-center bg-zinc-900/80 backdrop-blur border border-zinc-700 rounded-full px-6 py-3 mb-12 shadow-2xl max-w-full">
-                <i data-lucide="calendar" class="w-4 h-4 text-[#FF0050] mr-3 flex-shrink-0"></i>
-                <span
-                    class="text-white font-bold text-xs sm:text-sm md:text-base whitespace-nowrap overflow-hidden text-ellipsis">
-                    Oct 7–9 | ANAHEIM CONVENTION CENTER, LA
-                </span>
-            </div>
-
-            <div class="max-w-xl mx-auto border-t border-zinc-800 pt-8 px-4">
-                <p
-                    class="text-[10px] sm:text-xs md:text-sm text-[#FFD700] uppercase tracking-[0.25em] font-black italic leading-loose">
-                    The Premier Gathering for Global Leaders in Ecommerce & AI
-                </p>
-            </div>
-        </div>
-    </header>
-
-    <!-- Logo Section -->
-    <div class="bg-black py-12 flex flex-col items-center justify-center overflow-hidden">
-        <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
-            <span class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-[0.4em] font-black italic">Hosted
-                by</span>
-            <img src="index_image/80f52700ed614b76bfca0f8258bef819"
-                alt="TopTier League Logo"
-                class="h-20 sm:h-24 md:h-28 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,0,80,0.3)]" />
-        </div>
-    </div>
-
-    <!-- Dynamic Events Section -->
-    <section class="bg-zinc-950 pt-16 lg:pt-32 pb-6 relative overflow-hidden">
-        <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none">
-        </div>
-
-        <div class="container relative z-10">
-            <div class="text-center mb-16 px-4">
-                <h2
-                    class="animate-agenda-title text-2xl sm:text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter italic leading-none">
-                    <span
-                        class="bg-gradient-to-r from-[#00F2EA] via-white to-[#00F2EA] bg-clip-text text-transparent">Dynamic
-                        Agenda:</span>
-                    <br class="sm:hidden">
-                    <span class="text-white">TopTier Summit + YFCon Mega Expo</span>
-                </h2>
-                <div
-                    class="w-24 h-1 bg-gradient-to-r from-transparent via-[#00F2EA] to-transparent mx-auto mt-4 opacity-50">
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <!-- Card 1 -->
-                <div
-                    class="gradient-border border-red p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-[#FF0050] font-black text-xs uppercase tracking-[0.2em]">Summit</div>
-                        <i data-lucide="mic-2" class="w-5 h-5 text-[#FF0050]/50"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">Cutting-Edge Growth Summit -
-                        Sharing from Industry Pioneers</h3>
-                    <div
-                        class="mt-auto inline-flex items-center gap-2 bg-[#FF0050]/10 border border-[#FF0050]/20 px-3 py-1.5 rounded-lg">
-                        <i data-lucide="clock" class="w-4 h-4 text-[#FF0050]"></i>
-                        <span class="text-xs font-black text-white uppercase italic">10:00–17:00 | Oct 8, Summit
-                            Stage</span>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div
-                    class="gradient-border border-cyan p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-[#00F2EA] font-black text-xs uppercase tracking-[0.2em]">Mastermind</div>
-                        <i data-lucide="brain-circuit" class="w-5 h-5 text-[#00F2EA]/50"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">TopTier Mastermind & Airsoft
-                        Team Battle</h3>
-                    <div
-                        class="mt-auto inline-flex items-center gap-2 bg-[#00F2EA]/10 border border-[#00F2EA]/20 px-3 py-1.5 rounded-lg">
-                        <i data-lucide="clock" class="w-4 h-4 text-[#00F2EA]"></i>
-                        <span class="text-xs font-black text-white uppercase italic">12:00–16:00 | Oct 7, Evike
-                            Superstore</span>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div
-                    class="gradient-border border-cyan p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-[#00F2EA] font-black text-xs uppercase tracking-[0.2em]">TikTok Tour & Talk
-                        </div>
-                        <i data-lucide="lightbulb" class="w-5 h-5 text-[#00F2EA]/50"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">TikTok HQ Visit, Sharing &
-                        Networking</h3>
-                    <div
-                        class="mt-auto inline-flex items-center gap-2 bg-[#00F2EA]/10 border border-[#00F2EA]/20 px-3 py-1.5 rounded-lg">
-                        <i data-lucide="clock" class="w-4 h-4 text-[#00F2EA]"></i>
-                        <span class="text-xs font-black text-white uppercase italic">14:00–16:00 | Oct 6, TikTok HQ
-                            LA</span>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div
-                    class="gradient-border border-gold p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/40 backdrop-blur-md">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-[#FFD700] font-black text-xs uppercase tracking-[0.2em]">VIP Only</div>
-                        <i data-lucide="star" class="w-5 h-5 text-[#FFD700]/50"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-black text-[#FFD700] leading-tight mb-2 uppercase italic">
-                        Exclusive VIP Party</h3>
-                    <p class="text-[10px] text-white/60 uppercase tracking-widest font-bold mb-4">Top 1% creators &
-                        elite brands</p>
-                    <div
-                        class="mt-auto inline-flex items-center gap-2 bg-[#FFD700]/10 border border-[#FFD700]/20 px-3 py-1.5 rounded-lg">
-                        <i data-lucide="clock" class="w-4 h-4 text-[#FFD700]"></i>
-                        <span class="text-xs font-black text-white uppercase italic">from 18:30 | Oct 9</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Redesigned Mega Exhibition Callout -->
-            <div
-                class="bg-gradient-to-br from-[#FF007F] via-[#FF0050] to-[#990030] rounded-[2rem] p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between shadow-[0_20px_50px_rgba(255,0,80,0.3)] border border-white/20 gap-8 max-w-5xl mx-auto">
-                <div class="text-center md:text-left">
-                    <div
-                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-[9px] font-black uppercase tracking-[0.3em] mb-4">
-                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Flagship Event
-                    </div>
-                    <h3
-                        class="text-2xl sm:text-3xl md:text-4xl font-black text-white italic uppercase leading-[0.95] tracking-tighter">
-                        Two-Day Mega <br class="hidden sm:block"> Exhibition</h3>
-                    <p class="text-white/80 text-[11px] sm:text-xs font-bold mt-4 uppercase tracking-[0.25em]">Oct 8-9 |
-                        All Access Pass Required</p>
-                </div>
-                <div
-                    class="bg-black/30 backdrop-blur-md px-8 py-6 rounded-[1.5rem] border border-white/10 text-center min-w-[240px] shadow-2xl">
-                    <span
-                        class="text-white font-black text-2xl sm:text-3xl block leading-none tracking-tighter">12,000+</span>
-                    <span
-                        class="text-[10px] sm:text-xs text-white/90 block font-black uppercase mt-2 tracking-widest">EXPECTED
-                        ATTENDEES</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Speaker Lineup Section -->
-    <section class="bg-black pt-12 pb-20 overflow-hidden border-b border-zinc-900">
-        <div class="container text-center">
-            <div class="mb-14">
-                <a href="https://www.eventbrite.com/e/toptier-summit-yfcon2026-bfcm-edition-tickets-1994763825299"
-                    target="_blank"
-                    class="inline-flex items-center gap-3 bg-white text-black hover:bg-[#00F2EA] transition-colors duration-300 px-8 py-5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)] group">
-                    Join the summit
-                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-            </div>
-
-            <h2
-                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#FF007F] uppercase italic mb-16 tracking-tighter glow-pink px-4 leading-[1.1]">
-                PROPOSED SPEAKERS
-            </h2>
-
-            <!-- Speakers Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto mb-16 px-2">
-
-                <!-- Dongkai Chen -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/05d1419a02c347cc90dca80b5667e5ab"
-                            alt="Dongkai Chen"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Dongkai Chen</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Chief
-                            Growth Officer of Oceanwing, an Anker Innovation’s Subsidiary, Overseeing a 9-Figure
-                            E-Commerce Business</p>
-                    </div>
-                </div>
-
-
-                <!-- Mattia Miglio -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/09ae29665ec14898b5d9ace9e22441a6"
-                            alt="Mattia Miglio"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm"> Mattia Miglio</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Senior
-                            Director at Alibaba.com, Business Development & Partnerships</p>
-                    </div>
-                </div>
-
-                <!-- Can Chan -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/fc8f2988a6d84b04a00979c6a00f7201"
-                            alt="Can Chan"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Can Chan</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of TopTier League, Pioneering ecom seller community</p>
-                    </div>
-                </div>
-
-                <!-- David Connor -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/faff88b4af0241c9885b807bcc18545f"
-                            alt="David Connor"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">David Connor</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder & CEO of Kanzen Skincare, The UK’s #1 Acne Brand on TikTok</p>
-                    </div>
-                </div>
-
-
-                <!-- Josh Hadley -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/3799233cbf074bb3b3ac17a5a5e0bda4"
-                            alt="Josh Hadley"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Josh Hadley</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">CEO,
-                            8-figure ecommerce business owner</p>
-                    </div>
-                </div>
-
-                <!-- Muskaan Nanda -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/ef10f3d1884444dc8068cf287398a350"
-                            alt="Muskaan Nanda"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Muskaan Nanda</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Director at GuruNanda, Top-Selling Oral Care Brand on TikTok Shop</p>
-                    </div>
-                </div>
-
-                <!-- Aaron Jin -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/c21c4d00e3f8422ca68a33a0a94f76ba"
-                            alt="Aaron Jin"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Aaron Jin</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">TikTok
-                            Shop, Head of Appliances and Digital Goods</p>
-                    </div>
-                </div>
-
-                <!-- Timothy Sanchez-Vega -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/1b3aeed0c81a4d6181d530f3776a450f"
-                            alt="Timothy Sanchez-Vega"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Timothy Sanchez-Vega</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$3M in
-                            GMV, 6M followers across platforms</p>
-                    </div>
-                </div>
-
-                <!-- Ricky Chung -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/ab97b87ddcb641e087a8bd28e53d2360"
-                            alt="Ricky Chung"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Ricky Chung</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Freshware, 8-figure Amazon seller</p>
-                    </div>
-                </div>
-
-                <!-- Colin Raja -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/509fe38885574744a976528fe9c8261c"
-                            alt="Colin Raja"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Colin Raja</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Launch Lab, Strategist Behind Multiple 7-Figure Brands</p>
-                    </div>
-                </div>
-
-                <!-- Jason Termechi -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/0a0224ce11384e15b906f4b33a61c880"
-                            alt="Jason Termechi"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Jason Termechi</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Live
-                            Shopping Consultant, Driving $14M+ in GMV</p>
-                    </div>
-                </div>
-
-                <!-- Chris Rawlings -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/3722fd351c564798ae765ce82705e93a"
-                            alt="Chris Rawlings"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Chris Rawlings</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1"> CEO
-                            of Sophie Society, Amazon PPC Master</p>
-                    </div>
-                </div>
-
-                <!-- Jo Rodriguez -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/f54be20868ed4ed9b7d2bee688a35054"
-                            alt="Jo Rodriguez"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Jo Rodriguez</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Ali9 Creative | Generated $80M+ in Revenue Through Performance Marketing
-                            Campaigns</p>
-                    </div>
-                </div>
-
-                <!-- Carmen Muley -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/cdb1b8c91a7e4c2aa15773faa7d246f3"
-                            alt="Carmen Muley"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Carmen Muley</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder & CEO of Paragon Social Commerce</p>
-                    </div>
-                </div>
-
-                <!-- Ashley Wright -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/cc05280273984f209a02ce5e3a6951b1"
-                            alt="Ashley Wright"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Ashley Wright</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder & CEO, Social Tale</p>
-                    </div>
-                </div>
-
-                <!-- Felicity Zhang -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/adc0e70c4a794604af4226f7506a60fb"
-                            alt="Felicity Zhang"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Felicity Zhang</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">CEO &
-                            Founder of Felicity Crystal | Category-Leading Whatnot Seller</p>
-                    </div>
-                </div>
-
-                <!-- Alex Bonilla -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/4e9072ab6db54beaacc2cdf4cc89c2cb"
-                            alt="Alex Bonilla"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Alex Bonilla</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Owner/Founder of Delta Brands/Pura Vida Moringa</p>
-                    </div>
-                </div>
-
-                <!-- Andrew Erickson -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/00adab59286143b28d2c2fa9741cf321"
-                            alt="Andrew Erickson"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Andrew Erickson</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Co-Founder of Inventory Hero, two 7-figure FBA brand exits</p>
-                    </div>
-                </div>
-
-                <!-- Yudian Xie -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/2f80eb38eb9b4f43bfe72bd854da2beb"
-                            alt="Yudian Xie"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Yudian Xie</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Head
-                            of Managed Services at Oceanwing (Anker Subsidiary) | Experienced eCommerce Brand Operator
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Yibo Wei -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/71647b7e7a5d49c6bd5635cab2d921bf"
-                            alt="Yibo Wei"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Yibo Wei</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Co-founder of XLSEAFOOD & THINKPRO, Master of Rednote</p>
-                    </div>
-                </div>
-
-                <!-- Brian Kelsey (NEW) -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/9d27215f9d9e45cd9d899fad74e2dc03"
-                            alt="Brian Kelsey"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Brian Kelsey</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">8
-                            Figure Ecom Brand Owner, AI TikTok Posts with 20M Views/Month</p>
-                    </div>
-                </div>
-
-                <!-- Michelle Barnum Smith (NEW) -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/c6c957d9c20d498f9d73b34fe3022009"
-                            alt="Michelle Barnum Smith"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Michelle Barnum Smith</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Social Sellers, Award-winning Marketing Strategist</p>
-                    </div>
-                </div>
-
-
-                <!-- Kaley -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/704e468f6dc942d18e065442d4e7fa88"
-                            alt="Kaley"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Kaley (@curvefitacademy)</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1%
-                            TikTok Shop affiliate in Beauty & Personal Care</p>
-                    </div>
-                </div>
-
-                <!-- Matt Kahla -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/d68dbd5a4b4a4066b7c51ec92168e9b4"
-                            alt="Matt Kahla"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Matt Kahla</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$22M
-                            TikTok Shop GMV, Owner of MattKahla</p>
-                    </div>
-                </div>
-
-                <!-- Cassandra Bankson -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/0cc801a494bb439995ac4b7459b6f51e"
-                            alt="Cassandra Bankson"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Cassandra Bankson</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Award
-                            Winning Skincare Creator With 5M Followers</p>
-                    </div>
-                </div>
-
-                <!-- Tinashe Chaponda -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/8e887baa4cf448d799aacaf40b9d7c5e"
-                            alt="Tinashe Chaponda"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Tinashe Chaponda</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Forbes' 30 Under 30, Founder of Sosani Studios</p>
-                    </div>
-                </div>
-
-                <!-- Melissa Vicendese -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/2138705c933b4db994a5b52214c34c75"
-                            alt="Melissa Vicendese"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Melissa Vicendese</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1%
-                            Affiliate, Content & communication expert</p>
-                    </div>
-                </div>
-
-                <!-- Thomas Ruster -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/50a22f6a7e4a4566a73a032d38ca1ed2"
-                            alt="Thomas Ruster"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Thomas Ruster</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">The
-                            creator of 3rd and Pearl, $4M+ GMV on TikTok Shop</p>
-                    </div>
-                </div>
-
-                <!-- Janine Mora -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/c0ea5d3a68284252a4ec668007a1fb04"
-                            alt="Janine Mora"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Janine Mora</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1%
-                            affiliate, High-Converting Content Expert</p>
-                    </div>
-                </div>
-
-                <!-- Candi Osuna -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/4fc81038d38540de9962b0c3b2c588e4"
-                            alt="Candi Osuna"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Candi Osuna</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top
-                            TikTok Shop Creator in Mexico</p>
-                    </div>
-                </div>
-
-                <!-- Bill Hudak -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/6141d195f21a47a2b5aa08e058ed825c"
-                            alt="Bill Hudak"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Bill Hudak</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Digital Marketing OG, Ex VP of Dollar Shave Club</p>
-                    </div>
-                </div>
-
-                <!-- Angie Ibanez -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/e7837182e23f49b8b6dda22cf2686ec3"
-                            alt="Angie Ibanez"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Angie Ibanez</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Betty's Closet, Live Shopping Pioneer</p>
-                    </div>
-                </div>
-
-                <!-- Evike Chang -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/135d6bcb4a0d4360bfc75e800d09c2ce"
-                            alt="Evike Chang"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Evike Chang</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            9-figure brand owner, category leader</p>
-                    </div>
-                </div>
-
-                <!-- Victoria Prince -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/83f8cb5703ef4147a2cea01eb1bf04cf"
-                            alt="Victoria Prince"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Victoria Prince (@vprincemusic)
-                        </h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Founder of Kawela Skin, fashion & beauty creator, $6.7M+ GMV</p>
-                    </div>
-                </div>
-
-                <!-- J DEVINCI -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/14168cafec414f208af92b6291f8b7cc"
-                            alt="J DEVINCI"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">J DEVINCI</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Popular Content Creator | Featured Brands: Medicube, Sacheu, Forever 21</p>
-                    </div>
-                </div>
-
-                <!-- Kymie Ann -->
-                <div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
-                    <div class="aspect-[4/5] overflow-hidden bg-zinc-900">
-                        <img src="index_image/4150cb248369414d90a878f3bd25b11a"
-                            alt="Kymie Ann"
-                            class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
-                    </div>
-                    <div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
-                        <h4 class="text-white font-black uppercase text-xs sm:text-sm">Kymie Ann</h4>
-                        <p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
-                            Leading TikTok Shop Creator, 840K+ Followers, $12M+ GMV Generated</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="flex justify-center items-center gap-2 text-zinc-400">
-                <i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
-                <p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">More speakers to be
-                    unveiled</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Creators Section -->
-    <section class="bg-black py-20 border-b border-zinc-900">
-        <div class="container">
-            <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-12 tracking-wider glow-cyan">
-                Featured Creators</h2>
-            <div
-                class="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 shadow-2xl mb-12">
-                <img src="index_image/dd02a283acc14464954ecab6ceffa80d"
-                    alt="Featured Creators" class="w-full h-auto object-cover" />
-            </div>
-            <div class="max-w-3xl mx-auto">
-                <div class="p-[1px] rounded-3xl bg-gradient-to-r from-transparent via-[#FF0050] to-transparent">
-                    <div class="bg-zinc-950 px-6 py-10 sm:px-12 sm:py-12 rounded-[1.7rem] text-center">
-                        <p
-                            class="text-white text-base sm:text-xl lg:text-2xl font-bold leading-relaxed tracking-wide italic">
-                            <span
-                                class="live-dot inline-block w-3 h-3 rounded-full bg-[#FF0050] mr-3 align-middle"></span>
-                            Get in touch with <span class="text-[#FF0050]">high-performing TikTok creators</span> in
-                            person at the TopTier Summit and YFCon — <span class="text-[#00F2EA]"> best opportunity to
-                                connect before peak season.</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VIP Party Section -->
-    <section class="bg-zinc-950 py-20 border-b border-zinc-900">
-        <div class="container">
-            <h2
-                class="text-4xl sm:text-5xl md:text-6xl font-black text-center text-[#FFD700] uppercase italic mb-12 tracking-widest glow-gold">
-                VIP Party
-            </h2>
-            <div
-                class="max-w-5xl mx-auto rounded-3xl overflow-hidden border-4 border-zinc-900 mb-12 shadow-[0_0_50px_rgba(255,215,0,0.1)]">
-                <img src="index_image/898e9ba7ed614ec7a091e38e2083d45f"
-                    alt="VIP Party" class="w-full h-auto object-cover" />
-            </div>
-            <div
-                class="max-w-3xl mx-auto bg-black/60 p-8 sm:p-12 rounded-[2.5rem] border border-zinc-800 backdrop-blur-md">
-                <div class="text-center">
-                    <p class="text-[#FFD700] font-black text-lg mb-2 tracking-[0.3em] uppercase">from 18:30 | Oct 9</p>
-                    <p class="text-zinc-300 text-lg sm:text-xl leading-relaxed">
-                        An <span class="text-[#FFD700] font-bold">exclusive gathering of 150 VIP guests</span>,
-                        providing <span class="text-[#00F2EA] font-bold italic">Valuable Direct Access to 100 Top
-                            Creators, 50 Top Operators</span>,
-                        leading <span class="text-white font-bold">sellers, platform managers</span>,
-                        and key <span class="text-[#FF007F] font-bold">ecosystem partners</span>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mastermind Section -->
-    <section class="bg-black py-20 border-b border-zinc-900">
-        <div class="container">
-            <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-12 tracking-wider glow-cyan">
-                TopTier Mastermind</h2>
-            <div
-                class="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 shadow-2xl mb-12">
-                <img src="index_image/dc1904ddc2e944b28fd6e51b3040ae44"
-                    alt="TopTier Mastermind" class="w-full h-auto object-cover" />
-            </div>
-            <div class="max-w-3xl mx-auto">
-                <div class="p-[1px] rounded-3xl bg-gradient-to-r from-transparent via-[#FF0050] to-transparent">
-                    <div class="bg-zinc-950 px-6 py-10 sm:px-12 sm:py-12 rounded-[1.7rem] text-center">
-                        <p
-                            class="text-white text-base sm:text-xl lg:text-2xl font-bold leading-relaxed tracking-wide italic">
-                            <span
-                                class="live-dot inline-block w-3 h-3 rounded-full bg-[#FF0050] mr-3 align-middle"></span>
-                            Go beyond the stage.<span class="text-[#FF0050]"> Connect with top founders, creators, and
-                                operators in a private mastermind</span> designed for strategic discussions, actionable
-                            insights, and high-value partnerships that<span class="text-[#00F2EA]"> drive your next
-                                stage of growth.</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Airsoft Team Battle Section -->
-    <section class="bg-zinc-950 py-20 border-b border-zinc-900">
-        <div class="container">
-            <h2
-                class="text-4xl sm:text-5xl md:text-6xl font-black text-center text-[#FFD700] uppercase italic mb-12 tracking-widest glow-gold">
-                Airsoft Team Battle
-            </h2>
-            <div
-                class="max-w-5xl mx-auto rounded-3xl overflow-hidden border-4 border-zinc-900 mb-12 shadow-[0_0_50px_rgba(255,215,0,0.1)]">
-                <img src="index_image/1afcb9838d2347898e7e9566803c2c20"
-                    alt="Airsoft Team Battle" class="w-full h-auto object-cover" />
-            </div>
-            <div
-                class="max-w-3xl mx-auto bg-black/60 p-8 sm:p-12 rounded-[2.5rem] border border-zinc-800 backdrop-blur-md">
-                <div class="text-center">
-                    <p class="text-[#FFD700] font-black text-lg mb-2 tracking-[0.3em] uppercase">2PM – 4PM, Oct 7 |
-                        Evike Airsoft Superstore Alhambra</p>
-                    <p class="text-zinc-300 text-lg sm:text-xl leading-relaxed">
-                        Join an action-packed airsoft competition <span class="text-[#FFD700] font-bold">exclusive
-                            gathering of selected guests</span>,
-                        where <span class="text-[#00F2EA] font-bold italic"> founders, creators, and industry leaders
-                            team up,</span>,
-                        compete, <span class="text-white font-bold"> and build connections</span>,
-                        through <span class="text-[#FF007F] font-bold"> an unforgettable experience</span>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join the summit Section -->
-    <section class="bg-black pt-12 pb-20 overflow-hidden border-b border-zinc-900">
-        <div class="container text-center">
-            <div class="mb-14">
-                <a href="https://www.eventbrite.com/e/toptier-summit-yfcon2026-bfcm-edition-tickets-1994763825299"
-                    target="_blank"
-                    class="inline-flex items-center gap-3 bg-white text-black hover:bg-[#00F2EA] transition-colors duration-300 px-8 py-5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)] group">
-                    Join the summit
-                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-            </div>
-
-            <!-- Event Agenda Section -->
-            <section class="bg-black py-24 border-b border-zinc-900 overflow-hidden relative">
-                <!-- Background Accents -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-[#FF0050] rounded-full blur-[120px] opacity-10"></div>
-                <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#00F2EA] rounded-full blur-[120px] opacity-10"></div>
-
-                <div class="container relative z-10">
-                    <h2
-                        class="text-4xl sm:text-6xl font-black text-center mb-20 tracking-tighter italic uppercase text-white">
-                        Proposed Event <span class="text-[#FF0050]">Agenda</span>
-                    </h2>
-
-                    <!-- Oct 6 -->
-                    <div class="max-w-4xl mx-auto">
-                        <div class="flex items-center gap-4 mb-10">
-                            <div
-                                class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
-                                Oct 6
-                            </div>
-                            <div class="h-[2px] flex-1 bg-gradient-to-r from-[#00F2EA] to-transparent"></div>
-                        </div>
-
-                        <div class="text-left mb-8 px-4">
-                            <h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">
-                                Pre-Event: TikTok Shop HQ Tour & Talk</h3>
-                            <p
-                                class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">
-                                14:00 – 16:00</p>
-                        </div>
-
-                        </h2>
-                        <p
-                            class="text-white text-base sm:text-xl font-bold mb-12 italic max-w-3xl mx-auto leading-relaxed">
-                            Enjoy a meaningful office tour at TikTok Shop, along with a closed-door sharing session &
-                            networking with speakers and TikTok managers
-                        </p>
-
-                        <div class="flex justify-center items-center gap-2 text-zinc-400">
-                            <i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
-                            <p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">Note: RSVP
-                                required due to limited capacity. </p>
-                        </div>
-                    </div>
-            </section>
-
-            <!-- Oct 7 -->
-            <div class="max-w-4xl mx-auto">
-                <div class="flex items-center gap-4 mb-10">
-                    <div
-                        class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
-                        Oct 7
-                    </div>
-                    <div class="h-[2px] flex-1 bg-gradient-to-r from-[#00F2EA] to-transparent"></div>
-                </div>
-
-                <div class="text-left mb-8 px-4">
-                    <h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">Pre-Event:
-                        TopTier Mastermind & Airsoft Team Battle</h3>
-                    <p class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">
-                        12:00 – 16:00 @ Evike Superstore, 2801 W. Mission Rd., Alhambra</p>
-                </div>
-
-                </h2>
-                <p class="text-white text-base sm:text-xl font-bold mb-12 italic max-w-3xl mx-auto leading-relaxed">
-                    Join a curated group of 7/8/9-figure entrepreneurs, creators, and executives for high-level
-                    conversations, exclusive networking, and collaborations.
-
-                    Then, experience the thrill of team-based airsoft combat with fellow entrepreneurs. Create
-                    unforgettable memories beyond the summit stage together.
-                </p>
-
-                <div
-                    class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                    <div
-                        class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                        Feature Attendees</div>
-                    <div>
-                        <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Aaron Jin, Evike
-                            Chang, Katie London, Ricky Chung, Carmen Muley, Kymie Ann</p>
-
-                        <div class="flex justify-center items-center gap-2 text-zinc-400">
-                            <i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
-                            <p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">Note: RSVP
-                                required due to limited capacity. </p>
-                        </div>
-                    </div>
-    </section>
-
-
-    <!-- Oct 8 -->
-    <div class="max-w-4xl mx-auto mb-20">
-        <div class="flex items-center gap-4 mb-10">
-            <div
-                class="bg-[#FF0050] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(255,0,80,0.4)]">
-                Oct 8
-            </div>
-            <div class="h-[2px] flex-1 bg-gradient-to-r from-[#FF0050] to-transparent"></div>
-        </div>
-
-        <div class="text-left mb-8 px-4">
-            <h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">Cutting-Edge Growth
-                Summit</h3>
-            <p class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">Summit
-                Stage</p>
-        </div>
-
-        <!-- Timeline Oct 8 -->
-        <div class="space-y-4 px-2">
-            <!-- Row 1 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    10:00-10:10</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Opening
-                        Keynote</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Can Chan</p>
-                </div>
-            </div>
-            <!-- Row 2 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    10:10-10:30</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Dual-Engine
-                        Growth: Amazon & TikTok - How TikTok is Changing the Game</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Dongkai Chen</p>
-                </div>
-            </div>
-            <!-- Row 3 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    10:30-10:50</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How We Turned
-                        Virality Into the UK’s #1 Acne Brand on TikTok</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">David Connor</p>
-                </div>
-            </div>
-            <!-- Row 4 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    10:50-11:10</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic"> My Whatnot
-                        Journey—and What You Can Copy</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Felicity Zhang</p>
-                </div>
-            </div>
-            <!-- Row 5 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    11:10-11:30</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Top Claude
-                        skills I use to grow a $200m Amazon product portfolio</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Chris Rawlings</p>
-                </div>
-            </div>
-            <!-- Row 6 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    11:30-11:50</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The AI-Powered
-                        Amazon Launch Playbook: A Golden Case Study</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Colin Raja</p>
-                </div>
-            </div>
-            <!-- Row 7 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-[#FF007F]/30 hover:border-[#FF007F]/60 transition-all shadow-[0_0_15px_rgba(255,0,127,0.1)]">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF007F] font-black text-sm text-center sm:min-w-[120px]">
-                    11:50-12:10</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How Brands Can
-                        Turn TikTok Shop Creators Into a Scalable Ad Engine</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Jo Rodriguez</p>
-                </div>
-            </div>
-            <!-- Lunch -->
-            <div class="flex items-center gap-4 py-8">
-                <div class="h-[1px] flex-1 bg-zinc-800"></div>
-                <div
-                    class="flex items-center gap-3 text-zinc-500 uppercase font-black text-[10px] tracking-[0.4em] italic">
-                    <i data-lucide="utensils" class="w-4 h-4"></i>
-                    Lunch Break & Exhibition Visit (12:10-14:00)
-                </div>
-                <div class="h-[1px] flex-1 bg-zinc-800"></div>
-            </div>
-            <!-- Row 8 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    14:00-14:20</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How 7–8-Figure
-                        Brands Win Peak Season on TikTok Shop</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Carmen Muley</p>
-                </div>
-            </div>
-            <!-- Row 9 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    14:20-14:40</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Seven Weeks to
-                        Black Friday: The Complete Q4 Prep Checklist</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Andrew Erickson</p>
-                </div>
-            </div>
-            <!-- Row 10 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    14:40-15:00</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How Brands
-                        Build Creator & Celebrity Programs That Drive Brand Equity That Drives Sales</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Tinashe Chaponda</p>
-                </div>
-            </div>
-            <!-- Row 11 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    15:00-15:20</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The TikTok
-                        Shop Flywheel - How to Build an Engine That Attracts Top Affiliates</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Michelle Barnum Smith</p>
-                </div>
-            </div>
-            <!-- Row 12 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    15:20-15:50</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic"> Top Live
-                        Commerce Panel: Mastering Live Shopping on TikTok</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Jason Termechi, Cassandra
-                        Bankson, Angie Ibanez, CANDI OSUNA</p>
-                </div>
-            </div>
-            <!-- Row 13 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-[#FF007F]/30 hover:border-[#FF007F]/60 transition-all shadow-[0_0_15px_rgba(255,0,127,0.1)]">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    15:50-16:10</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">What Creators
-                        Actually Want: An Insider's Playbook for Sellers Heading Into Q4</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Melissa Vicendese</p>
-                </div>
-            </div>
-            <!-- Row 14 -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
-                <div
-                    class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
-                    16:10-16:30</div>
-                <div>
-                    <h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic"> Panel
-                        Discussion: Tips & Social Commerce Insights for Q4 and Beyond</h4>
-                    <p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Yudian Xie, J DEVINCI,
-                        Janine Mora </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- YFCon -->
-    <div class="max-w-4xl mx-auto">
-        <div class="flex items-center gap-4 mb-10">
-            <div
-                class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
-                Oct 8-9
-            </div>
-            <div class="h-[2px] flex-1 bg-gradient-to-r from-[#00F2EA] to-transparent"></div>
-        </div>
-
-        <!-- YFCon Stage Session -->
-        <div
-            class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-[#00F2EA]/5 blur-3xl rounded-full"></div>
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/3">
-                    <h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">TopTier
-                        Creator Keynote Speech</h3>
-                    <p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">YFCon
-                        Stage</p>
-                    <div
-                        class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">
-                        9:30-16:30 Oct 8-9</div>
-                </div>
-                <div class="md:w-2/3 border-l md:border-zinc-800 md:pl-8 space-y-6">
-                    <div>
-                        <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">Key
-                            Note Speeches & Panel Discussions</p>
-                        <ul class="space-y-2 text-zinc-200 text-xs sm:text-sm font-bold uppercase italic">
-                            <li>- Killer Tips for Seller–Creator Collaboration in Q4 and Beyond</li>
-                            <li>- Unlocking Magic Power: How Sellers & Creators Win in Peak Season</li>
-                            <li>- From Outreach to Revenue: Mastering Seller–Creator Collaboration</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-zinc-800">
-                        <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
-                            Featured Speakers</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Matt
-                                Kahla, Jr.</span>
-                            <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Kymie
-                                Ann</span>
-                            <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Kiara
-                                (Worth The Grab 🔥)</span>
-                            <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Alex
-                                Kobayashi</span>
-                            <span
-                                class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Akie</span>
-                            <span
-                                class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Savannah</span>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Lunch -->
-        <div class="flex items-center gap-4 py-8 px-4">
-            <div class="h-[1px] flex-1 bg-zinc-800"></div>
-            <div class="flex items-center gap-3 text-zinc-500 uppercase font-black text-[10px] tracking-[0.4em] italic">
-                <i data-lucide="utensils" class="w-4 h-4"></i>
-                Exhibition Visits (9:00-18:00)
-            </div>
-            <div class="h-[1px] flex-1 bg-zinc-800"></div>
-        </div>
-
-
-
-        <!-- Creator Sharing Session -->
-        <div
-            class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/3">
-                    <h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">
-                        Sparkling TikTok Shop Creator Sharing</h3>
-                    <p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">YFCon
-                        Stage</p>
-                    <div
-                        class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">
-                        9:30-16:30 Oct 8-9</div>
-                </div>
-                <div class="md:w-2/3 border-l md:border-zinc-800 md:pl-8 space-y-6">
-                    <div>
-                        <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
-                            Key Note Speeches & Panel Discussions</p>
-                        <ul class="space-y-2 text-zinc-200 text-xs sm:text-sm font-bold uppercase italic">
-                            <li>- How to Build a 8-Figure TikTok Shop Channel (Without Burning Cash)</li>
-                            <li>- Bridging the Gap Between Brand and Creator Content</li>
-                            <li>- Dos and Don'ts of High-Performing Seller-Creator Collaborations</li>
-                            <li>- Beyond GMV: How Brands Build Creator Programs That Drive Sales and Brand
-                                Equity</li>
-                            <li>- Where Content Meets Commerce: Unlocking Growth with TikTok Shop</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-zinc-800">
-                        <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
-                            Featured Speakers</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Austin
-                                Brown</span>
-                            <span
-                                class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Brandon
-                                Phillips</span>
-                            <span
-                                class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Brandon
-                                Hans</span>
-                            <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Amy
-                                Jackson</span>
-                            <span
-                                class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Victoria</span>
-                            <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Ana
-                                Torres</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Breakout Stage Session -->
-        <div
-            class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-[#00F2EA]/5 blur-3xl rounded-full"></div>
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/3">
-                    <h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">
-                        Unlock Growth Opportunities On TikTok Shop Mexico</h3>
-                    <p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">
-                        Breakout Stage</p>
-                    <div
-                        class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">
-                        14:00-17:30 Oct 8</div>
-                </div>
-                <div class="md:w-2/3 border-l md:border-zinc-800 md:pl-8 space-y-6">
-                    <div>
-                        <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
-                            Spanish Breakout Session</p>
-                        <ul class="space-y-2 text-zinc-200 text-xs sm:text-sm font-bold uppercase italic">
-                            <li>- Mexico market opportunities</li>
-                            <li>- TikTok Shop ecosystem insights</li>
-                            <li>- Affiliate & content strategies</li>
-                            <li>- Brand success stories</li>
-                            <li>- Cross-industry panel discussion</li>
-
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-zinc-800">
-                        <p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
-                            Featured Speakers</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Jaime
-                                Guadarrama</span>
-                            <span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Julio
-                                Cesar Martinez</span>
-                            <span
-                                class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Vicente
-                                Peredo</span>
-                            <span
-                                class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Alfonso
-                                Xing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- VIP Party Reveal -->
-        <div
-            class="bg-gradient-to-br from-[#FFD700]/10 to-transparent border border-[#FFD700]/30 rounded-3xl p-8 text-center group">
-            <div class="flex flex-col items-center">
-                <div class="text-[#FFD700] font-black uppercase tracking-[0.3em] text-[10px] sm:text-xs italic mb-4">
-                    Evening Event</div>
-                <h3 class="text-2xl sm:text-4xl font-black text-white italic uppercase tracking-tighter mb-4">
-                    VIP <span class="text-[#FFD700]">Party</span></h3>
-                <p class="text-zinc-400 font-bold uppercase text-[10px] tracking-widest mb-6">Venue revealed
-                    soon • from 18:30</p>
-                <div class="max-w-md text-zinc-300 text-xs sm:text-sm italic font-bold leading-relaxed">
-                    Get ready to join the party with <span class="text-[#FFD700]">TOP 1% CREATORS, ELITE
-                        BRAND OWNERS & KEY ECOSYSTEM PARTNERS</span>.
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </section>
-
-    <!-- YFCon Mega Exhibition Highlights -->
-    <section class="bg-zinc-950 py-24 border-b border-zinc-900 relative overflow-hidden">
-        <div class="container text-center">
-            <h2 class="text-3xl sm:text-5xl font-black italic uppercase mb-8 tracking-tighter glow-cyan text-[#00F2EA]">
-                YFCon Mega Exhibition Highlights
-            </h2>
-            <p class="text-white text-base sm:text-xl font-bold mb-12 italic max-w-3xl mx-auto leading-relaxed">
-                Experience the energy of a 10,000-attendee social commerce exhibition like nowhere else.
-            </p>
-
-            <div
-                class="max-w-5xl mx-auto rounded-[2.5rem] overflow-hidden border-4 border-zinc-800 shadow-[0_20px_50px_rgba(0,242,234,0.15)] mb-12 transition-transform duration-700 hover:scale-[1.01]">
-                <img src="index_image/2ab48229c3fc474a88bdfa48762acc47"
-                    alt="YFCon Mega Exhibition" class="w-full h-auto object-cover" />
-            </div>
-
-            <div
-                class="max-w-2xl mx-auto bg-black/40 backdrop-blur-md border border-zinc-800 p-8 sm:p-10 rounded-[2rem]">
-                <p class="text-zinc-400 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-8 leading-loose">
-                    Want to showcase your brand in the exhibition alongside <span class="text-white">Tesla, QVC, Goli,
-                        leading K-beauty brands</span>, and more? Get in touch below 👇
-                </p>
-
-                <a href="https://www.linkedin.com/in/can-chan-966a632b" target="_blank"
-                    class="group inline-flex items-center gap-4 px-8 py-4 bg-[#0077B5]/10 border border-[#0077B5]/40 hover:bg-[#0077B5] hover:border-[#0077B5] rounded-full transition-all duration-300">
-                    <i data-lucide="linkedin"
-                        class="w-6 h-6 text-[#0077B5] group-hover:text-white transition-colors"></i>
-                    <span
-                        class="text-white text-xs sm:text-sm font-black uppercase tracking-widest group-hover:text-white">Can
-                        Chan</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Who Attends -->
-    <section class="bg-black py-20 border-b border-zinc-900">
-        <div class="container">
-            <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-16 tracking-wider glow-cyan">
-                Who Attends</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
-                    <i data-lucide="users" class="w-12 h-12 text-[#FF0050] mx-auto mb-6"></i>
-                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">High-level
-                        eCommerce sellers across TikTok Shop, Amazon, and DTC</p>
-                </div>
-                <div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
-                    <i data-lucide="trending-up" class="w-12 h-12 text-[#FF007F] mx-auto mb-6"></i>
-                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">10,000+
-                        creators attending the two-day exhibition</p>
-                </div>
-                <div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
-                    <i data-lucide="zap" class="w-12 h-12 text-[#FFD700] mx-auto mb-6"></i>
-                    <p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">AI
-                        specialists, ecosystem partners and platform leaders</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Benefits -->
-    <section class="bg-zinc-950 py-20 border-b border-zinc-900">
-        <div class="container max-w-4xl text-center">
-            <h2
-                class="text-2xl sm:text-3xl font-black mb-12 uppercase italic tracking-[0.4em] glow-gold text-[#FFD700]">
-                Core Benefits</h2>
-            <div class="space-y-4">
-                <div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#00F2EA] rounded-xl text-left card-hover">
-                    <p class="text-[#00F2EA] text-base sm:text-lg font-black uppercase mb-1">Direct Access</p>
-                    <p class="text-white text-sm sm:text-base opacity-90 italic">Direct, in-person access to top
-                        creators — saving hundreds of hours of outreach and coordination.</p>
-                </div>
-                <div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#FF0050] rounded-xl text-left card-hover">
-                    <p class="text-[#FF0050] text-base sm:text-lg font-black uppercase mb-1">Network Power</p>
-                    <p class="text-white text-sm sm:text-base opacity-90 italic">High-level networking with leading
-                        operators across TikTok, Amazon, and DTC.</p>
-                </div>
-                <div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#FFD700] rounded-xl text-left card-hover">
-                    <p class="text-[#FFD700] text-base sm:text-lg font-black uppercase mb-1">Intelligence</p>
-                    <p class="text-white text-sm sm:text-base opacity-90 italic">Actionable insights into the most
-                        advanced growth and monetization strategies in the industry.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Exploration Topics -->
-    <section class="bg-black py-24 border-b border-zinc-900">
-        <div class="container">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl italic uppercase text-center mb-16 tracking-tighter glow-red">
-                What We'll <span class="text-[#FF0050]">Explore</span>
-            </h2>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 gap-4">
-                <div
-                    class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF0050] transition-all group cursor-default">
-                    <div
-                        class="w-12 h-12 bg-[#FF0050]/10 text-[#FF0050] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF0050] group-hover:text-white transition-all duration-300">
-                        1</div>
-                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">The future of
-                        discovery-driven commerce growth</h4>
-                </div>
-                <div
-                    class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#00F2EA] transition-all group cursor-default">
-                    <div
-                        class="w-12 h-12 bg-[#00F2EA]/10 text-[#00F2EA] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#00F2EA] group-hover:text-black transition-all duration-300">
-                        2</div>
-                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">Scaling
-                        brands in the creator and influencer economy</h4>
-                </div>
-                <div
-                    class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FFD700] transition-all group cursor-default">
-                    <div
-                        class="w-12 h-12 bg-[#FFD700]/10 text-[#FFD700] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FFD700] group-hover:text-black transition-all duration-300">
-                        3</div>
-                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">TikTok ×
-                        Amazon × DTC ecosystem synergies</h4>
-                </div>
-                <div
-                    class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF007F] transition-all group cursor-default">
-                    <div
-                        class="w-12 h-12 bg-[#FF007F]/10 text-[#FF007F] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF007F] group-hover:text-white transition-all duration-300">
-                        4</div>
-                    <h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">AI-driven
-                        monetization and automation strategies</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Campaigns -->
-    <section id="campaigns" class="bg-black py-24 border-b border-zinc-900">
-        <div class="container text-center">
-            <h2 class="text-3xl sm:text-5xl font-black italic uppercase mb-16 tracking-tighter px-4 leading-tight">
-                PREVIOUS <span class="text-[#FFD700]">TOPTIER</span> & <span class="text-[#FF0050]">YFCON</span>
-                CAMPAIGNS
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
-                <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="index_image/633aa959a3ea41fcb8da504595324793"
-                            alt="Mega Expo"
-                            class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
-                    </div>
-                    <div class="p-6 bg-zinc-950 border-t border-zinc-800">
-                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Mega Expo
-                        </h4>
-                    </div>
-                </div>
-                <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="index_image/4fa0cff6023a413a81418d96beb27415"
-                            alt="Productive Meetings"
-                            class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
-                    </div>
-                    <div class="p-6 bg-zinc-950 border-t border-zinc-800">
-                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Productive
-                            Meetings</h4>
-                    </div>
-                </div>
-                <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="index_image/30ef3a303c634c3dab114487565df448"
-                            alt="YFCon Summit"
-                            class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
-                    </div>
-                    <div class="p-6 bg-zinc-950 border-t border-zinc-800">
-                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">YFCon
-                            Summit</h4>
-                    </div>
-                </div>
-                <div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="index_image/ec0f5fcb4d7c4de3997d444f8f137f40"
-                            alt="TopTier Mastermind"
-                            class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
-                    </div>
-                    <div class="p-6 bg-zinc-950 border-t border-zinc-800">
-                        <h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">TopTier
-                            Mastermind</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Media Coverage Section -->
-    <section id="media-coverage" class="bg-zinc-950 py-24 border-b border-zinc-900">
-        <div class="container text-center">
-            <h2
-                class="text-3xl sm:text-5xl font-black italic uppercase mb-16 tracking-tighter px-4 leading-tight text-white text-center">
-                Media <span class="text-[#FF0050]">Coverage</span>
-            </h2>
-            <p class="text-zinc-400 text-sm sm:text-base mb-12 italic tracking-widest uppercase">The YFCon was reported
-                and recognized by leading global news outlets.</p>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
-                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="index_image/9253e510038a475f9d9a24cdf008ba6c"
-                        alt="Yahoo Finance" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="index_image/9e7472019a6c4999946d97764daa40a0"
-                        alt="AP News" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="index_image/022742cdc98346b9abdddaac6d0c6c37"
-                        alt="Street Insider" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="index_image/30ef82490ddc412085644fe8b1119fe5"
-                        alt="The Globe and Mail" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="index_image/1aad2b0510fc48b4b6e47a338aa0b2c3"
-                        alt="The Chronicle Journal" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="index_image/6e54649b37304efe83027eb155b8d83e"
-                        alt="Barchart" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
-                    <img src="index_image/3d6e9e2e41d44d8dacf89ee2a3d30d80"
-                        alt="CBS News" class="max-h-full max-w-full object-contain">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="bg-black py-24 border-b border-zinc-900">
-        <div class="container">
-            <h2
-                class="text-3xl sm:text-5xl font-black italic uppercase text-center mb-16 tracking-tighter px-4 leading-tight text-white">
-                What Previous <span class="text-[#00F2EA]">Attendees</span> Are Saying
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
-                    <i data-lucide="quote" class="quote-icon text-[#FF0050]"></i>
-                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
-                        "Everything was great. Great group of peers to network with, liked the length of the format. Can
-                        did a great job introducing attendees to each other. Event not too big or small just the right
-                        size"
-                    </p>
-                    <div class="mt-auto pt-6 border-t border-zinc-800">
-                        <p class="text-white font-black uppercase text-xs tracking-widest">Ariana Pareja</p>
-                        <p class="text-[#FF0050] text-[10px] uppercase font-bold tracking-tighter mt-1">Cofounder,
-                            Mighty Minis</p>
-                    </div>
-                </div>
-
-                <div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
-                    <i data-lucide="quote" class="quote-icon text-[#00F2EA]"></i>
-                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
-                        "It's all about networking. Just one conversation can make the entire trip worth it."
-                    </p>
-                    <div class="mt-auto pt-6 border-t border-zinc-800">
-                        <p class="text-white font-black uppercase text-xs tracking-widest">Alex Bonilla</p>
-                        <p class="text-[#00F2EA] text-[10px] uppercase font-bold tracking-tighter mt-1">Founder, Pura
-                            Vida Moringa</p>
-                    </div>
-                </div>
-
-                <div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
-                    <i data-lucide="quote" class="quote-icon text-[#FFD700]"></i>
-                    <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
-                        "Highly recommended. I found the event to be exceptionally well-organized, with insightful
-                        speakers and valuable networking opportunities."
-                    </p>
-                    <div class="mt-auto pt-6 border-t border-zinc-800">
-                        <p class="text-white font-black uppercase text-xs tracking-widest">Ali Shahzad</p>
-                        <p class="text-[#FFD700] text-[10px] uppercase font-bold tracking-tighter mt-1">Rimal Global</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / Tickets -->
-    <footer class="pt-24 pb-32 bg-zinc-950 text-center border-t border-zinc-900 relative overflow-hidden"
-        style="padding-bottom: calc(5rem + var(--ios-safe-bottom));">
-        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#FF0050] via-[#FFD700] to-[#00F2EA]">
-        </div>
-
-        <div class="container px-6">
-            <h2
-                class="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 uppercase italic tracking-tighter px-4 leading-[0.9] glow-cyan">
-                Join the Industry’s <br class="hidden sm:block"> <span class="text-[#00F2EA]">Top Minds</span>
-            </h2>
-            <p
-                class="text-xs sm:text-sm text-zinc-500 mb-16 max-w-2xl mx-auto leading-loose italic uppercase tracking-[0.4em] px-4">
-                Two powerful days of insight, collaboration, and innovation shaping the future of commerce.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-6 justify-center max-w-3xl mx-auto mb-20 px-4">
-                <a href="https://www.eventbrite.com/e/toptier-summit-yfcon2026-bfcm-edition-tickets-1994763825299"
-                    target="_blank"
-                    class="btn-hover flex-1 bg-white text-black px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl text-center group transition-all hover:ring-8 hover:ring-white/10">
-                    <span class="block text-[10px] opacity-60 mb-1 tracking-[0.2em]">General Access</span>
-                    <span class="block text-lg">Mastermind + Summit</span>
-                    <span class="block text-3xl mt-2 font-black">$699</span>
-                </a>
-
-                <a href="https://www.eventbrite.com/e/toptier-summit-yfcon2026-bfcm-edition-tickets-1994763825299"
-                    target="_blank"
-                    class="btn-hover flex-1 bg-gradient-to-br from-[#FF0050] to-[#FF007F] text-white px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl border border-white/10 text-center ring-4 ring-[#FFD700]/20 hover:ring-8 transition-all">
-                    <span class="block text-[10px] opacity-80 mb-1 text-[#FFD700] tracking-[0.2em]">The Elite
-                        Experience</span>
-                    <span class="block text-lg">Mastermind + Summit + VIP Party</span>
-                    <span class="block text-3xl mt-2 font-black">$1999</span>
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center gap-6 mb-16">
-                <p class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-[0.5em] font-black">Contact the
-                    Organizer</p>
-                <a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank"
-                    class="group flex items-center gap-4 px-8 py-4 bg-zinc-900/50 hover:bg-[#0077B5]/10 border border-zinc-800 hover:border-[#0077B5] rounded-full transition-all backdrop-blur-sm">
-                    <i data-lucide="linkedin"
-                        class="w-6 h-6 text-[#0077B5] group-hover:scale-110 transition-transform"></i>
-                    <span class="text-white text-xs sm:text-sm font-black uppercase tracking-widest">Connect with Can
-                        Chan</span>
-                </a>
-            </div>
-
-            <p class="text-[10px] text-zinc-700 uppercase tracking-[0.4em] italic font-bold">© 2026 TopTier League • Los
-                Angeles, California</p>
-        </div>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-
-        document.addEventListener('touchstart', function (event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        }, { passive: false });
-
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
-        });
-    </script>
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 z-[100] bg-black/90 backdrop-blur-xl border-b border-zinc-800"
+style="padding-top: var(--ios-safe-top);">
+<div class="container h-16 flex items-center justify-center">
+<a href="https://toptierleague.com" target="_blank"
+
+class="font-bold text-xl tracking-tighter italic flex items-center gap-2">
+<span class="text-[#FF0050]">TopTier</span> <span class="text-white">League</span>
+</a>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<header class="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden border-b border-zinc-900">
+<div
+class="absolute top-0 right-[-10%] w-[60vw] h-[60vw] bg-[#FF0050] rounded-full blur-[120px] opacity-10 pointer-events-none">
+</div>
+<div
+class="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-[#00F2EA] rounded-full blur-[120px] opacity-5 pointer-events-none">
+</div>
+
+<div class="container relative z-10 text-center">
+<div class="inline-block mb-6">
+<h1
+class="hero-title text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none shimmer-text uppercase">
+TopTier Summit
+</h1>
+<h2
+class="hero-subtitle text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mt-2 tracking-tight leading-tight text-[#00F2EA]">
+Peak Season Edition 2026
+</h2>
+</div>
+
+<p
+class="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-zinc-400 mb-10 uppercase tracking-[0.2em] px-4">
+Defining the <span class="text-[#00F2EA] font-semibold italic">Next E-commerce Era</span>
+</p>
+
+<div
+class="inline-flex items-center bg-zinc-900/80 backdrop-blur border border-zinc-700 rounded-full px-6 py-3 mb-12 shadow-2xl max-w-full">
+<i data-lucide="calendar" class="w-4 h-4 text-[#FF0050] mr-3 flex-shrink-0"></i>
+<span
+class="text-white font-bold text-xs sm:text-sm md:text-base whitespace-nowrap overflow-hidden text-ellipsis">
+Oct 6–9 | ANAHEIM CONVENTION CENTER, CA
+</span>
+</div>
+
+<div class="max-w-xl mx-auto border-t border-zinc-800 pt-8 px-4">
+<p
+class="text-[10px] sm:text-xs md:text-sm text-[#FFD700] uppercase tracking-[0.25em] font-black italic leading-loose">
+The Premier Gathering for Global Leaders in Ecommerce & AI
+</p>
+</div>
+</div>
+</header>
+
+<!-- Logo Section -->
+<div class="bg-black py-12 flex flex-col items-center justify-center overflow-hidden">
+<div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+<span class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-[0.4em] font-black italic">Hosted
+by</span>
+<img src="https://drive.google.com/thumbnail?id=14vCFhO8kpQeztWo1kBlJoDayK5XRvYzb&sz=w500"
+
+alt="TopTier League Logo"
+class="h-20 sm:h-24 md:h-28 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,0,80,0.3)]" />
+</div>
+</div>
+
+<!-- Dynamic Events Section -->
+<section class="bg-zinc-950 pt-16 lg:pt-32 pb-6 relative overflow-hidden">
+<div
+class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none">
+</div>
+
+<div class="container relative z-10">
+<div class="text-center mb-16 px-4">
+<h2
+class="animate-agenda-title text-2xl sm:text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter italic leading-none">
+<span
+class="bg-gradient-to-r from-[#00F2EA] via-white to-[#00F2EA] bg-clip-text text-transparent">Dynamic
+Agenda:</span>
+<br class="sm:hidden">
+<span class="text-white">TopTier Summit + YFCon Mega Expo</span>
+</h2>
+<div
+class="w-24 h-1 bg-gradient-to-r from-transparent via-[#00F2EA] to-transparent mx-auto mt-4 opacity-50">
+</div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+<!-- Card 1 -->
+<div
+class="gradient-border border-red p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="text-[#FF0050] font-black text-xs uppercase tracking-[0.2em]">Summit</div>
+<i data-lucide="mic-2" class="w-5 h-5 text-[#FF0050]/50"></i>
+</div>
+<h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">Cutting-Edge Growth Summit -
+Sharing from Industry Pioneers</h3>
+<div
+class="mt-auto inline-flex items-center gap-2 bg-[#FF0050]/10 border border-[#FF0050]/20 px-3 py-1.5 rounded-lg">
+<i data-lucide="clock" class="w-4 h-4 text-[#FF0050]"></i>
+<span class="text-xs font-black text-white uppercase italic">10:00–17:00 | Oct 8, Summit
+Stage</span>
+</div>
+</div>
+
+<!-- Card 2 -->
+<div
+class="gradient-border border-cyan p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="text-[#00F2EA] font-black text-xs uppercase tracking-[0.2em]">Mastermind</div>
+<i data-lucide="brain-circuit" class="w-5 h-5 text-[#00F2EA]/50"></i>
+</div>
+<h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">TopTier Mastermind & Airsoft
+Team Battle</h3>
+<div
+class="mt-auto inline-flex items-center gap-2 bg-[#00F2EA]/10 border border-[#00F2EA]/20 px-3 py-1.5 rounded-lg">
+<i data-lucide="clock" class="w-4 h-4 text-[#00F2EA]"></i>
+<span class="text-xs font-black text-white uppercase italic">12:00–16:00 | Oct 7, Evike
+Superstore</span>
+</div>
+</div>
+
+<!-- Card 3 -->
+<div
+class="gradient-border border-cyan p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/30 backdrop-blur-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="text-[#00F2EA] font-black text-xs uppercase tracking-[0.2em]">TikTok Tour & Talk
+</div>
+<i data-lucide="lightbulb" class="w-5 h-5 text-[#00F2EA]/50"></i>
+</div>
+<h3 class="text-lg sm:text-xl font-black text-white leading-tight mb-4">TikTok HQ Visit, Sharing &
+Networking</h3>
+<div
+class="mt-auto inline-flex items-center gap-2 bg-[#00F2EA]/10 border border-[#00F2EA]/20 px-3 py-1.5 rounded-lg">
+<i data-lucide="clock" class="w-4 h-4 text-[#00F2EA]"></i>
+<span class="text-xs font-black text-white uppercase italic">14:00–16:00 | Oct 6, TikTok HQ
+LA</span>
+</div>
+</div>
+
+<!-- Card 4 -->
+<div
+class="gradient-border border-gold p-8 card-hover flex flex-col min-h-[220px] bg-zinc-900/40 backdrop-blur-md">
+<div class="flex justify-between items-start mb-4">
+<div class="text-[#FFD700] font-black text-xs uppercase tracking-[0.2em]">VIP Only</div>
+<i data-lucide="star" class="w-5 h-5 text-[#FFD700]/50"></i>
+</div>
+<h3 class="text-lg sm:text-xl font-black text-[#FFD700] leading-tight mb-2 uppercase italic">
+Exclusive VIP Party</h3>
+<p class="text-[10px] text-white/60 uppercase tracking-widest font-bold mb-4">Top 1% creators &
+elite brands</p>
+<div
+class="mt-auto inline-flex items-center gap-2 bg-[#FFD700]/10 border border-[#FFD700]/20 px-3 py-1.5 rounded-lg">
+<i data-lucide="clock" class="w-4 h-4 text-[#FFD700]"></i>
+<span class="text-xs font-black text-white uppercase italic">from 18:30 | Oct 9</span>
+</div>
+</div>
+</div>
+
+<!-- Redesigned Mega Exhibition Callout -->
+<div
+class="bg-gradient-to-br from-[#FF007F] via-[#FF0050] to-[#990030] rounded-[2rem] p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between shadow-[0_20px_50px_rgba(255,0,80,0.3)] border border-white/20 gap-8 max-w-5xl mx-auto">
+<div class="text-center md:text-left">
+<div
+class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-white text-[9px] font-black uppercase tracking-[0.3em] mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Flagship Event
+</div>
+<h3
+class="text-2xl sm:text-3xl md:text-4xl font-black text-white italic uppercase leading-[0.95] tracking-tighter">
+Two-Day Mega <br class="hidden sm:block"> Exhibition</h3>
+<p class="text-white/80 text-[11px] sm:text-xs font-bold mt-4 uppercase tracking-[0.25em]">Oct 8-9 |
+All Access Pass Required</p>
+</div>
+<div
+class="bg-black/30 backdrop-blur-md px-8 py-6 rounded-[1.5rem] border border-white/10 text-center min-w-[240px] shadow-2xl">
+<span
+class="text-white font-black text-2xl sm:text-3xl block leading-none tracking-tighter">12,000+</span>
+<span
+class="text-[10px] sm:text-xs text-white/90 block font-black uppercase mt-2 tracking-widest">EXPECTED
+ATTENDEES</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Speaker Lineup Section -->
+<section class="bg-black pt-12 pb-20 overflow-hidden border-b border-zinc-900">
+<div class="container text-center">
+<div class="mb-14">
+<a href="https://www.eventbrite.com/e/toptier-summit-yfcon2026-bfcm-edition-tickets-1994763825299"
+
+target="_blank"
+class="inline-flex items-center gap-3 bg-white text-black hover:bg-[#00F2EA] transition-colors duration-300 px-8 py-5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)] group">
+Join the summit
+<i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+</a>
+</div>
+
+<h2
+class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#FF007F] uppercase italic mb-16 tracking-tighter glow-pink px-4 leading-[1.1]">
+PROPOSED SPEAKERS
+</h2>
+
+<!-- Speakers Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto mb-16 px-2">
+
+<!-- Dongkai Chen -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1mSGqGNSAcWwHrNZe60r-0-F-UiSruvkU&sz=w600"
+
+alt="Dongkai Chen"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Dongkai Chen</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Chief
+Growth Officer of Oceanwing, an Anker Innovation’s Subsidiary, Overseeing a 9-Figure
+E-Commerce Business</p>
+</div>
+</div>
+
+
+<!-- Alex Tsai -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1KkPeiTOIZAvbu_UpnQ16XcXflijrVzx0&sz=w600"
+
+alt="Alex Tsai"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm"> Alex Tsai</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Head of Strategic Partnerships, Alibaba.com</p>
+
+</div>
+</div>
+
+<!-- Can Chan -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1JCleG_LHNa8vl__z7MI9ReV3aDA_N6bl&sz=w600"
+
+alt="Can Chan"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Can Chan</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder of TopTier League, Pioneering ecom seller community</p>
+</div>
+</div>
+
+<!-- David Connor -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1zsaSmIlaO7iGdzABjkVZ4S4Z--ldlZ02&sz=w600"
+
+alt="David Connor"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">David Connor</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder & CEO of Kanzen Skincare, The UK’s #1 Acne Brand on TikTok</p>
+</div>
+</div>
+
+
+<!-- Josh Hadley -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1cUArs8hK6LUn-HOrUfiQ-7k3bXIVdmtJ&sz=w600"
+
+alt="Josh Hadley"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Josh Hadley</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">CEO,
+8-figure ecommerce business owner</p>
+</div>
+</div>
+
+<!-- Muskaan Nanda -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1WShVcomHB8yrOLxEoWT1BRsIHF3ZNMIP&sz=w600"
+
+alt="Muskaan Nanda"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Muskaan Nanda</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Director at GuruNanda, Top-Selling Oral Care Brand on TikTok Shop</p>
+</div>
+</div>
+
+<!-- Aaron Jin -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=11iJFiHrVJsdUfWzK77mqS-Qpf5Pfz0Gn&sz=w600"
+
+alt="Aaron Jin"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Aaron Jin</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">TikTok
+Shop, Head of Appliances and Digital Goods</p>
+</div>
+</div>
+
+<!-- Timothy Sanchez-Vega -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1Y80zYGiPTXVSNn1MCJiehhu1HBVL1fOS&sz=w600"
+
+alt="Timothy Sanchez-Vega"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Timothy Sanchez-Vega</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$3M in
+GMV, 6M followers across platforms</p>
+</div>
+</div>
+
+<!-- Ricky Chung -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=16dlxvchxOFtkXLyq6yvaBHx4YqSOJr9k&sz=w600"
+
+alt="Ricky Chung"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Ricky Chung</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder of Freshware, 8-figure Amazon seller</p>
+</div>
+</div>
+
+<!-- Colin Raja -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1QVW619GKF8z3SUOpemETzOBIHLLuiiwo&sz=w600"
+
+alt="Colin Raja"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Colin Raja</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder of Launch Lab, Strategist Behind Multiple 7-Figure Brands</p>
+</div>
+</div>
+
+<!-- Jason Termechi -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1tp_ReAAVqA1v04dQ-Sv8YS6cmL5K36I6&sz=w600"
+
+alt="Jason Termechi"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Jason Termechi</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Live
+Shopping Consultant, Driving $14M+ in GMV</p>
+</div>
+</div>
+
+<!-- Chris Rawlings -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=16fUMX9PkQrX58EVJFryH9sZiO3O4xTJ_&sz=w600"
+
+alt="Chris Rawlings"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Chris Rawlings</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1"> CEO
+of Sophie Society, Amazon PPC Master</p>
+</div>
+</div>
+
+<!-- Jo Rodriguez -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1sqLVno_g6ZcEs5teGtu1xPndA1-dmWyN&sz=w600"
+
+alt="Jo Rodriguez"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Jo Rodriguez</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder of Ali9 Creative | Generated $80M+ in Revenue Through Performance Marketing
+Campaigns</p>
+</div>
+</div>
+
+<!-- Carmen Muley -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=18gOexsZWW8NLnxnwMumcbNsI3x38f9fo&sz=w600"
+
+alt="Carmen Muley"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Carmen Muley</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder & CEO of Paragon Social Commerce</p>
+</div>
+</div>
+
+<!-- Ashley Wright -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1W-8dYdESL1-bAOaceKq5ArBh5RgMw9Ip&sz=w600"
+
+alt="Ashley Wright"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Ashley Wright</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder & CEO, Social Tale</p>
+</div>
+</div>
+
+<!-- Felicity Zhang -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1TVo4fgyvPFTDNqXSxsxNEQVDCJto4ygi&sz=w600"
+
+alt="Felicity Zhang"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Felicity Zhang</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">CEO &
+Founder of Felicity Crystal | Category-Leading Whatnot Seller</p>
+</div>
+</div>
+
+<!—Ziwei Chen -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=170-9SLKEL2Bqk7unc1c8TAHylJUS6WGl&sz=w600"
+
+alt="Ziwei Chen"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Ziwei Chen</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Product Marketing Lead, Accio</p>
+</div>
+</div>
+
+<!-- Andrew Erickson -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1zIVJzJWqCe6Cb2By6-lquaDNwEuKYgGT&sz=w600"
+
+alt="Andrew Erickson"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Andrew Erickson</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Co-Founder of Inventory Hero, two 7-figure FBA brand exits</p>
+</div>
+</div>
+
+<!-- Yudian Xie -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1gKCw87lUVUzkmcBgEq6y33wuqcOOnn40&sz=w600"
+
+alt="Yudian Xie"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Yudian Xie</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Head
+of Managed Services at Oceanwing (Anker Subsidiary) | Experienced eCommerce Brand Operator
+</p>
+</div>
+</div>
+
+<!-- Yibo Wei -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1d01S9p7Y0VICzLzgG29_dXgE-_qRM3rz&sz=w600"
+
+alt="Yibo Wei"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Yibo Wei</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Co-founder of XLSEAFOOD & THINKPRO, Master of Rednote</p>
+</div>
+</div>
+
+<!—Judy Chan -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1kSfkZvLxjoLL9XWubsKCxhagG2fJ9MWh&sz=w600"
+
+alt="Judy Chan"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Judy Chan</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">VP of Marketing at Gori & ShipBae</p>
+
+</div>
+</div>
+
+<!-- Michelle Barnum Smith (NEW) -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1FD1KX6cTr73qqWyau98FU9dwPc9viKvf&sz=w600"
+
+alt="Michelle Barnum Smith"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Michelle Barnum Smith</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder of Social Sellers, Award-winning Marketing Strategist</p>
+</div>
+</div>
+
+
+<!-- Kaley -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1K_0KXFX1jDTfFwvg3Ph3892UupaYOViO&sz=w600"
+
+alt="Kaley"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Kaley (@curvefitacademy)</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1%
+TikTok Shop affiliate in Beauty & Personal Care</p>
+</div>
+</div>
+
+<!-- Matt Kahla -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1ztmdqwxNvhLmjR-5q0se8hsiIytq77qW&sz=w600"
+
+alt="Matt Kahla"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Matt Kahla</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">$22M
+TikTok Shop GMV, Owner of MattKahla</p>
+</div>
+</div>
+
+<!-- Cassandra Bankson -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1j0x1l-iZc9dEdGko6PfgxW1L5z2L8AWr&sz=w600"
+
+alt="Cassandra Bankson"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Cassandra Bankson</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Award
+Winning Skincare Creator With 5M Followers</p>
+</div>
+</div>
+
+<!-- Tinashe Chaponda -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1ld6nP-pl6wPgh2HMkWy-ZLeCYEya7nqz&sz=w600"
+
+alt="Tinashe Chaponda"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Tinashe Chaponda</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Forbes' 30 Under 30, Founder of Sosani Studios</p>
+</div>
+</div>
+
+<!-- Melissa Vicendese -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1_bginRij2Mw4_XpH-PIs8Q5gLpPCBRY1&sz=w600"
+
+alt="Melissa Vicendese"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Melissa Vicendese</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1%
+Affiliate, Content & communication expert</p>
+</div>
+</div>
+
+<!-- Thomas Ruster -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1LSvslOQX81piAtUsr_vQ1OyYJ01RJnkX&sz=w600"
+
+alt="Thomas Ruster"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Thomas Ruster</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">The
+creator of 3rd and Pearl, $4M+ GMV on TikTok Shop</p>
+</div>
+</div>
+
+<!-- Janine Mora -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1Vqv6S1Vg7u4tFDDVh3s_PzqsAcf1uK70&sz=w600"
+
+alt="Janine Mora"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Janine Mora</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top 1%
+affiliate, High-Converting Content Expert</p>
+</div>
+</div>
+
+<!-- Candi Osuna -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=168AdooUBOxL_RNWolQ2Mj0vIbacpjbkz&sz=w600"
+
+alt="Candi Osuna"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Candi Osuna</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">Top
+TikTok Shop Creator in Mexico</p>
+</div>
+</div>
+
+<!-- Bill Hudak -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1SvdNUPFrBqFsz-vlL_qO1Idld_w-8XAb&sz=w600"
+
+alt="Bill Hudak"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Bill Hudak</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Digital Marketing OG, Ex VP of Dollar Shave Club</p>
+</div>
+</div>
+
+<!-- Angie Ibanez -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1uohzqFmlrOs4NFIyG_zdHPJFG7DcdHeJ&sz=w600"
+
+alt="Angie Ibanez"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Angie Ibanez</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder of Betty's Closet, Live Shopping Pioneer</p>
+</div>
+</div>
+
+<!-- Evike Chang -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=10le8x5XF2mRhW34e5D2BJyHRn3qqV0cG&sz=w600"
+
+alt="Evike Chang"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Evike Chang</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+9-figure brand owner, category leader</p>
+</div>
+</div>
+
+<!-- Victoria Prince -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1CcEVFNSYLDr-LWG3x3Ha9nRK0uUlmCle&sz=w600"
+
+alt="Victoria Prince"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Victoria Prince (@vprincemusic)
+</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Founder of Kawela Skin, fashion & beauty creator, $6.7M+ GMV</p>
+</div>
+</div>
+
+<!-- J DEVINCI -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1e5M1EX_nj7WW08_q7BvNAWGPmUhxANve&sz=w600"
+
+alt="J DEVINCI"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">J DEVINCI</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Popular Content Creator | Featured Brands: Medicube, Sacheu, Forever 21</p>
+</div>
+</div>
+
+<!-- Kymie Ann -->
+<div class="speaker-card rounded-2xl overflow-hidden flex flex-col text-left card-hover">
+<div class="aspect-[4/5] overflow-hidden bg-zinc-900">
+<img src="https://drive.google.com/thumbnail?id=1IL70RmcljDoFoIK0hs6QfSPD64XmGOOj&sz=w600"
+
+alt="Kymie Ann"
+class="w-full h-full object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-500">
+</div>
+<div class="p-4 flex-1 flex flex-col justify-center border-t border-zinc-800">
+<h4 class="text-white font-black uppercase text-xs sm:text-sm">Kymie Ann</h4>
+<p class="text-[#FF007F] text-[10px] sm:text-xs font-bold uppercase tracking-widest mt-1">
+Leading TikTok Shop Creator, 840K+ Followers, $12M+ GMV Generated</p>
+</div>
+</div>
+
+</div>
+
+<div class="flex justify-center items-center gap-2 text-zinc-400">
+<i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
+<p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">More speakers to be
+unveiled</p>
+</div>
+</div>
+</section>
+
+<!-- Creators Section -->
+<section class="bg-black py-20 border-b border-zinc-900">
+<div class="container">
+<h2
+class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-12 tracking-wider glow-cyan">
+Featured Creators</h2>
+<div
+class="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 shadow-2xl mb-12">
+<img src="https://drive.google.com/thumbnail?id=1ky4RY5CWJgPrB_85vDiS0FLMUz-VWusK&sz=w1000"
+
+alt="Featured Creators" class="w-full h-auto object-cover" />
+</div>
+<div class="max-w-3xl mx-auto">
+<div class="p-[1px] rounded-3xl bg-gradient-to-r from-transparent via-[#FF0050] to-transparent">
+<div class="bg-zinc-950 px-6 py-10 sm:px-12 sm:py-12 rounded-[1.7rem] text-center">
+<p
+class="text-white text-base sm:text-xl lg:text-2xl font-bold leading-relaxed tracking-wide italic">
+<span
+class="live-dot inline-block w-3 h-3 rounded-full bg-[#FF0050] mr-3 align-middle"></span>
+Get in touch with <span class="text-[#FF0050]">high-performing TikTok creators</span> in
+person at the TopTier Summit and YFCon — <span class="text-[#00F2EA]"> best opportunity to
+connect before peak season.</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- VIP Party Section -->
+<section class="bg-zinc-950 py-20 border-b border-zinc-900">
+<div class="container">
+<h2
+class="text-4xl sm:text-5xl md:text-6xl font-black text-center text-[#FFD700] uppercase italic mb-12 tracking-widest glow-gold">
+VIP Party
+</h2>
+<div
+class="max-w-5xl mx-auto rounded-3xl overflow-hidden border-4 border-zinc-900 mb-12 shadow-[0_0_50px_rgba(255,215,0,0.1)]">
+<img src="https://drive.google.com/thumbnail?id=1Rt4K3Q-sIRSXREYgijgbh32VH2MR56ql&sz=w1200"
+
+alt="VIP Party" class="w-full h-auto object-cover" />
+</div>
+<div
+class="max-w-3xl mx-auto bg-black/60 p-8 sm:p-12 rounded-[2.5rem] border border-zinc-800 backdrop-blur-md">
+<div class="text-center">
+<p class="text-[#FFD700] font-black text-lg mb-2 tracking-[0.3em] uppercase">from 18:30 | Oct 9</p>
+<p class="text-zinc-300 text-lg sm:text-xl leading-relaxed">
+An <span class="text-[#FFD700] font-bold">exclusive gathering of 150 VIP guests</span>,
+providing <span class="text-[#00F2EA] font-bold italic">Valuable Direct Access to 100 Top
+Creators, 50 Top Operators</span>,
+leading <span class="text-white font-bold">sellers, platform managers</span>,
+and key <span class="text-[#FF007F] font-bold">ecosystem partners</span>.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Mastermind Section -->
+<section class="bg-black py-20 border-b border-zinc-900">
+<div class="container">
+<h2
+class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-12 tracking-wider glow-cyan">
+TopTier Mastermind</h2>
+<div
+class="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 shadow-2xl mb-12">
+<img src="https://drive.google.com/thumbnail?id=17RwUoZtIVoHZ05uR1hZUHDE1py3alNzS&sz=w1000"
+
+alt="TopTier Mastermind" class="w-full h-auto object-cover" />
+</div>
+<div class="max-w-3xl mx-auto">
+<div class="p-[1px] rounded-3xl bg-gradient-to-r from-transparent via-[#FF0050] to-transparent">
+<div class="bg-zinc-950 px-6 py-10 sm:px-12 sm:py-12 rounded-[1.7rem] text-center">
+<p
+class="text-white text-base sm:text-xl lg:text-2xl font-bold leading-relaxed tracking-wide italic">
+<span
+class="live-dot inline-block w-3 h-3 rounded-full bg-[#FF0050] mr-3 align-middle"></span>
+Go beyond the stage.<span class="text-[#FF0050]"> Connect with top founders, creators, and
+operators in a private mastermind</span> designed for strategic discussions, actionable
+insights, and high-value partnerships that<span class="text-[#00F2EA]"> drive your next
+stage of growth.</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Airsoft Team Battle Section -->
+<section class="bg-zinc-950 py-20 border-b border-zinc-900">
+<div class="container">
+<h2
+class="text-4xl sm:text-5xl md:text-6xl font-black text-center text-[#FFD700] uppercase italic mb-12 tracking-widest glow-gold">
+Airsoft Team Battle
+</h2>
+<div
+class="max-w-5xl mx-auto rounded-3xl overflow-hidden border-4 border-zinc-900 mb-12 shadow-[0_0_50px_rgba(255,215,0,0.1)]">
+<img src="https://drive.google.com/thumbnail?id=1_gUAsQi6HjBNoUqN7fIeSIX4QeEcRAfZ&sz=w1200"
+
+alt="Airsoft Team Battle" class="w-full h-auto object-cover" />
+</div>
+<div
+class="max-w-3xl mx-auto bg-black/60 p-8 sm:p-12 rounded-[2.5rem] border border-zinc-800 backdrop-blur-md">
+<div class="text-center">
+<p class="text-[#FFD700] font-black text-lg mb-2 tracking-[0.3em] uppercase">2PM – 4PM, Oct 7 |
+Evike Airsoft Superstore Alhambra</p>
+<p class="text-zinc-300 text-lg sm:text-xl leading-relaxed">
+Join an action-packed airsoft competition <span class="text-[#FFD700] font-bold">exclusive
+gathering of selected guests</span>,
+where <span class="text-[#00F2EA] font-bold italic"> founders, creators, and industry leaders
+team up,</span>,
+compete, <span class="text-white font-bold"> and build connections</span>,
+through <span class="text-[#FF007F] font-bold"> an unforgettable experience</span>.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Join the summit Section -->
+<section class="bg-black pt-12 pb-20 overflow-hidden border-b border-zinc-900">
+<div class="container text-center">
+<div class="mb-14">
+<a href="https://www.eventbrite.com/e/toptier-summit-yfcon2026-bfcm-edition-tickets-1994763825299"
+
+target="_blank"
+class="inline-flex items-center gap-3 bg-white text-black hover:bg-[#00F2EA] transition-colors duration-300 px-8 py-5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(255,255,255,0.2)] group">
+Join the summit
+<i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+</a>
+</div>
+
+<!-- Event Agenda Section -->
+<section class="bg-black py-24 border-b border-zinc-900 overflow-hidden relative">
+<!-- Background Accents -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-[#FF0050] rounded-full blur-[120px] opacity-10"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-[#00F2EA] rounded-full blur-[120px] opacity-10"></div>
+
+<div class="container relative z-10">
+<h2
+class="text-4xl sm:text-6xl font-black text-center mb-20 tracking-tighter italic uppercase text-white">
+Proposed Event <span class="text-[#FF0050]">Agenda</span>
+</h2>
+
+<!-- Oct 6 -->
+<div class="max-w-4xl mx-auto">
+<div class="flex items-center gap-4 mb-10">
+<div
+class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
+Oct 6
+</div>
+<div class="h-[2px] flex-1 bg-gradient-to-r from-[#00F2EA] to-transparent"></div>
+</div>
+
+<div class="text-left mb-8 px-4">
+<h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">
+Pre-Event: TikTok Shop HQ Tour & Talk</h3>
+<p
+class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">
+14:00 – 16:00</p>
+</div>
+
+</h2>
+<p
+class="text-white text-base sm:text-xl font-bold mb-12 italic max-w-3xl mx-auto leading-relaxed">
+Enjoy a meaningful office tour at TikTok Shop, along with a closed-door sharing session &
+networking with speakers and TikTok managers
+</p>
+
+<div class="flex justify-center items-center gap-2 text-zinc-400">
+<i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
+<p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">Note: RSVP
+required due to limited capacity. </p>
+</div>
+</div>
+</section>
+
+<!-- Oct 7 -->
+<div class="max-w-4xl mx-auto">
+<div class="flex items-center gap-4 mb-10">
+<div
+class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
+Oct 7
+</div>
+<div class="h-[2px] flex-1 bg-gradient-to-r from-[#00F2EA] to-transparent"></div>
+</div>
+
+<div class="text-left mb-8 px-4">
+<h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">Pre-Event:
+TopTier Mastermind & Airsoft Team Battle</h3>
+<p class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">
+12:00 – 16:00 @ Evike Superstore, 2801 W. Mission Rd., Alhambra</p>
+</div>
+
+</h2>
+<p class="text-white text-base sm:text-xl font-bold mb-12 italic max-w-3xl mx-auto leading-relaxed">
+Join a curated group of 7/8/9-figure entrepreneurs, creators, and executives for high-level
+conversations, exclusive networking, and collaborations.
+
+Then, experience the thrill of team-based airsoft combat with fellow entrepreneurs. Create
+unforgettable memories beyond the summit stage together.
+</p>
+
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+Feature Attendees</div>
+<div>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Aaron Jin, Evike
+Chang, Katie London, Ricky Chung, Carmen Muley, Kymie Ann</p>
+
+<div class="flex justify-center items-center gap-2 text-zinc-400">
+<i data-lucide="info" class="w-4 h-4 text-[#FF0050]"></i>
+<p class="text-[10px] sm:text-xs font-black tracking-[0.2em] italic uppercase">Note: RSVP
+required due to limited capacity. </p>
+</div>
+</div>
+</section>
+
+
+<!-- Oct 8 -->
+<div class="max-w-4xl mx-auto mb-20">
+<div class="flex items-center gap-4 mb-10">
+<div
+class="bg-[#FF0050] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(255,0,80,0.4)]">
+Oct 8
+</div>
+<div class="h-[2px] flex-1 bg-gradient-to-r from-[#FF0050] to-transparent"></div>
+</div>
+
+<div class="text-left mb-8 px-4">
+<h3 class="text-2xl sm:text-3xl font-black text-white uppercase italic leading-none">Cutting-Edge Growth
+Summit</h3>
+<p class="text-[#FF0050] font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs mt-2 italic">Summit
+Stage</p>
+</div>
+
+<!-- Timeline Oct 8 -->
+<div class="space-y-4 px-2">
+<!-- Row 1 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+10:00-10:10</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Opening
+Keynote</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Can Chan</p>
+</div>
+</div>
+<!-- Row 2 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+10:10-10:30</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Dual-Engine
+Growth: Amazon & TikTok - How TikTok is Changing the Game</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Dongkai Chen</p>
+</div>
+</div>
+<!-- Row 3 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+10:30-10:50</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How We Turned
+Virality Into the UK’s #1 Acne Brand on TikTok</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">David Connor</p>
+</div>
+</div>
+<!-- Row 4 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+10:50-11:10</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic"> From Affiliate to Brand Founder with Accio AI Agent</h4>
+
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Alex Tsai, Ziwei Chen</p>
+</div>
+</div>
+<!-- Row 5 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+11:10-11:30</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Top Claude
+skills I use to grow a $200m Amazon product portfolio</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Chris Rawlings</p>
+</div>
+</div>
+<!-- Row 6 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+11:30-11:50</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The AI-Powered
+Amazon Launch Playbook: A Golden Case Study</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Colin Raja</p>
+</div>
+</div>
+<!-- Row 7 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-[#FF007F]/30 hover:border-[#FF007F]/60 transition-all shadow-[0_0_15px_rgba(255,0,127,0.1)]">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF007F] font-black text-sm text-center sm:min-w-[120px]">
+11:50-12:10</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How Brands Can
+Turn TikTok Shop Creators Into a Scalable Ad Engine</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Jo Rodriguez</p>
+</div>
+</div>
+<!-- Lunch -->
+<div class="flex items-center gap-4 py-8">
+<div class="h-[1px] flex-1 bg-zinc-800"></div>
+<div
+class="flex items-center gap-3 text-zinc-500 uppercase font-black text-[10px] tracking-[0.4em] italic">
+<i data-lucide="utensils" class="w-4 h-4"></i>
+Lunch Break & Exhibition Visit (12:10-14:00)
+</div>
+<div class="h-[1px] flex-1 bg-zinc-800"></div>
+</div>
+<!-- Row 8 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+14:00-14:20</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How 7–8-Figure
+Brands Win Peak Season on TikTok Shop</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Carmen Muley</p>
+</div>
+</div>
+<!-- Row 9 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+14:20-14:40</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">Seven Weeks to
+Black Friday: The Complete Q4 Prep Checklist</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Andrew Erickson</p>
+</div>
+</div>
+<!-- Row 10 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+14:40-15:00</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">How Brands
+Build Creator & Celebrity Programs That Drive Brand Equity That Drives Sales</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Tinashe Chaponda</p>
+</div>
+</div>
+<!-- Row 11 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+15:00-15:20</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">The TikTok
+Shop Flywheel - How to Build an Engine That Attracts Top Affiliates</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Michelle Barnum Smith</p>
+</div>
+</div>
+<!-- Row 12 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+15:20-15:50</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic"> Top Live
+Commerce Panel: Mastering Live Shopping on TikTok</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Jason Termechi, Cassandra
+Bankson, Angie Ibanez, CANDI OSUNA</p>
+</div>
+</div>
+<!-- Row 13 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-[#FF007F]/30 hover:border-[#FF007F]/60 transition-all shadow-[0_0_15px_rgba(255,0,127,0.1)]">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+15:50-16:10</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic">What Creators
+Actually Want: An Insider's Playbook for Sellers Heading Into Q4</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Melissa Vicendese</p>
+</div>
+</div>
+<!-- Row 14 -->
+<div
+class="flex flex-col sm:flex-row gap-4 p-5 rounded-2xl bg-zinc-900/40 border border-zinc-800 hover:border-zinc-700 transition-all">
+<div
+class="agenda-time-pill px-4 py-2 rounded-xl text-[#FF0050] font-black text-sm text-center sm:min-w-[120px]">
+16:10-16:30</div>
+<div>
+<h4 class="text-white font-black uppercase text-sm sm:text-base tracking-wide italic"> Panel
+Discussion: Tips & Social Commerce Insights for Q4 and Beyond</h4>
+<p class="text-[#00F2EA] font-bold text-xs uppercase tracking-widest mt-1">Yudian Xie, J DEVINCI,
+Janine Mora </p>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- YFCon -->
+<div class="max-w-4xl mx-auto">
+<div class="flex items-center gap-4 mb-10">
+<div
+class="bg-[#00F2EA] text-black font-black px-6 py-2 rounded-full uppercase text-sm tracking-[0.2em] italic shadow-[0_0_20px_rgba(0,242,234,0.4)]">
+Oct 8-9
+</div>
+<div class="h-[2px] flex-1 bg-gradient-to-r from-[#00F2EA] to-transparent"></div>
+</div>
+
+<!-- YFCon Stage Session -->
+<div
+class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-[#00F2EA]/5 blur-3xl rounded-full"></div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3">
+<h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">TopTier
+Creator Keynote Speech</h3>
+<p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">YFCon
+Stage</p>
+<div
+class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">
+9:30-16:30 Oct 8-9</div>
+</div>
+<div class="md:w-2/3 border-l md:border-zinc-800 md:pl-8 space-y-6">
+<div>
+<p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">Key
+Note Speeches & Panel Discussions</p>
+<ul class="space-y-2 text-zinc-200 text-xs sm:text-sm font-bold uppercase italic">
+<li>- Killer Tips for Seller–Creator Collaboration in Q4 and Beyond</li>
+<li>- Unlocking Magic Power: How Sellers & Creators Win in Peak Season</li>
+<li>- From Outreach to Revenue: Mastering Seller–Creator Collaboration</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-zinc-800">
+<p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
+Featured Speakers</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Matt
+Kahla, Jr.</span>
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Kymie
+Ann</span>
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Kiara
+(Worth The Grab 🔥)</span>
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Alex
+Kobayashi</span>
+<span
+class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Akie</span>
+<span
+class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Savannah</span>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Lunch -->
+<div class="flex items-center gap-4 py-8 px-4">
+<div class="h-[1px] flex-1 bg-zinc-800"></div>
+<div class="flex items-center gap-3 text-zinc-500 uppercase font-black text-[10px] tracking-[0.4em] italic">
+<i data-lucide="utensils" class="w-4 h-4"></i>
+Exhibition Visits (9:00-18:00)
+</div>
+<div class="h-[1px] flex-1 bg-zinc-800"></div>
+</div>
+
+
+
+<!-- Creator Sharing Session -->
+<div
+class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3">
+<h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">
+Sparkling TikTok Shop Creator Sharing</h3>
+<p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">YFCon
+Stage</p>
+<div
+class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">
+9:30-16:30 Oct 8-9</div>
+</div>
+<div class="md:w-2/3 border-l md:border-zinc-800 md:pl-8 space-y-6">
+<div>
+<p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
+Key Note Speeches & Panel Discussions</p>
+<ul class="space-y-2 text-zinc-200 text-xs sm:text-sm font-bold uppercase italic">
+<li>- How to Build a 8-Figure TikTok Shop Channel (Without Burning Cash)</li>
+<li>- Bridging the Gap Between Brand and Creator Content</li>
+<li>- Dos and Don'ts of High-Performing Seller-Creator Collaborations</li>
+<li>- Beyond GMV: How Brands Build Creator Programs That Drive Sales and Brand
+Equity</li>
+<li>- Where Content Meets Commerce: Unlocking Growth with TikTok Shop</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-zinc-800">
+<p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
+Featured Speakers</p>
+<div class="flex flex-wrap gap-2">
+<span
+class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Austin
+Brown</span>
+<span
+class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Brandon
+Phillips</span>
+<span
+class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Brandon
+Hans</span>
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Amy
+Jackson</span>
+<span
+class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Victoria</span>
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Ana
+Torres</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Breakout Stage Session -->
+<div
+class="mb-12 bg-zinc-900/20 rounded-3xl border border-zinc-800/50 p-6 sm:p-10 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-[#00F2EA]/5 blur-3xl rounded-full"></div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/3">
+<h3 class="text-xl sm:text-2xl font-black text-white uppercase italic leading-none">
+Unlock Growth Opportunities On TikTok Shop Mexico</h3>
+<p class="text-[#00F2EA] font-bold uppercase tracking-[0.3em] text-[10px] mt-2 italic">
+Breakout Stage</p>
+<div
+class="mt-4 agenda-time-pill inline-block px-4 py-2 rounded-xl text-[#00F2EA] font-black text-xs tracking-widest">
+14:00-17:30 Oct 8</div>
+</div>
+<div class="md:w-2/3 border-l md:border-zinc-800 md:pl-8 space-y-6">
+<div>
+<p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
+Spanish Breakout Session</p>
+<ul class="space-y-2 text-zinc-200 text-xs sm:text-sm font-bold uppercase italic">
+<li>- Mexico market opportunities</li>
+<li>- TikTok Shop ecosystem insights</li>
+<li>- Affiliate & content strategies</li>
+<li>- Brand success stories</li>
+<li>- Cross-industry panel discussion</li>
+
+</ul>
+</div>
+<div class="pt-4 border-t border-zinc-800">
+<p class="text-zinc-500 font-black uppercase text-[10px] tracking-widest mb-3 italic">
+Featured Speakers</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Jaime
+Guadarrama</span>
+<span class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Julio
+Cesar Martinez</span>
+<span
+class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Vicente
+Peredo</span>
+<span
+class="bg-zinc-800 text-white text-[10px] px-3 py-1 rounded-md font-bold italic">Alfonso
+Xing</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- VIP Party Reveal -->
+<div
+class="bg-gradient-to-br from-[#FFD700]/10 to-transparent border border-[#FFD700]/30 rounded-3xl p-8 text-center group">
+<div class="flex flex-col items-center">
+<div class="text-[#FFD700] font-black uppercase tracking-[0.3em] text-[10px] sm:text-xs italic mb-4">
+Evening Event</div>
+<h3 class="text-2xl sm:text-4xl font-black text-white italic uppercase tracking-tighter mb-4">
+VIP <span class="text-[#FFD700]">Party</span></h3>
+<p class="text-zinc-400 font-bold uppercase text-[10px] tracking-widest mb-6">Venue revealed
+soon • from 18:30</p>
+<div class="max-w-md text-zinc-300 text-xs sm:text-sm italic font-bold leading-relaxed">
+Get ready to join the party with <span class="text-[#FFD700]">TOP 1% CREATORS, ELITE
+BRAND OWNERS & KEY ECOSYSTEM PARTNERS</span>.
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- YFCon Mega Exhibition Highlights -->
+<section class="bg-zinc-950 py-24 border-b border-zinc-900 relative overflow-hidden">
+<div class="container text-center">
+<h2 class="text-3xl sm:text-5xl font-black italic uppercase mb-8 tracking-tighter glow-cyan text-[#00F2EA]">
+YFCon Mega Exhibition Highlights
+</h2>
+<p class="text-white text-base sm:text-xl font-bold mb-12 italic max-w-3xl mx-auto leading-relaxed">
+Experience the energy of a 10,000-attendee social commerce exhibition like nowhere else.
+</p>
+
+<div
+class="max-w-5xl mx-auto rounded-[2.5rem] overflow-hidden border-4 border-zinc-800 shadow-[0_20px_50px_rgba(0,242,234,0.15)] mb-12 transition-transform duration-700 hover:scale-[1.01]">
+<img src="https://drive.google.com/thumbnail?id=1XwwdxJaG1Iej6JI9dzEY49srb_rSBKtP&sz=w1200"
+
+alt="YFCon Mega Exhibition" class="w-full h-auto object-cover" />
+</div>
+
+<div
+class="max-w-2xl mx-auto bg-black/40 backdrop-blur-md border border-zinc-800 p-8 sm:p-10 rounded-[2rem]">
+<p class="text-zinc-400 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-8 leading-loose">
+Want to showcase your brand in the exhibition alongside <span class="text-white">Tesla, QVC, Goli,
+leading K-beauty brands</span>, and more? Get in touch below 👇
+</p>
+
+<a href="https://www.linkedin.com/in/can-chan-966a632b" target="_blank"
+class="group inline-flex items-center gap-4 px-8 py-4 bg-[#0077B5]/10 border border-[#0077B5]/40 hover:bg-[#0077B5] hover:border-[#0077B5] rounded-full transition-all duration-300">
+<i data-lucide="linkedin"
+class="w-6 h-6 text-[#0077B5] group-hover:text-white transition-colors"></i>
+<span
+class="text-white text-xs sm:text-sm font-black uppercase tracking-widest group-hover:text-white">Can
+Chan</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Who Attends -->
+<section class="bg-black py-20 border-b border-zinc-900">
+<div class="container">
+<h2
+class="text-3xl sm:text-4xl md:text-5xl font-black text-center text-[#00F2EA] uppercase italic mb-16 tracking-wider glow-cyan">
+Who Attends</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
+<i data-lucide="users" class="w-12 h-12 text-[#FF0050] mx-auto mb-6"></i>
+<p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">High-level
+eCommerce sellers across TikTok Shop, Amazon, and DTC</p>
+</div>
+<div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
+<i data-lucide="trending-up" class="w-12 h-12 text-[#FF007F] mx-auto mb-6"></i>
+<p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">10,000+
+creators attending the two-day exhibition</p>
+</div>
+<div class="bg-zinc-900/40 p-10 rounded-[2rem] border border-zinc-800 text-center card-hover">
+<i data-lucide="zap" class="w-12 h-12 text-[#FFD700] mx-auto mb-6"></i>
+<p class="text-zinc-200 font-bold uppercase text-sm sm:text-base italic leading-snug">AI
+specialists, ecosystem partners and platform leaders</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Core Benefits -->
+<section class="bg-zinc-950 py-20 border-b border-zinc-900">
+<div class="container max-w-4xl text-center">
+<h2
+class="text-2xl sm:text-3xl font-black mb-12 uppercase italic tracking-[0.4em] glow-gold text-[#FFD700]">
+Core Benefits</h2>
+<div class="space-y-4">
+<div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#00F2EA] rounded-xl text-left card-hover">
+<p class="text-[#00F2EA] text-base sm:text-lg font-black uppercase mb-1">Direct Access</p>
+<p class="text-white text-sm sm:text-base opacity-90 italic">Direct, in-person access to top
+creators — saving hundreds of hours of outreach and coordination.</p>
+</div>
+<div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#FF0050] rounded-xl text-left card-hover">
+<p class="text-[#FF0050] text-base sm:text-lg font-black uppercase mb-1">Network Power</p>
+<p class="text-white text-sm sm:text-base opacity-90 italic">High-level networking with leading
+operators across TikTok, Amazon, and DTC.</p>
+</div>
+<div class="bg-zinc-900/60 p-6 sm:p-8 border-l-8 border-[#FFD700] rounded-xl text-left card-hover">
+<p class="text-[#FFD700] text-base sm:text-lg font-black uppercase mb-1">Intelligence</p>
+<p class="text-white text-sm sm:text-base opacity-90 italic">Actionable insights into the most
+advanced growth and monetization strategies in the industry.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Exploration Topics -->
+<section class="bg-black py-24 border-b border-zinc-900">
+<div class="container">
+<h2 class="text-3xl sm:text-4xl md:text-5xl italic uppercase text-center mb-16 tracking-tighter glow-red">
+What We'll <span class="text-[#FF0050]">Explore</span>
+</h2>
+<div class="max-w-4xl mx-auto grid grid-cols-1 gap-4">
+<div
+class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF0050] transition-all group cursor-default">
+<div
+class="w-12 h-12 bg-[#FF0050]/10 text-[#FF0050] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF0050] group-hover:text-white transition-all duration-300">
+1</div>
+<h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">The future of
+discovery-driven commerce growth</h4>
+</div>
+<div
+class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#00F2EA] transition-all group cursor-default">
+<div
+class="w-12 h-12 bg-[#00F2EA]/10 text-[#00F2EA] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#00F2EA] group-hover:text-black transition-all duration-300">
+2</div>
+<h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">Scaling
+brands in the creator and influencer economy</h4>
+</div>
+<div
+class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FFD700] transition-all group cursor-default">
+<div
+class="w-12 h-12 bg-[#FFD700]/10 text-[#FFD700] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FFD700] group-hover:text-black transition-all duration-300">
+3</div>
+<h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">TikTok ×
+Amazon × DTC ecosystem synergies</h4>
+</div>
+<div
+class="flex items-center gap-6 p-5 sm:p-6 bg-zinc-900/40 rounded-3xl border border-zinc-800 hover:border-[#FF007F] transition-all group cursor-default">
+<div
+class="w-12 h-12 bg-[#FF007F]/10 text-[#FF007F] rounded-xl flex-shrink-0 flex items-center justify-center font-black text-xl group-hover:bg-[#FF007F] group-hover:text-white transition-all duration-300">
+4</div>
+<h4 class="font-bold uppercase italic text-sm sm:text-lg text-zinc-100 tracking-tight">AI-driven
+monetization and automation strategies</h4>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Gallery Campaigns -->
+<section id="campaigns" class="bg-black py-24 border-b border-zinc-900">
+<div class="container text-center">
+<h2 class="text-3xl sm:text-5xl font-black italic uppercase mb-16 tracking-tighter px-4 leading-tight">
+PREVIOUS <span class="text-[#FFD700]">TOPTIER</span> & <span class="text-[#FF0050]">YFCON</span>
+CAMPAIGNS
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
+<div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
+<div class="aspect-video overflow-hidden">
+<img src="https://drive.google.com/thumbnail?id=1YDjmGXHF_PtlvqK5Vv7X7CNCARXW0qEB&sz=w800"
+
+alt="Mega Expo"
+class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+</div>
+<div class="p-6 bg-zinc-950 border-t border-zinc-800">
+<h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Mega Expo
+</h4>
+</div>
+</div>
+<div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
+<div class="aspect-video overflow-hidden">
+<img src="https://drive.google.com/thumbnail?id=1jUOXelgCG32zfyDZ09QsYxjugWXmpcxf&sz=w800"
+
+alt="Productive Meetings"
+class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+</div>
+<div class="p-6 bg-zinc-950 border-t border-zinc-800">
+<h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">Productive
+Meetings</h4>
+</div>
+</div>
+<div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
+<div class="aspect-video overflow-hidden">
+<img src="https://drive.google.com/thumbnail?id=1_ck62I6pddeFys5_AMM4zvhWoipMRcbt&sz=w800"
+
+alt="YFCon Summit"
+class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+</div>
+<div class="p-6 bg-zinc-950 border-t border-zinc-800">
+<h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">YFCon
+Summit</h4>
+</div>
+</div>
+<div class="bg-zinc-900/50 rounded-[2.5rem] overflow-hidden border border-zinc-800 card-hover">
+<div class="aspect-video overflow-hidden">
+<img src="https://drive.google.com/thumbnail?id=1W0g3nZ1w7T7LJbiBl5WRr9zSJJPwtEtM&sz=w800"
+
+alt="TopTier Mastermind"
+class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+</div>
+<div class="p-6 bg-zinc-950 border-t border-zinc-800">
+<h4 class="text-white font-bold uppercase text-xs sm:text-sm italic tracking-[0.3em]">TopTier
+Mastermind</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Media Coverage Section -->
+<section id="media-coverage" class="bg-zinc-950 py-24 border-b border-zinc-900">
+<div class="container text-center">
+<h2
+class="text-3xl sm:text-5xl font-black italic uppercase mb-16 tracking-tighter px-4 leading-tight text-white text-center">
+Media <span class="text-[#FF0050]">Coverage</span>
+</h2>
+<p class="text-zinc-400 text-sm sm:text-base mb-12 italic tracking-widest uppercase">The YFCon was reported
+and recognized by leading global news outlets.</p>
+
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
+<div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+<img src="https://drive.google.com/thumbnail?id=1fOwOAGEYcXazGGpLmVvx1-PT3uD7cs9t&sz=w400"
+
+alt="Yahoo Finance" class="max-h-full max-w-full object-contain">
+</div>
+<div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+<img src="https://drive.google.com/thumbnail?id=1KtfWmETQT5kasWaOuH-JfRKaTYk71vHT&sz=w400"
+
+alt="AP News" class="max-h-full max-w-full object-contain">
+</div>
+<div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+<img src="https://drive.google.com/thumbnail?id=1lt7TaWXUziQSM5sx84SUNLURWRDqnPJz&sz=w400"
+
+alt="Street Insider" class="max-h-full max-w-full object-contain">
+</div>
+<div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+<img src="https://drive.google.com/thumbnail?id=19b5WdGHWNockreTYz93jUvwiEj1Lr1PO&sz=w400"
+
+alt="The Globe and Mail" class="max-h-full max-w-full object-contain">
+</div>
+<div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+<img src="https://drive.google.com/thumbnail?id=1KWcwUrNkiz7rP2WppRIBa5i_AD57ELyk&sz=w400"
+
+alt="The Chronicle Journal" class="max-h-full max-w-full object-contain">
+</div>
+<div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+<img src="https://drive.google.com/thumbnail?id=1IG0zxm4Uw3qXKRvG4v0YbXSHJshopRoj&sz=w400"
+
+alt="Barchart" class="max-h-full max-w-full object-contain">
+</div>
+<div class="media-logo-card rounded-xl h-24 flex items-center justify-center p-4">
+<img src="https://drive.google.com/thumbnail?id=1j3kuvrcLLTgjsM1bAJXzJTiklP8I1aLr&sz=w400"
+
+alt="CBS News" class="max-h-full max-w-full object-contain">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="bg-black py-24 border-b border-zinc-900">
+<div class="container">
+<h2
+class="text-3xl sm:text-5xl font-black italic uppercase text-center mb-16 tracking-tighter px-4 leading-tight text-white">
+What Previous <span class="text-[#00F2EA]">Attendees</span> Are Saying
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
+<i data-lucide="quote" class="quote-icon text-[#FF0050]"></i>
+<p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
+"Everything was great. Great group of peers to network with, liked the length of the format. Can
+did a great job introducing attendees to each other. Event not too big or small just the right
+size"
+</p>
+<div class="mt-auto pt-6 border-t border-zinc-800">
+<p class="text-white font-black uppercase text-xs tracking-widest">Ariana Pareja</p>
+<p class="text-[#FF0050] text-[10px] uppercase font-bold tracking-tighter mt-1">Cofounder,
+Mighty Minis</p>
+</div>
+</div>
+
+<div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
+<i data-lucide="quote" class="quote-icon text-[#00F2EA]"></i>
+<p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
+"It's all about networking. Just one conversation can make the entire trip worth it."
+</p>
+<div class="mt-auto pt-6 border-t border-zinc-800">
+<p class="text-white font-black uppercase text-xs tracking-widest">Alex Bonilla</p>
+<p class="text-[#00F2EA] text-[10px] uppercase font-bold tracking-tighter mt-1">Founder, Pura
+Vida Moringa</p>
+</div>
+</div>
+
+<div class="relative bg-zinc-900/40 p-8 rounded-[2rem] border border-zinc-800 card-hover flex flex-col">
+<i data-lucide="quote" class="quote-icon text-[#FFD700]"></i>
+<p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-8 italic relative z-10">
+"Highly recommended. I found the event to be exceptionally well-organized, with insightful
+speakers and valuable networking opportunities."
+</p>
+<div class="mt-auto pt-6 border-t border-zinc-800">
+<p class="text-white font-black uppercase text-xs tracking-widest">Ali Shahzad</p>
+<p class="text-[#FFD700] text-[10px] uppercase font-bold tracking-tighter mt-1">Rimal Global</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer / Tickets -->
+<footer class="pt-24 pb-32 bg-zinc-950 text-center border-t border-zinc-900 relative overflow-hidden"
+style="padding-bottom: calc(5rem + var(--ios-safe-bottom));">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#FF0050] via-[#FFD700] to-[#00F2EA]">
+</div>
+
+<div class="container px-6">
+<h2
+class="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 uppercase italic tracking-tighter px-4 leading-[0.9] glow-cyan">
+Join the Industry’s <br class="hidden sm:block"> <span class="text-[#00F2EA]">Top Minds</span>
+</h2>
+<p
+class="text-xs sm:text-sm text-zinc-500 mb-16 max-w-2xl mx-auto leading-loose italic uppercase tracking-[0.4em] px-4">
+Two powerful days of insight, collaboration, and innovation shaping the future of commerce.
+</p>
+
+<div class="flex flex-col sm:flex-row gap-6 justify-center max-w-3xl mx-auto mb-20 px-4">
+<a href="https://www.eventbrite.com/e/toptier-summit-yfcon2026-bfcm-edition-tickets-1994763825299"
+
+target="_blank"
+class="btn-hover flex-1 bg-white text-black px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl text-center group transition-all hover:ring-8 hover:ring-white/10">
+<span class="block text-[10px] opacity-60 mb-1 tracking-[0.2em]">General Access</span>
+<span class="block text-lg">Mastermind + Summit</span>
+<span class="block text-3xl mt-2 font-black">$699</span>
+</a>
+
+<a href="https://www.eventbrite.com/e/toptier-summit-yfcon2026-bfcm-edition-tickets-1994763825299"
+
+target="_blank"
+class="btn-hover flex-1 bg-gradient-to-br from-[#FF0050] to-[#FF007F] text-white px-8 py-7 rounded-3xl font-black text-sm tracking-widest uppercase shadow-2xl border border-white/10 text-center ring-4 ring-[#FFD700]/20 hover:ring-8 transition-all">
+<span class="block text-[10px] opacity-80 mb-1 text-[#FFD700] tracking-[0.2em]">The Elite
+Experience</span>
+<span class="block text-lg">Mastermind + Summit + VIP Party</span>
+<span class="block text-3xl mt-2 font-black">$1999</span>
+</a>
+</div>
+
+<div class="flex flex-col items-center gap-6 mb-16">
+<p class="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-[0.5em] font-black">Contact the
+Organizer</p>
+<a href="https://www.linkedin.com/in/can-chan-966a632b/" target="_blank"
+class="group flex items-center gap-4 px-8 py-4 bg-zinc-900/50 hover:bg-[#0077B5]/10 border border-zinc-800 hover:border-[#0077B5] rounded-full transition-all backdrop-blur-sm">
+<i data-lucide="linkedin"
+class="w-6 h-6 text-[#0077B5] group-hover:scale-110 transition-transform"></i>
+<span class="text-white text-xs sm:text-sm font-black uppercase tracking-widest">Connect with Can
+Chan</span>
+</a>
+</div>
+
+<p class="text-[10px] text-zinc-700 uppercase tracking-[0.4em] italic font-bold">© 2026 TopTier League • Los
+Angeles, California</p>
+</div>
+</footer>
+
+<script>
+lucide.createIcons();
+
+document.addEventListener('touchstart', function (event) {
+if (event.touches.length > 1) {
+event.preventDefault();
+}
+}, { passive: false });
+
+const observerOptions = {
+threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('opacity-100');
+entry.target.classList.remove('opacity-0', 'translate-y-10');
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('section').forEach(section => {
+section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+observer.observe(section);
+});
+</script>
 </body>
 
 </html>
